@@ -1,0 +1,59 @@
+.card.smallcard {
+  height: 328px;
+  width: 100%;
+  overflow: hidden;
+}
+.card.bigcard {
+  height: 670px;
+  width: 100%;
+  overflow: hidden;
+}
+.work_head {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--white-color);
+}
+.horizontal-scroll-1 {
+  display: flex;
+  width: 300%;
+}
+
+.h-section {
+  flex: 0 0 100vw;
+  padding: 20px;
+}
+.bg-bliss-logo {
+  background: url("../../images/bliss/bliss_logo_bg.webp");
+  background-size: cover;
+  position: relative;
+}
+.bg-bliss-logo::before {
+  content: "";
+  position: absolute;
+  backdrop-filter: #00000070;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.color-box {
+  width: 101px;
+  height: 101px;
+  border-radius: 20px;
+}
+.bg-lifespaces-logo{
+  background: url("../../images/lifespaces/lifespaces_logo_bg.webp");
+  background-size: cover;
+  position: relative;
+}
+.bg-beeyond{
+  background: url("../../images/beeyond/beeyond_logo_bg.webp");
+  background-size: cover;
+  position: relative;
+}
+.scaled{
+  transform: scale(1.2);
+}

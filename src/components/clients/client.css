@@ -1,0 +1,76 @@
+.py-15{
+    padding: 90px 0;
+}
+.brandlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+.brand-logo {
+  padding: 0 60px;
+  pointer-events: none;
+}
+.clientxbig {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+.clientbig {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+.clientsmall {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+.clientxsmall {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+.marquee-client {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1296px;
+  height: 339px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #E8E8E8;
+  border-radius: 65px;
+}
+.client_bannner::before {
+  content: "";
+  position: absolute;
+  height: 276px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(39, 39, 39, 0) 0%, #272727 100%);
+  transform: rotate(180deg);
+  top: 90px;
+  left: 0;
+}
+.marquee-client {
+  pointer-events: none;
+}
+.client_head {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white-color);
+  text-transform: capitalize;
+}
