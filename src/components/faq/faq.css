@@ -1,0 +1,35 @@
+.bg-faq {
+  background: url("../../images/faqbg.webp");
+  background-size: cover;
+  height: 1760px;
+  margin-top: 150px;
+}
+.faq_head {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #252525;
+}
+.faq-content{
+    padding-top: 300px;
+}
+.faq-content .row {
+    padding: 20px 0; /* This will add padding inside each FAQ row */
+  }
+  
+  .faq-content .row .faq-title {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .faq-content .row .faq-content {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+  

@@ -6,6 +6,7 @@ import Counter from "./components/counter/Counter";
 import Process from "./components/process/Process";
 import Client from "./components/clients/Client";
 import WorkSample from "./components/work/WorkSample";
+import Faqs from "./components/faq/Faqs";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Client/>
           <Process/>
           <WorkSample/>
+          <Faqs/>
         </div>
       </div>
     </>

@@ -20,7 +20,7 @@ const WorkSample = () => {
         scrollTrigger: {
           trigger: ".wrapper",
           start: "top top",
-          end: "+=2300",
+          end: "+=1700",
           scrub: 1.5,
           pin: true,
           anticipatePin: 1,
@@ -47,7 +47,7 @@ const WorkSample = () => {
                     <div className="row gy-3">
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0 bg-bliss-logo d-flex justify-content-center align-items-center">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/logos/bliss.png")}
                             className="img-fluid"
                             width={120}
@@ -57,7 +57,7 @@ const WorkSample = () => {
                       </div>
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/bliss/bliss_thumb2.webp")}
                             className="img-fluid object-fit-cover"
                             alt=""
@@ -70,7 +70,7 @@ const WorkSample = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="card bigcard rounded-3 border-0">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/bliss/bliss_thumb_mid.webp")}
                             className="img-fluid object-fit-cover"
                             alt=""
@@ -99,7 +99,7 @@ const WorkSample = () => {
                     <div className="row gy-3">
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0 bg-beeyond d-flex justify-content-center align-items-center">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/beeyond/beeyond_logo.png")}
                             className="img-fluid"
                             width={160}
@@ -109,7 +109,7 @@ const WorkSample = () => {
                       </div>
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0 bg-light">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/beeyond/beeyond_thumb2.webp")}
                             className="img-fluid object-fit-cover"
                             alt=""
@@ -122,7 +122,7 @@ const WorkSample = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="card bigcard rounded-3 border-0">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/beeyond/beeyond_thumb3.webp")}
                             className="img-fluid object-fit-cover"
                             alt=""
@@ -139,7 +139,7 @@ const WorkSample = () => {
                     <div className="row gy-3">
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0 bg-lifespaces-logo d-flex justify-content-center align-items-center">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/logos/lifespaces.png")}
                             className="img-fluid"
                             width={200}
@@ -156,7 +156,7 @@ const WorkSample = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="card bigcard rounded-3 border-0 bg-light">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/lifespaces/lifespaces_web_thumb.webp")}
                             className="img-fluid object-fit-cover"
                             style={{ objectPosition: "top" }}
@@ -170,7 +170,7 @@ const WorkSample = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="card bigcard rounded-3 border-0">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/lifespaces/lifespaces_mob_thumb.webp")}
                             className="img-fluid object-fit-cover h-100"
                             alt=""
@@ -181,13 +181,13 @@ const WorkSample = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-section fourth">
+              {/* <div className="h-section fourth">
                 <div className="row">
                   <div className="col-lg-3 pe-1">
                     <div className="row gy-3">
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0">
-                        <img
+                        <img loading="lazy"
                             src={require("../../images/swayam/swayam_thumb1.webp")}
                             className="img-fluid object-fit-cover h-100 scaled" style={{objectPosition:'115%'}}
                             alt=""
@@ -196,7 +196,7 @@ const WorkSample = () => {
                       </div>
                       <div className="col-lg-12">
                         <div className="card smallcard rounded-3 border-0 ">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/swayam/swayam_thumb2.webp")}
                             className="img-fluid object-fit-cover h-100 scaled"
                             alt=""
@@ -209,7 +209,7 @@ const WorkSample = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="card bigcard rounded-3 border-0 bg-light">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/swayam/swayam_thumb_3.webp")}
                             className="img-fluid object-fit-cover h-100"
                            
@@ -223,7 +223,7 @@ const WorkSample = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="card bigcard rounded-3 border-0">
-                          <img
+                          <img loading="lazy"
                             src={require("../../images/lifespaces/lifespaces_mob_thumb.webp")}
                             className="img-fluid object-fit-cover h-100"
                             alt=""
@@ -233,12 +233,12 @@ const WorkSample = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
-      <section className="vh-100"></section>
+     
     </>
   );
 };
