@@ -10,6 +10,8 @@ import Faqs from "./components/faq/Faqs";
 import Services from "./components/services/Services";
 import gsap from "gsap/all";
 import ScrollSmoother from "gsap-trial/ScrollSmoother";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 
 
 const App = () => {
@@ -39,6 +41,8 @@ const App = () => {
           <Process/>
           <WorkSample/>
           <Faqs/>
+          <Contact/>
+          <Footer/>
         </div>
       </div>
     </>

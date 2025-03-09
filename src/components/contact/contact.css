@@ -1,0 +1,42 @@
+.contact_head {
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #fff;
+}
+.start_contact {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: #fff;
+}
+.form-input {
+  border-bottom: 1px solid #797979 !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+.form-input::placeholder {
+  color: #797979;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+.btn.submitbtn {
+  width: 220px;
+  height: 67px;
+  border-radius: 30px;
+  background-color: #414141;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+}

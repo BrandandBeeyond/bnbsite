@@ -22,7 +22,10 @@ body {
   padding: 160px 0;
 }
 .pt-20 {
-  padding: 90px;
+  padding-top: 90px;
+}
+.pt-25 {
+  padding-top: 130px;
 }
 .pb-10 {
   padding-bottom: 20px;
