@@ -6,6 +6,9 @@
   --light-color: #d9d9d9;
   --white-color: #ffffff;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #272727;
@@ -18,10 +21,13 @@ body {
 .pt-30 {
   padding: 160px 0;
 }
+.pt-20 {
+  padding: 90px;
+}
 .pb-10 {
   padding-bottom: 20px;
 }
-.pb-20{
+.pb-20 {
   padding-bottom: 120px;
 }
 .mt-20 {
@@ -166,10 +172,10 @@ body {
 .bg-light {
   background-color: var(--light-color);
 }
-.bg-blissgreen{
-  background-color: #A8CA6D;
+.bg-blissgreen {
+  background-color: #a8ca6d;
 }
-.bg-darkgreen{
+.bg-darkgreen {
   background-color: #366546;
 }
 
@@ -181,7 +187,45 @@ body {
   text-transform: capitalize;
   margin: 0 15px;
 }
+.subhead {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--white-color);
+}
 
+.card.servicecard {
+  border: 2px solid #978649;
+  backdrop-filter: blur(29.399999618530273px);
+  background-color: #fff0c74f;
+  height: 342px;
+  width: 359px;
+}
+.service_head {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.service_thumb {
+  height: 153px;
+  width: auto;
+}
+.service_para p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: var(--white-color);
+}
+
+.p-much-top{
+  padding-top: 700px;
+}
 @media (min-width: 1550px) and (max-width: 1700px) {
   .container-fluid {
     max-width: 1500px !important;

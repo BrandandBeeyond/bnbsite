@@ -21,7 +21,7 @@ const WorkSample = () => {
           trigger: ".wrapper",
           start: "top top",
           end: "+=1700",
-          scrub: 1.5,
+          scrub: 3,
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
@@ -36,9 +36,9 @@ const WorkSample = () => {
   }, []);
   return (
     <>
-      <section className="">
+      <section className="p-much-top">
         <div className="container-fluid">
-          <h4 className="work_head py-3 ps-5">Our work</h4>
+          <h2 className="work_head py-3 ps-5">Our work</h2>
           <div className="wrapper" ref={containerRef}>
             <div className="horizontal-scroll-1">
               <div className="h-section first">
@@ -181,7 +181,7 @@ const WorkSample = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="h-section fourth">
+               <div className="h-section fourth">
                 <div className="row">
                   <div className="col-lg-3 pe-1">
                     <div className="row gy-3">
@@ -233,7 +233,7 @@ const WorkSample = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div> 
             </div>
           </div>
         </div>

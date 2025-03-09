@@ -9,19 +9,22 @@ const Process = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
+  
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top top",
-        end: "+=1900px",
+        start: "top top", // Start pinning as soon as the section reaches the top
+        end: "+=600", // Keeps the section pinned for some time
         scrub: 1,
-        pin: true,
-        pinSpacing: true,
+        pin: true, 
+        pinSpacing: false, // Ensures the next section doesn’t push up
         anticipatePin: 1,
       },
     });
-
+  
+    // Delay before scrolling resumes
+    tl.to({}, { duration: 3 }); // Holds for 3 seconds
+  
     hexagonsRef.current.forEach((hex, index) => {
       tl.to(hex, {
         backgroundColor: "#FFBB00",
@@ -29,11 +32,16 @@ const Process = () => {
         delay: index * 1.5,
       });
     });
-
+  
+    ScrollTrigger.refresh();
+  
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+  
+  
+  
 
   return (
     <section className="pt-2">
@@ -54,13 +62,13 @@ const Process = () => {
                 >
                   <div className="hex-content">
                     <div className="hex-num">
-                       <span>01</span>
+                      <span>01</span>
                     </div>
                     <h3 className="hex-title">
                       Research <br /> & Planning
                     </h3>
                     <div className="hex-para">
-                        <p>Understand the problem, goals, and target audience.</p>
+                      <p>Understand the problem, goals, and target audience.</p>
                     </div>
                   </div>
                 </div>
@@ -73,14 +81,14 @@ const Process = () => {
                 >
                   <div className="hex-content">
                     <div className="hex-num">
-                       <span>02</span>
+                      <span>02</span>
                     </div>
                     <h3 className="hex-title">
                       Concept
                       <br /> & Ideation
                     </h3>
                     <div className="hex-para">
-                        <p>Brainstorm ideas and Create wireframes, mood boards.</p>
+                      <p>Brainstorm ideas and Create wireframes, mood boards.</p>
                     </div>
                   </div>
                 </div>
@@ -96,14 +104,13 @@ const Process = () => {
                 >
                   <div className="hex-content">
                     <div className="hex-num">
-                       <span>03</span>
+                      <span>03</span>
                     </div>
                     <h3 className="hex-title">
-                      {" "}
                       Design <br /> & Development
                     </h3>
                     <div className="hex-para">
-                        <p>Brainstorm ideas and Create wireframes, mood boards.</p>
+                      <p>Brainstorm ideas and Create wireframes, mood boards.</p>
                     </div>
                   </div>
                 </div>
@@ -116,13 +123,13 @@ const Process = () => {
                 >
                   <div className="hex-content">
                     <div className="hex-num">
-                       <span>04</span>
+                      <span>04</span>
                     </div>
                     <h3 className="hex-title">
                       Testing <br /> & Feedback
                     </h3>
                     <div className="hex-para">
-                        <p>Gather feedback from users, stakeholders.</p>
+                      <p>Gather feedback from users, stakeholders.</p>
                     </div>
                   </div>
                 </div>
@@ -137,13 +144,13 @@ const Process = () => {
                 >
                   <div className="hex-content">
                     <div className="hex-num">
-                       <span>05</span>
+                      <span>05</span>
                     </div>
                     <h3 className="hex-title">
                       Review <br /> & Finalization
                     </h3>
                     <div className="hex-para">
-                        <p>Launch, implement, or publish the design.</p>
+                      <p>Launch, implement, or publish the design.</p>
                     </div>
                   </div>
                 </div>

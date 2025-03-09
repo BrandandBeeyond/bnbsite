@@ -145,7 +145,7 @@ const Client = () => {
   return (
     <div className="position-relative client_bannner py-15">
       <canvas ref={canvasRef} className="client_banner_hex" />
-      <h4 className="client_head">our clients</h4>
+      <h4 className="client_head">Our Clients</h4>
       
       <div className="marquee-client">
         <Marquee autoFill>
@@ -157,7 +157,7 @@ const Client = () => {
                     <img
                       src={item.logo}
                       className={`img-fluid ${item.size}`}
-                      alt=""
+                      alt="Client Logo"
                     />
                   </div>
                 ))}

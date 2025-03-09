@@ -4,7 +4,6 @@ import "./faq.css";
 
 const Faqs = () => {
   const data = {
-  
     rows: [
       {
         title: "Lorem ipsum dolor sit amet,",
@@ -32,14 +31,13 @@ const Faqs = () => {
     ],
   };
   const styles = {
-    bgColor: 'transparent',
-    titleTextColor: "blue",
-    rowTitleColor: "blue",
-    rowContentPaddingTop: '20px',
-   
+    bgColor: "transparent",
+    titleTextColor: "#252525",
+    rowTitleColor: "#252525",
+    rowTitleTextSize: "30px",
+    rowContentPaddingTop: "20px",
   };
 
- 
   return (
     <section className="bg-faq d-flex justify-content-center align-items-center">
       <div className="container-fluid h-100">
@@ -47,10 +45,7 @@ const Faqs = () => {
           <h3 className="faq_head pb-20">
             Frequently <br /> asked questions
           </h3>
-          <Faq
-                data={data}
-                styles={styles}
-            />
+          <Faq data={data} styles={styles} />
         </div>
       </div>
     </section>
