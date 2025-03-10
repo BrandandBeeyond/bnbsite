@@ -39,6 +39,7 @@ const Header = () => {
                 portfolio
               </a>
             </li>
+            <button className="btn contactbtn ms-4">Contact Us</button>
           </ul>
         </div>
       </div>
