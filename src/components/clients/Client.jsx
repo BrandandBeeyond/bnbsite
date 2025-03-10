@@ -144,26 +144,24 @@ const Client = () => {
 
   return (
     <div className="position-relative client_bannner py-15">
-      <canvas ref={canvasRef} className="client_banner_hex" style={{pointerEvents:'none'}}/>
+      <canvas
+        ref={canvasRef}
+        className="client_banner_hex"
+        style={{ pointerEvents: "none" }}
+      />
       <h4 className="client_head">Our Clients</h4>
-      
+
       <div className="marquee-client">
-        <Marquee autoFill>
-          <div className="row justify-content-center">
-            <div className="col-lg-11">
-              <div className="brandlist">
-                {allClients.map((item, i) => (
-                  <div className="brand-logo" key={i}>
-                    <img
-                      src={item.logo}
-                      className={`img-fluid ${item.size}`}
-                      alt="Client Logo"
-                    />
-                  </div>
-                ))}
-              </div>
+        <Marquee autoFill={true} speed={50} pauseOnHover={true}>
+          {allClients.map((item, i) => (
+            <div className="brand-logo-wrapper" key={i}>
+              <img
+                src={item.logo}
+                className={`img-fluid ${item.size}`}
+                alt="Client Logo"
+              />
             </div>
-          </div>
+          ))}
         </Marquee>
       </div>
     </div>

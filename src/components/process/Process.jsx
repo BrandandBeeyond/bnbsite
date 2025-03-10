@@ -14,7 +14,7 @@ const Process = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top", // Start pinning as soon as the section reaches the top
-        end: "+=600", // Keeps the section pinned for some time
+        end: "+=900", // Keeps the section pinned for some time
         scrub: 1,
         pin: true, 
         pinSpacing: false, // Ensures the next section doesn’t push up

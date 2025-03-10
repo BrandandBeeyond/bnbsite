@@ -19,7 +19,7 @@ body {
 }
 
 .pt-30 {
-  padding: 160px 0;
+  padding: 290px 0;
 }
 .pt-20 {
   padding-top: 90px;
@@ -78,8 +78,8 @@ body {
 .main-text {
   position: absolute;
   top: 50%;
-  left: 47%;
-  transform: translate(-47%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 .container-fluid {
@@ -142,7 +142,8 @@ body {
   align-items: center;
   width: 270px;
   height: 310px;
-  background-color: #daba14;
+  background:transparent;
+  border: 1px solid #daba14;
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -181,7 +182,10 @@ body {
 .bg-darkgreen {
   background-color: #366546;
 }
-
+.header-wrapper {
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.4s;
+  z-index: 999;
+}
 .main-links {
   font-weight: 600;
   font-size: 18px;
@@ -241,8 +245,9 @@ body {
 }
 
 .btn.contactbtn:active:before {
-  background: #3a0ca3;
+  background: #F9B000;
   transition: background 0s;
+  border: 1px solid #F9B000 !important;
 }
 .card.servicecard {
   border: 2px solid #978649;
@@ -273,7 +278,7 @@ body {
 }
 
 .p-much-top {
-  padding-top: 700px;
+  padding-top: 1000px;
 }
 @media (min-width: 1550px) and (max-width: 1700px) {
   .container-fluid {

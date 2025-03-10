@@ -20,7 +20,7 @@ const WorkSample = () => {
         scrollTrigger: {
           trigger: ".wrapper",
           start: "top top",
-          end: "+=1700",
+          end: "+=2200",
           scrub: 1,
           pin: true,
           anticipatePin: 1,
@@ -38,8 +38,9 @@ const WorkSample = () => {
     <>
       <section className="p-much-top">
         <div className="container-fluid">
-          <h2 className="work_head py-3 ps-5">Our work</h2>
+        
           <div className="wrapper" ref={containerRef}>
+            <h2 className="work_head py-3 ps-5">Our work</h2>
             <div className="horizontal-scroll-1">
               <div className="h-section first">
                 <div className="row">

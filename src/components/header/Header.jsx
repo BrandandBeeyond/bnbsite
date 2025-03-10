@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import BnbLogo from "../../images/logos/bnblogo.png";
 
 const Header = () => {
+
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const currentScrollY = window.scrollY;
+
+  
+
+  if(currentScrollY > lastScrollY && currentScrollY > 100){
+
+  }
+
   return (
-    <header className="navbar navbar-expand-lg navbar-dark py-2  position-sticky top-0 z9">
+    <header className="navbar navbar-expand-lg navbar-dark py-2 header-wrapper">
       <div className="container-fluid">
         <div className="d-flex justify-content-between">
           <div className="logo">

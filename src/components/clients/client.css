@@ -53,7 +53,7 @@
 .client_bannner::before {
   content: "";
   position: absolute;
-  height: 276px;
+  height: 600px;
   width: 100%;
   background: linear-gradient(180deg, rgba(39, 39, 39, 0) 0%, #272727 100%);
   transform: rotate(180deg);
@@ -83,4 +83,7 @@ Marquee{
 }
 .client_bannner_hex{
   pointer-events: none !important;
+}
+.brand-logo-wrapper {
+  padding: 0 40px; /* Adjust logo spacing if needed */
 }
