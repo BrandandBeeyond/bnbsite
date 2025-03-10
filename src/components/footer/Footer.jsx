@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import './footer.css';
+import "./footer.css";
 
 const Footer = () => {
   const canvasRef = useRef(null);
@@ -119,7 +119,51 @@ const Footer = () => {
   return (
     <footer className="position-relative footer_banner mt-3">
       <canvas ref={canvasRef} className="client_banner_hex" />
-      <div className="container-fluid">
+      <div className="container-fluid footercontainer">
+        <div className="row align-items-center">
+          <div className="col-lg-4">
+            <img
+              src={require("../../images/logos/bnblogo.png")}
+              className="img-fluid footlogo"
+              width={338}
+              alt=""
+            />
+          </div>
+          <div className="col-lg-4 d-flex justify-content-center flex-column">
+            <h3 className="footer_head">Contact us :</h3>
+            <ul className="footer_contacts mt-2 ps-0">
+              <li className="nav-item text-white numbers py-2">
+                +91 45674844158
+              </li>
+              <li className="nav-item text-white numbers py-2">
+                +91 45674844158
+              </li>
+            </ul>
+            <h3 className="footer_head">Office Address :</h3>
+            <div className="address mt-3">
+              <p>
+                Office No 12 ,Second Floor, Business Bay, Shree Matoshree Nagar,
+                Mumbai Naka, Nashik 422002.
+              </p>
+            </div>
+          </div>
+          <div className="col-lg-4 d-flex justify-content-center">
+            <ul className="footer_contacts mt-2 ps-0">
+              <li className="nav-item text-white numbers py-2">
+                 HOME
+              </li>
+              <li className="nav-item text-white numbers py-2">
+              ABOUT US
+              </li>
+              <li className="nav-item text-white numbers py-2">
+              SERVICES
+              </li>
+              <li className="nav-item text-white numbers py-2">
+              PORTFOLIO
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -144,7 +144,7 @@ const Client = () => {
 
   return (
     <div className="position-relative client_bannner py-15">
-      <canvas ref={canvasRef} className="client_banner_hex" />
+      <canvas ref={canvasRef} className="client_banner_hex" style={{pointerEvents:'none'}}/>
       <h4 className="client_head">Our Clients</h4>
       
       <div className="marquee-client">

@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./contact.css";
 
 const Contact = () => {
+  const services = [
+    "Social Media",
+    "Website Development",
+    "Web SEO",
+    "Google SEO & GMB",
+    "Logo design",
+    "Strategy",
+    "Motion Graphics",
+  ];
+
+  const [selectedServices, setSelectedServices] = useState([]);
+
+  const handleSelectedService=(service)=>{
+     if(selectedServices.includes(service)){
+       setSelectedServices(selectedServices.filter((item)=> item !== service))
+     }
+     else{
+       setSelectedServices([...selectedServices,service])
+     }
+  }
+
+
   return (
     <section className="pt-25">
       <div className="container-fluid">
@@ -11,11 +33,19 @@ const Contact = () => {
           </div>
           <div className="col-lg-7">
             <div className="row">
-              <h4 className="start_contact mb-5">
+              <h4 className="start_contact mb-2">
                 I am looking for a project in{" "}
               </h4>
 
-              <form className="row gy-4 mb-4">
+              <form className="row gy-4 my-4">
+                <div className="col-lg-12">
+                  <div className="servicestabs d-flex flex-wrap gap-3 mb-5">
+                    {services.map((service,index)=>(
+                      <div className={`service-tab ${selectedServices.includes(service) ? 'active':''}`} key={index} onClick={()=>handleSelectedService(service)}>{service}</div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="col-lg-6">
                   <input
                     type="text"
@@ -50,7 +80,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <div className="mt-5">
-                <button className="btn submitbtn">SEND </button>
+                  <button className="btn submitbtn">SEND </button>
                 </div>
               </form>
             </div>

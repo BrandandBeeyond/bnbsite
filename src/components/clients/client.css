@@ -48,6 +48,7 @@
   align-items: center;
   border: 1px solid #E8E8E8;
   border-radius: 65px;
+
 }
 .client_bannner::before {
   content: "";
@@ -60,7 +61,7 @@
   left: 0;
 }
 .marquee-client {
-  pointer-events: none;
+  pointer-events: none !important;
 }
 .client_head {
   font-family: "Inter", sans-serif;
@@ -73,4 +74,13 @@
   transform: translateX(-50%);
   color: var(--white-color);
   text-transform: capitalize;
+}
+Marquee{
+  pointer-events: none !important;
+}
+.brandlist{
+  pointer-events: none !important;
+}
+.client_bannner_hex{
+  pointer-events: none !important;
 }
