@@ -10,7 +10,7 @@ const Counter = () => {
             <div className="row g-2 g-sm-3 g-md-5">
               <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
-                  <h4 class="countnum" data-target="40">
+                  <h4 className="countnum" data-target="40">
                     2000+
                   </h4>
                   <span className="count-text">
@@ -20,7 +20,7 @@ const Counter = () => {
               </div>
               <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
-                  <h4 class="countnum" data-target="40">
+                  <h4 className="countnum" data-target="40">
                     12+
                   </h4>
                   <span className="count-text">
@@ -30,7 +30,7 @@ const Counter = () => {
               </div>
               <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
-                  <h4 class="countnum" data-target="40">
+                  <h4 className="countnum" data-target="40">
                     500+
                   </h4>
                   <span className="count-text">
@@ -40,7 +40,7 @@ const Counter = () => {
               </div>
               <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
-                  <h4 class="countnum" data-target="40">
+                  <h4 className="countnum" data-target="40">
                     25+
                   </h4>
                   <span className="count-text">

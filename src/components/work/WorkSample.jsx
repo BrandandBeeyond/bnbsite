@@ -21,7 +21,7 @@ const WorkSample = () => {
           trigger: ".wrapper",
           start: "top top",
           end: "+=1700",
-          scrub: 3,
+          scrub: 1,
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
