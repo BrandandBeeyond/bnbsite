@@ -295,7 +295,7 @@ body {
     font-size: 7.2px;
     line-height: 100%;
     letter-spacing: 0%;
-    
+
     border-radius: 0 !important;
     position: relative;
   }
@@ -324,10 +324,16 @@ body {
     height: 91px;
     background-color: #daba14;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
+  }
   .hexagon-sec {
     position: absolute;
     bottom: 214px;
     left: -11px;
-}
+  }
+  .pt-mob-0{
+    padding-top: 0 !important;
+  }
+  .mt-mob-m50{
+    margin-top: -300px;
+  }
 }

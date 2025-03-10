@@ -3,12 +3,12 @@ import "./counter.css";
 
 const Counter = () => {
   return (
-    <section className="counter pt-30 pb-10">
+    <section className="counter pt-30 pt-mob-0 pb-10">
       <div className="container-fluid">
-        <div className="row justify-content-center mt-5">
-          <div className="col-lg-10">
-            <div className="row g-5">
-              <div className="col-lg-3">
+        <div className="row justify-content-center mt-mob-m50 mt-sm-5">
+          <div className="col-lg-10 border-mob">
+            <div className="row g-2 g-sm-3 g-md-5">
+              <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
                   <h4 class="countnum" data-target="40">
                     2000+
@@ -18,7 +18,7 @@ const Counter = () => {
                   </span>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
                   <h4 class="countnum" data-target="40">
                     12+
@@ -28,7 +28,7 @@ const Counter = () => {
                   </span>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
                   <h4 class="countnum" data-target="40">
                     500+
@@ -38,7 +38,7 @@ const Counter = () => {
                   </span>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3 col-sm-6 col-6">
                 <div className="count text-center">
                   <h4 class="countnum" data-target="40">
                     25+
