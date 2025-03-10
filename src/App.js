@@ -47,9 +47,9 @@ const App = () => {
         <WorkSample />
       </Element>
 
-      <Element name="faqs">
+      {/* <Element name="faqs">
         <Faqs />
-      </Element>
+      </Element> */}
 
       <Element name="contact">
         <Contact />

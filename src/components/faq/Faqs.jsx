@@ -1,6 +1,6 @@
 import React from "react";
-import Faq from "react-faq-component";
-import "./faq.css";
+// import Faq from "react-faq-component";
+// import "./faq.css";
 
 const Faqs = () => {
   const data = {
@@ -45,7 +45,7 @@ const Faqs = () => {
           <h3 className="faq_head pb-20">
             Frequently <br /> asked questions
           </h3>
-          <Faq data={data} styles={styles} />
+         
         </div>
       </div>
     </section>
