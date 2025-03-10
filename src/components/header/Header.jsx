@@ -22,19 +22,19 @@ const Header = () => {
           ></button>
         </div>
 
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto navbarmenu">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ms-auto navbarmenu">
+            <li className="nav-item">
               <a href="" className="nav-link main-links active">
                 About us
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a href="" className="nav-link main-links active">
                 services
               </a>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <a href="" className="nav-link main-links active">
                 portfolio
               </a>
