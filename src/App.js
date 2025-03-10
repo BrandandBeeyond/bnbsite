@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
 import Header from "./components/header/Header";
 import HexCanvas from "./components/hexcanvas/HexCanvas";
 import About from "./components/about/About";
@@ -15,10 +15,10 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <>
-      {/* ✅ Header Section */}
+   
       <Header />
 
-      {/* ✅ Smooth Scrolling Sections */}
+     
       <Element name="hexcanvas">
         <HexCanvas />
       </Element>
