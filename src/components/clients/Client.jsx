@@ -183,7 +183,7 @@ const Client = () => {
               </div>
             ))}
           </Marquee>
-          <Marquee autoFill={true} speed={50} pauseOnHover={true} className="mt-5">
+          <Marquee autoFill={true} speed={50} pauseOnHover={true} className="mt-5 pt-4">
             {allClients.map((item, i) => (
               <div className="brand-logo-wrapper" key={i}>
                 <img

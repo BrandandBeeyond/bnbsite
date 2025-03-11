@@ -6,15 +6,21 @@
   --light-color: #d9d9d9;
   --white-color: #ffffff;
 }
-html {
+body {
+  overflow-x: hidden;
+  width: 100%;
   scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #272727;
-  overflow-x: hidden;
   font-family: "Raleway", sans-serif;
-  height: 6000px;
   /* cursor: url('./images/bee.png') 16 16, auto; */
 }
 
@@ -47,6 +53,7 @@ body {
 canvas {
   display: block; /* Removes the default inline-block spacing */
   width: 100%; /* Make canvas responsive */
+  overflow-x: hidden !important;
 }
 .main_banner::before {
   content: "";
@@ -281,7 +288,7 @@ canvas {
   width: 359px;
   cursor: pointer;
 }
-.service_head {
+.service_head h5 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -368,9 +375,57 @@ canvas {
     transform: rotate(-180deg);
     pointer-events: none;
   }
+  .mt-minus-50 {
+    margin-top: -340px;
+    position: relative;
+    z-index: 12;
+  }
+  .subhead {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .card.servicecard {
+    border: 2px solid #978649;
+    backdrop-filter: blur(29.399999618530273px);
+    background-color: #fff0c74f;
+    height: 136px;
+    width: 143.6px;
+    cursor: pointer;
+  }
+  .service_thumb {
+    height: 61.2px;
+    width: auto;
+  }
+  .service_para p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    padding: 0 20px;
+    font-size: 6.4px;
+    line-height: 11px;
+    color: var(--white-color);
+  }
+  .service_head h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 12.6px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+  .p-much-top {
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 450px) {
+  .service_head h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 9.6px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
   .main-text {
     position: absolute;
     top: 20%;
@@ -432,10 +487,7 @@ canvas {
   .pt-mob-0 {
     padding-top: 0 !important;
   }
-  .mt-mob-m50 {
-    position: relative;
-    top: -521px;
-  }
+
   .banner_head {
     color: var(--white-color);
     font-weight: 400;

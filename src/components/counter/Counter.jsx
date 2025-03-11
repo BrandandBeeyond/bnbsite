@@ -3,7 +3,7 @@ import "./counter.css";
 
 const Counter = () => {
   return (
-    <section className="counter pt-30 pt-mob-0 pb-10">
+    <section className="counter pt-30 pt-mob-0 pb-10 mt-minus-50">
       <div className="container-fluid">
         <div className="row justify-content-center mt-sm-5">
           <div className="col-lg-10 border-mob">

@@ -11,6 +11,8 @@ import Faqs from "./components/faq/Faqs";
 import Services from "./components/services/Services";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import ProcessMob from "./components/process/ProcessMob";
+import WorkSampleMob from "./components/work/WorkSampleMob";
 
 const App = () => {
   return (
@@ -39,12 +41,18 @@ const App = () => {
         <Services />
       </Element>
 
-      <Element name="process">
+      <Element name="process" className="d-none d-sm-none d-md-block">
         <Process />
       </Element>
+      <Element name="processmob" className="d-block d-sm-block d-md-none">
+        <ProcessMob />
+      </Element>
 
-      <Element name="work">
+      <Element name="work" className="d-none d-sm-block d-md-block">
         <WorkSample />
+      </Element>
+      <Element name="workmob" className="d-block d-sm-none d-md-none">
+        <WorkSampleMob />
       </Element>
 
       {/* <Element name="faqs">

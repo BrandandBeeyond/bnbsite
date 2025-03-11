@@ -1,30 +1,27 @@
-import React, { useEffect, useRef } from "react";
-import "./process.css";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from "react";
 
-const Process = () => {
+const ProcessMob = () => {
   const containerRef = useRef(null);
   const hexagonsRef = useRef([]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-  
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top", // Start pinning as soon as the section reaches the top
-        end: "+=900", // Keeps the section pinned for some time
-        scrub: 1,
-        pin: true, 
+        end: "+=400", 
         pinSpacing: false, // Ensures the next section doesn’t push up
         anticipatePin: 1,
       },
     });
-  
+
     // Delay before scrolling resumes
     tl.to({}, { duration: 3 }); // Holds for 3 seconds
-  
+
     hexagonsRef.current.forEach((hex, index) => {
       tl.to(hex, {
         backgroundColor: "#FFBB00",
@@ -32,33 +29,29 @@ const Process = () => {
         delay: index * 1.5,
       });
     });
-  
+
     ScrollTrigger.refresh();
-  
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-  
-  
-  
-
   return (
     <section className="pt-2">
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <h4 className="section_head mt-20">our process</h4>
-          <div className="col-lg-12">
-            <div className="hex-container" ref={containerRef}>
-              <div className="hex-wrapper position-relative">
-                <div className="hexagon-dumb hex-dumb"></div>
+          <h4 className="section_head text-center mt-20">our process</h4>
+          <div className="col-lg-10">
+            <div className="hex-container-mob" ref={containerRef}>
+
+            <div className="hex-wrapper position-relative">
+                <div className="hexagon-dumb hex-dumb-mob-1"></div>
               </div>
+
               <div className="hex-wrapper position-relative">
-                <div className="hexagon-dumb-small hex-dumb-1"></div>
-                <div className="hexagon-dumb-small hex-dumb-2"></div>
                 <div
                   ref={(el) => (hexagonsRef.current[0] = el)}
-                  className="hexagon hex-1"
+                  className="hexagon hex-1-mob"
                 >
                   <div className="hex-content">
                     <div className="hex-num">
@@ -77,7 +70,7 @@ const Process = () => {
               <div className="hex-wrapper position-relative">
                 <div
                   ref={(el) => (hexagonsRef.current[1] = el)}
-                  className="hexagon hex-2"
+                  className="hexagon hex-2-mob"
                 >
                   <div className="hex-content">
                     <div className="hex-num">
@@ -88,19 +81,18 @@ const Process = () => {
                       <br /> & Ideation
                     </h3>
                     <div className="hex-para">
-                      <p>Brainstorm ideas and Create wireframes, mood boards.</p>
+                      <p>
+                        Brainstorm ideas and Create wireframes, mood boards.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="hex-wrapper position-relative">
-                <div className="hexagon-dumb-mid hex-dumb-1"></div>
-                <div className="hexagon-dumb-mid hex-dumb-2"></div>
-                <div className="hexagon-dumb-mid hex-dumb-3"></div>
                 <div
                   ref={(el) => (hexagonsRef.current[2] = el)}
-                  className="hexagon hex-3"
+                  className="hexagon hex-3-mob"
                 >
                   <div className="hex-content">
                     <div className="hex-num">
@@ -110,7 +102,9 @@ const Process = () => {
                       Design <br /> & Development
                     </h3>
                     <div className="hex-para">
-                      <p>Brainstorm ideas and Create wireframes, mood boards.</p>
+                      <p>
+                        Brainstorm ideas and Create wireframes, mood boards.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -119,7 +113,7 @@ const Process = () => {
               <div className="hex-wrapper position-relative">
                 <div
                   ref={(el) => (hexagonsRef.current[3] = el)}
-                  className="hexagon hex-4"
+                  className="hexagon hex-4-mob"
                 >
                   <div className="hex-content">
                     <div className="hex-num">
@@ -134,14 +128,11 @@ const Process = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="hex-wrapper position-relative">
-                <div className="hexagon-dumb-small hex-dumb-3"></div>
-                <div className="hexagon-dumb-xssmall hex-dumb-4"></div>
-                <div className="hexagon-dumb-xssmall hex-dumb-5"></div>
                 <div
                   ref={(el) => (hexagonsRef.current[4] = el)}
-                  className="hexagon hex-5"
+                  className="hexagon hex-5-mob"
                 >
                   <div className="hex-content">
                     <div className="hex-num">
@@ -156,8 +147,9 @@ const Process = () => {
                   </div>
                 </div>
               </div>
+
               <div className="hex-wrapper position-relative">
-                <div className="hexagon-dumb hex-dumb"></div>
+                <div className="hexagon-dumb hex-dumb-mob-2"></div>
               </div>
             </div>
           </div>
@@ -167,4 +159,4 @@ const Process = () => {
   );
 };
 
-export default Process;
+export default ProcessMob;

@@ -202,3 +202,97 @@
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+
+@media (max-width: 750px) {
+  .hexagon {
+    width: 161px;
+    height: 136px;
+    background-color: #d9d9d9;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .hex-container-mob {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    justify-content: center;
+    margin: auto;
+    gap: 30px;
+    margin-top: -70px;
+  }
+  .hex-1-mob {
+    transform: translate(50px, 0);
+  }
+  .hex-2-mob {
+    transform: translate(175px, -90px);
+  }
+  .hex-3-mob {
+    transform: translate(48px, -183px);
+  }
+  .hex-4-mob {
+    transform: translate(175px, -277px);
+  }
+  .hex-5-mob {
+    transform: translate(48px, -371px);
+  }
+  .hexagon-dumb {
+    width: 161px;
+    height: 136px;
+    background-color: #d9d9d952;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hex-dumb-mob-2 {
+    transform: translate(175px, -465px);
+  }
+  .hex-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #272727;
+  }
+  .hex-para p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 8.4px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #272727;
+  }
+  .hex-num span {
+    color: #ffffffa3;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 17.5px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .hex-dumb-mob-1 {
+    transform: translate(179px, 97px);
+  }
+  .section_head {
+    font-weight: 600;
+    font-size: 19px;
+    position: relative;
+    top: 70px;
+  }
+  .m-top-minus-50{
+    margin-top: -300px;
+  }
+}

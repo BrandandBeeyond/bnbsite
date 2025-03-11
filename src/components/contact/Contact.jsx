@@ -46,7 +46,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-12">
                   <input
                     type="text"
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
@@ -54,7 +54,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-12">
                   <input
                     type="num"
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
@@ -62,7 +62,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-12 col-12">
                   <input
                     type="email"
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
@@ -70,16 +70,16 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <div className="col-lg-12">
+                <div className="col-lg-12 col-12">
                   <textarea
                     name=""
                     rows={5}
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
                     id=""
-                    placeholder="describe your project "
+                    placeholder="describe your project"
                   ></textarea>
                 </div>
-                <div className="mt-5">
+                <div className="mt-5 text-center text-sm-center text-md-start">
                   <button className="btn submitbtn">SEND </button>
                 </div>
               </form>

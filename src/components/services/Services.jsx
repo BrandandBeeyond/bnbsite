@@ -60,7 +60,7 @@ const Services = () => {
                   tiltMaxAngleY={25}
                   perspective={1000}
                 >
-                  <div className="card-body">
+                  <div className="card-body h-100">
                     <div className="d-flex flex-column justify-content-center">
                       <div className="text-center">
                         <img
@@ -69,9 +69,9 @@ const Services = () => {
                           alt=""
                         />
                         <div className="service_head my-3">
-                          <h5 className="">{item.serviceTitle}</h5>
+                          <h5 className="pt-3">{item.serviceTitle}</h5>
                         </div>
-                        <div className="service_para">
+                        <div className="service_para pt-1">
                           <p className="pb-0">{item.servicePara}</p>
                         </div>
                       </div>
@@ -92,36 +92,33 @@ const Services = () => {
               Works!
             </h2>
           </div>
-          <div className="row gy-5 pt-20">
+          <div className="row gy-5 pt-20 align-items-center">
             {servicedata.map((item, i) => (
-              <div className="col-lg-4 d-flex justify-content-center" key={i}>
-                <ReactParallaxTilt
-                  className="card servicecard rounded-5 overflow-hidden"
-                  glareEnable={true}
-                  glareMaxOpacity={0.35}
-                  scale={1.07}
-                  tiltMaxAngleX={25}
-                  tiltMaxAngleY={25}
-                  perspective={1000}
-                >
-                  <div className="card-body">
-                    <div className="d-flex flex-column justify-content-center">
-                      <div className="text-center">
-                        <img
-                          src={item.serviceThumb}
-                          className="img-fluid service_thumb"
-                          alt=""
-                        />
-                        <div className="service_head my-3">
-                          <h5 className="">{item.serviceTitle}</h5>
-                        </div>
-                        <div className="service_para">
-                          <p className="pb-0">{item.servicePara}</p>
+              <div
+                className="col-lg-4 col-sm-6 col-6 d-flex justify-content-center"
+                key={i}
+              >
+                <div className="d-flex justify-content-center flex-column align-items-center text-center">
+                  <div className="card servicecard rounded-5 overflow-hidden">
+                    <div className="card-body d-flex justify-content-center">
+                      <div className="d-flex flex-column justify-content-center">
+                        <div className="text-center">
+                          <img
+                            src={item.serviceThumb}
+                            className="img-fluid service_thumb"
+                            alt=""
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                </ReactParallaxTilt>
+                  <div className="service_head my-3">
+                    <h5 className="">{item.serviceTitle}</h5>
+                  </div>
+                  <div className="service_para">
+                    <p className="pb-0">{item.servicePara}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

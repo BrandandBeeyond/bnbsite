@@ -44,16 +44,42 @@
   height: 101px;
   border-radius: 20px;
 }
-.bg-lifespaces-logo{
+.bg-lifespaces-logo {
   background: url("../../images/lifespaces/lifespaces_logo_bg.webp");
   background-size: cover;
   position: relative;
 }
-.bg-beeyond{
+.bg-beeyond {
   background: url("../../images/beeyond/beeyond_logo_bg.webp");
   background-size: cover;
   position: relative;
 }
-.scaled{
+.scaled {
   transform: scale(1.2);
+}
+
+@media (max-width: 751px) {
+  .work_head {
+    font-weight: 400;
+    font-size: 19px;
+    padding: 0 11px;
+  }
+  .card.smallcard {
+    height: 95px !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .card.bigcard {
+    height: 205px !important;
+    width: 100%;
+    overflow: hidden;
+  }
+  .beeyondlogo{
+    height: 40px;
+  }
+  .lifespaces_logo{
+    height: 20px;
+    width: auto;
+  }
 }
