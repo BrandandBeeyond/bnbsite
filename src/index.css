@@ -130,6 +130,12 @@ canvas {
   transform: translateY(0);
   opacity: 1;
   pointer-events: all;
+  background-color: rgba(40, 39, 39, 0.09);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  z-index: 9;
 }
 
 .about_para p {

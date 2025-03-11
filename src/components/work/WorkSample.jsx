@@ -15,12 +15,12 @@ const WorkSample = () => {
       const sections = gsap.utils.toArray(".h-section");
 
       gsap.to(sections, {
-        xPercent: -100 * (sections.length - 0.95),
+        xPercent: -100 * (sections.length - 0.96),
         ease: "none",
         scrollTrigger: {
           trigger: ".wrapper",
-          start: "top top",
-          end: "+=2200",
+          start: "top top+=20",
+          end: "+=3000",
           scrub: 1,
           pin: true,
           anticipatePin: 1,
@@ -38,9 +38,9 @@ const WorkSample = () => {
     <>
       <section className="p-much-top">
         <div className="container-fluid">
-          <div className="wrapper" ref={containerRef}>
+          <div className="wrapper" >
             <h2 className="work_head py-3 ps-5">Our work</h2>
-            <div className="horizontal-scroll-1">
+            <div className="horizontal-scroll-1" ref={containerRef}>
               <div className="h-section first">
                 <div className="row">
                   <div className="col-lg-3 pe-1">
