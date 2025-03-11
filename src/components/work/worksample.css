@@ -8,6 +8,11 @@
   width: 100%;
   overflow: hidden;
 }
+.card.filledcard {
+  height: 400px;
+  width: 100%;
+  background-color: #366546;
+}
 .work_head {
   font-family: Raleway;
   font-weight: 400;
@@ -57,7 +62,33 @@
 .scaled {
   transform: scale(1.2);
 }
+.goti1 {
+  width: 66px;
+  height: 66px;
+  border-radius: 40px;
+  border: 0.4px solid #fff;
+  background-color: #B9C16C;
+}
+.goti2 {
+  width: 66px;
+  height: 66px;
+  border-radius: 40px;
+  border: 0.4px solid #fff;
+  background-color: #5C964C;
+}
+.goti3 {
+  width: 66px;
+  height: 66px;
+  border-radius: 40px;
+  border: 0.4px solid #fff;
+  background-color: #203421;
+}
+.color-box-swayam{
+  width: 106px;
+height: 255px;
+border-radius: 20px;
 
+}
 @media (max-width: 751px) {
   .work_head {
     font-weight: 400;
@@ -75,11 +106,28 @@
     width: 100%;
     overflow: hidden;
   }
-  .beeyondlogo{
+  .beeyondlogo {
     height: 40px;
   }
-  .lifespaces_logo{
+  .lifespaces_logo {
     height: 20px;
     width: auto;
+  }
+  .color-box {
+    width: 29px;
+    height: 29px;
+    border-radius: 40px;
+  }
+  .card.filledcard {
+    height: 160px;
+    width: 100%;
+    background-color: #366546;
+  }
+  .goti1 {
+    width: 26px;
+    height: 26px;
+    border-radius: 40px;
+    border: 0.4px solid #fff;
+    background-color: #B9C16C;
   }
 }

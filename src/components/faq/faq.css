@@ -1,8 +1,8 @@
 .bg-faq {
-  background: url("../../images/faqbg.webp")no-repeat;
+  background: url("../../images/faqbg.webp") no-repeat;
   background-size: contain;
   min-height: 1730px;
-  width: 100%;  
+  width: 100%;
   margin-top: 150px;
   /* padding-bottom: 100px; */
 }
@@ -15,20 +15,94 @@
   text-align: center;
   text-transform: uppercase;
   color: #252525;
+  padding-top: 200px;
+  padding-bottom: 150px;
 }
-.faq-content{
-    /* padding-top: 400px; */
-}
-.faq-content .react-faq-row {
-  margin-bottom: 20px; /* Adjust spacing between titles */
-}
-
-.faq-content .react-faq-row-title {
-  padding: 20px 0; /* Adds padding above and below each title */
-  font-size: 30px; /* Ensures title font size */
-  font-weight: bold;
+.faqs {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
+.faqs .faq {
+  margin: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #000000;
+}
 
-  
-  
+.faqs .faq .faq-question {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  font-size: 30px;
+  font-weight: 400;
+  padding-right: 80px;
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-question::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease;
+}
+.faq-answer ul li,.faq-answer p{
+   font-size: 16px;
+   line-height: 28px;
+}
+.faqs .faq .faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqs .faq.open .faq-question {
+  margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-question::after {
+  content: "-";
+}
+
+.faqs .faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .bg-faq {
+    background-size: cover;
+    background-position: top;
+    min-height: auto;
+    padding-bottom: 100px;
+}
+  .faq_head {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #252525;
+    padding-top: 37px;
+    padding-bottom: 0px;
+  }
+  .faqs .faq .faq-question {
+    font-family: "Inter", sans-serif;
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    padding-right: 35px;
+    transition: all 0.4s ease;
+}
+.faq-answer ul li,.faq-answer p{
+  font-size: 10px;
+  line-height: 18px;
+}
+}

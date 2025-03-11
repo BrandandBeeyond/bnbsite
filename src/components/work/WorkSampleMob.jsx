@@ -56,7 +56,16 @@ const WorkSampleMob = () => {
                       <div className="color-box bg-darkgreen"></div>
                     </div>
                   </div>
-                  <div className="col-lg-12"></div>
+                  <div className="col-lg-12">
+                    <div className="card filledcard rounded-3 border-0 mt-3">
+                      <img
+                        loading="lazy"
+                        src={require("../../images/bliss/bliss_web4.png")}
+                        className="img-fluid object-fit-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -105,7 +114,6 @@ const WorkSampleMob = () => {
             </div>
           </div>
 
-
           <div className="h-section-mob third mt-5">
             <div className="row">
               <div className="col-3 pe-1">
@@ -116,7 +124,6 @@ const WorkSampleMob = () => {
                         loading="lazy"
                         src={require("../../images/logos/lifespaces.png")}
                         className="img-fluid lifespaces_logo"
-                     
                         alt=""
                       />
                     </div>

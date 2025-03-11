@@ -100,8 +100,10 @@ Marquee {
     color: var(--white-color);
     text-transform: capitalize;
   }
-  .brand-logo-wrapper img {
-    height: 75px !important;
+  
+  
+  .clientmob{
+    height: 60px !important;
     width: auto;
   }
 }

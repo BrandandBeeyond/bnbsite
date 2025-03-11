@@ -35,6 +35,10 @@
   text-transform: capitalize;
   list-style: none;
 }
+.footlogo {
+  height: 134px;
+  width: auto;
+}
 .address p {
   color: #fff;
   font-weight: 400;
@@ -42,4 +46,35 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: capitalize;
+}
+@media (max-width: 750px) {
+  .footlogo {
+    height: 32px;
+    width: auto;
+  }
+  .footer_head {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #fff;
+  }
+  .numbers {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    list-style: none;
+  }
+  .address p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
 }

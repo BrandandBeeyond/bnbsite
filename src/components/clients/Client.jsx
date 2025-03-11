@@ -142,6 +142,22 @@ const Client = () => {
     { logo: Sparkle, size: "clientxbig" },
   ];
 
+  const upperClient = [
+    { logo: BlissLogo, size: "clientxsmall" },
+    { logo: TouchwoodLogo, size: "clientmob" },
+    { logo: LifespacesLogo, size: "clientmob" },
+    { logo: WeddingLogo, size: "clientxsmall" },
+    { logo: SwayamLogo, size: "clientxsmall" },
+  ];
+
+  const lowerClient = [
+    { logo: BeeyondLogo, size: "clientxsmall" },
+    { logo: AnayaLogo, size: "clientmob" },
+    { logo: NativeShirdi, size: "clientxsmall" },
+    { logo: TheBrandYogi, size: "clientxsmall" },
+    { logo: Avani, size: "clientmob" },
+    { logo: Sparkle, size: "clientxsmall" },
+  ];
   return (
     <>
       <div className="position-relative client_bannner d-none d-sm-none d-md-block py-15">
@@ -173,7 +189,7 @@ const Client = () => {
 
         <div className="">
           <Marquee autoFill={true} speed={50} pauseOnHover={true}>
-            {allClients.map((item, i) => (
+            {upperClient.map((item, i) => (
               <div className="brand-logo-wrapper" key={i}>
                 <img
                   src={item.logo}
@@ -183,8 +199,14 @@ const Client = () => {
               </div>
             ))}
           </Marquee>
-          <Marquee autoFill={true} speed={50} pauseOnHover={true} className="mt-5 pt-4">
-            {allClients.map((item, i) => (
+          <Marquee
+            autoFill={true}
+            speed={50}
+            pauseOnHover={true}
+            direction="right"
+            className="mt-5 pt-4"
+          >
+            {lowerClient.map((item, i) => (
               <div className="brand-logo-wrapper" key={i}>
                 <img
                   src={item.logo}

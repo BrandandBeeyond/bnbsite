@@ -55,9 +55,9 @@ const App = () => {
         <WorkSampleMob />
       </Element>
 
-      {/* <Element name="faqs">
+      <Element name="faqs">
         <Faqs />
-      </Element> */}
+      </Element>
 
       <Element name="contact">
         <Contact />

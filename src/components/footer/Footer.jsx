@@ -121,15 +121,15 @@ const Footer = () => {
       <canvas ref={canvasRef} className="client_banner_hex" style={{pointerEvents:'none'}} />
       <div className="container-fluid footercontainer">
         <div className="row align-items-center">
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-4">
             <img
               src={require("../../images/logos/bnblogo.png")}
               className="img-fluid footlogo"
-              width={338}
+           
               alt=""
             />
           </div>
-          <div className="col-lg-4 d-flex justify-content-center flex-column">
+          <div className="col-lg-4 col-4 d-flex justify-content-center flex-column">
             <h3 className="footer_head">Contact us :</h3>
             <ul className="footer_contacts mt-2 ps-0">
               <li className="nav-item text-white numbers py-2">
@@ -147,7 +147,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 d-flex justify-content-center">
+          <div className="col-lg-4 col-4 d-flex justify-content-center">
             <ul className="footer_contacts mt-2 ps-0">
               <li className="nav-item text-white numbers py-2">
                  HOME
