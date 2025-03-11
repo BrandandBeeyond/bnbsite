@@ -3,8 +3,8 @@ import dotImage from "../../images/logos/dots.png";
 
 const About = () => {
   return (
-    <section className="">
-      <div className="row align-items-center t-up-mob">
+    <section className="d-none d-sm-none d-md-block">
+      <div className="row align-items-center">
         <div className="col-lg-4 d-flex justify-content-center align-items-center position-relative order-md-1 order-3">
           <img
             src={dotImage}

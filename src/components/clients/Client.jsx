@@ -166,7 +166,7 @@ const Client = () => {
           </Marquee>
         </div>
       </div>
-      <div className="position-relative client_bannner py-15 d-block d-sm-block d-md-none mt-mob-m50">
+      <div className="position-relative client_bannner py-15 d-block d-sm-block d-md-none">
         <div className="pb-20">
           <h4 className="client_head">Our Clients</h4>
         </div>
