@@ -44,6 +44,10 @@ body {
   text-transform: uppercase;
   color: var(--white-color);
 }
+canvas {
+  display: block; /* Removes the default inline-block spacing */
+  width: 100%; /* Make canvas responsive */
+}
 .main_banner::before {
   content: "";
   position: absolute;
@@ -101,7 +105,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  background:transparent;
+  background: transparent;
   z-index: 999;
   transition: transform 0.5s ease-in-out, opacity 0.3s;
   will-change: transform, opacity;
@@ -166,7 +170,7 @@ body {
   align-items: center;
   width: 270px;
   height: 310px;
-  background:#daba14;;
+  background: #daba14;
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -223,7 +227,7 @@ body {
   color: var(--white-color);
 }
 .btn.contactbtn {
-  --color: #F9B000;
+  --color: #f9b000;
   font-family: inherit;
   display: inline-block;
   width: 150px;
@@ -231,7 +235,7 @@ body {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border: 1px solid #F9B000;
+  border: 1px solid #f9b000;
   transition: color 0.5s;
   z-index: 1;
   font-size: 17px;
@@ -265,9 +269,9 @@ body {
 }
 
 .btn.contactbtn:active:before {
-  background: #F9B000;
+  background: #f9b000;
   transition: background 0s;
-  border: 1px solid #F9B000 !important;
+  border: 1px solid #f9b000 !important;
 }
 .card.servicecard {
   border: 2px solid #978649;
@@ -339,14 +343,18 @@ body {
     border-radius: 0 !important;
     position: relative;
   }
+  .bnblogo {
+    width: auto;
+    height: 49px;
+  }
 }
 
 @media (max-width: 450px) {
   .main-text {
     position: absolute;
-    top: 35%;
+    top: 28%;
     left: 50%;
-    transform: translate(-47%, -35%);
+    transform: translate(-47%, -28%);
     pointer-events: none;
   }
   .about_para p {
@@ -371,7 +379,7 @@ body {
   }
   .t-up-mob {
     position: relative;
-    top: -400px;
+    top: -575px;
   }
   .hexagon-big {
     position: relative;
@@ -404,6 +412,16 @@ body {
     padding-top: 0 !important;
   }
   .mt-mob-m50 {
-    margin-top: -300px;
+    position: relative;
+    top: -521px;
+  }
+  .banner_head {
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35.35px;
+    letter-spacing: 0%;
+    pointer-events: none;
+    font-family: "Staatliches", sans-serif;
   }
 }

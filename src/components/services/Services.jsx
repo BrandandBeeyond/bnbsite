@@ -38,50 +38,96 @@ const Services = () => {
   ];
 
   return (
-    <section className="services">
-      <div className="container-fluid">
-        <div className="text-center">
-          <h4 className="subhead">We offer</h4>
-          <h2 className="work_head py-3">
-            Strategic, Smart, and Seamlessly Integrated <br /> Marketing That
-            Works!
-          </h2>
-        </div>
-        <div className="row gy-5 pt-20">
-          {servicedata.map((item, i) => (
-            <div className="col-lg-4 d-flex justify-content-center" key={i}>
-              <ReactParallaxTilt
-                className="card servicecard rounded-5 overflow-hidden"
-                glareEnable={true}
-                glareMaxOpacity={0.35}
-                scale={1.07}
-                tiltMaxAngleX={25}
-                tiltMaxAngleY={25}
-                perspective={1000}
-              >
-                <div className="card-body">
-                  <div className="d-flex flex-column justify-content-center">
-                    <div className="text-center">
-                      <img
-                        src={item.serviceThumb}
-                        className="img-fluid service_thumb"
-                        alt=""
-                      />
-                      <div className="service_head my-3">
-                        <h5 className="">{item.serviceTitle}</h5>
-                      </div>
-                      <div className="service_para">
-                        <p className="pb-0">{item.servicePara}</p>
+    <>
+      <section className="services d-none d-sm-none d-md-block">
+        <div className="container-fluid">
+          <div className="text-center">
+            <h4 className="subhead">We offer</h4>
+            <h2 className="work_head py-3">
+              Strategic, Smart, and Seamlessly Integrated <br /> Marketing That
+              Works!
+            </h2>
+          </div>
+          <div className="row gy-5 pt-20">
+            {servicedata.map((item, i) => (
+              <div className="col-lg-4 d-flex justify-content-center" key={i}>
+                <ReactParallaxTilt
+                  className="card servicecard rounded-5 overflow-hidden"
+                  glareEnable={true}
+                  glareMaxOpacity={0.35}
+                  scale={1.07}
+                  tiltMaxAngleX={25}
+                  tiltMaxAngleY={25}
+                  perspective={1000}
+                >
+                  <div className="card-body">
+                    <div className="d-flex flex-column justify-content-center">
+                      <div className="text-center">
+                        <img
+                          src={item.serviceThumb}
+                          className="img-fluid service_thumb"
+                          alt=""
+                        />
+                        <div className="service_head my-3">
+                          <h5 className="">{item.serviceTitle}</h5>
+                        </div>
+                        <div className="service_para">
+                          <p className="pb-0">{item.servicePara}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </ReactParallaxTilt>
-            </div>
-          ))}
+                </ReactParallaxTilt>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className="services d-block d-sm-block d-md-none">
+        <div className="container-fluid">
+          <div className="text-center">
+            <h4 className="subhead">We offer</h4>
+            <h2 className="work_head py-3">
+              Strategic, Smart, and Seamlessly Integrated <br /> Marketing That
+              Works!
+            </h2>
+          </div>
+          <div className="row gy-5 pt-20">
+            {servicedata.map((item, i) => (
+              <div className="col-lg-4 d-flex justify-content-center" key={i}>
+                <ReactParallaxTilt
+                  className="card servicecard rounded-5 overflow-hidden"
+                  glareEnable={true}
+                  glareMaxOpacity={0.35}
+                  scale={1.07}
+                  tiltMaxAngleX={25}
+                  tiltMaxAngleY={25}
+                  perspective={1000}
+                >
+                  <div className="card-body">
+                    <div className="d-flex flex-column justify-content-center">
+                      <div className="text-center">
+                        <img
+                          src={item.serviceThumb}
+                          className="img-fluid service_thumb"
+                          alt=""
+                        />
+                        <div className="service_head my-3">
+                          <h5 className="">{item.serviceTitle}</h5>
+                        </div>
+                        <div className="service_para">
+                          <p className="pb-0">{item.servicePara}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ReactParallaxTilt>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

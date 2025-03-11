@@ -104,8 +104,8 @@ const HexCanvas = () => {
   }, []);
 
   return (
-    <div className="main_banner position-relative t-up">
-      <canvas ref={canvasRef} />
+    <div className="main_banner position-relative t-up overflow-x-hidden">
+      <canvas ref={canvasRef} className="mainhexcanvas"/>
       <div className="row main-text">
         <div className="col-lg-12 text-center">
           <h2 className="banner_head">

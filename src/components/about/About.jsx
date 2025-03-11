@@ -13,9 +13,15 @@ const About = () => {
           />
           <div className="row justify-content-center mt-4 mt-sm-3 mt-md-0">
             <div className="col-lg-12 text-center text-sm-start text-md-start">
-              <div className="about_para">
+              <div className="about_para d-none d-sm-none d-md-block">
                 <p>
                   From strategy to storytelling ,<br /> digital to design—we craft <br />
+                  Brands Beeyond expectations.
+                </p>
+              </div>
+              <div className="about_para d-block d-sm-block d-md-none">
+                <p>
+                  From strategy to storytelling , digital to design—we craft 
                   Brands Beeyond expectations.
                 </p>
               </div>

@@ -143,28 +143,60 @@ const Client = () => {
   ];
 
   return (
-    <div className="position-relative client_bannner py-15">
-      <canvas
-        ref={canvasRef}
-        className="client_banner_hex"
-        style={{ pointerEvents: "none" }}
-      />
-      <h4 className="client_head">Our Clients</h4>
+    <>
+      <div className="position-relative client_bannner d-none d-sm-none d-md-block py-15">
+        <canvas
+          ref={canvasRef}
+          className="client_banner_hex"
+          style={{ pointerEvents: "none" }}
+        />
+        <h4 className="client_head">Our Clients</h4>
 
-      <div className="marquee-client">
-        <Marquee autoFill={true} speed={50} pauseOnHover={true}>
-          {allClients.map((item, i) => (
-            <div className="brand-logo-wrapper" key={i}>
-              <img
-                src={item.logo}
-                className={`img-fluid ${item.size}`}
-                alt="Client Logo"
-              />
-            </div>
-          ))}
-        </Marquee>
+        <div className="marquee-client">
+          <Marquee autoFill={true} speed={50} pauseOnHover={true}>
+            {allClients.map((item, i) => (
+              <div className="brand-logo-wrapper" key={i}>
+                <img
+                  src={item.logo}
+                  className={`img-fluid ${item.size}`}
+                  alt="Client Logo"
+                />
+              </div>
+            ))}
+          </Marquee>
+        </div>
       </div>
-    </div>
+      <div className="position-relative client_bannner py-15 d-block d-sm-block d-md-none mt-mob-m50">
+        <div className="pb-20">
+          <h4 className="client_head">Our Clients</h4>
+        </div>
+
+        <div className="">
+          <Marquee autoFill={true} speed={50} pauseOnHover={true}>
+            {allClients.map((item, i) => (
+              <div className="brand-logo-wrapper" key={i}>
+                <img
+                  src={item.logo}
+                  className={`img-fluid ${item.size}`}
+                  alt="Client Logo"
+                />
+              </div>
+            ))}
+          </Marquee>
+          <Marquee autoFill={true} speed={50} pauseOnHover={true} className="mt-5">
+            {allClients.map((item, i) => (
+              <div className="brand-logo-wrapper" key={i}>
+                <img
+                  src={item.logo}
+                  className={`img-fluid ${item.size}`}
+                  alt="Client Logo"
+                />
+              </div>
+            ))}
+          </Marquee>
+        </div>
+      </div>
+    </>
   );
 };
 
