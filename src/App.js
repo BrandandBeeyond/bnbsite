@@ -44,7 +44,7 @@ const App = () => {
         <Counter />
       </Element>
 
-      <Element name="client" className="overflow-x-hidden">
+      <Element name="client">
         <Client />
       </Element>
 
