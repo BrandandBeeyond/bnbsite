@@ -95,7 +95,7 @@ const Faqs = () => {
     <section className="bg-faq d-flex justify-content-center">
       <div className="container-fluid h-100">
         <div className="faq-content">
-          <h3 className="faq_head">
+          <h3 className="faq_head" data-aos="flip-up" data-aos-delay="80">
             Frequently <br /> asked questions
           </h3>
           <div className="faqs">

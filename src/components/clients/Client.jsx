@@ -166,7 +166,7 @@ const Client = () => {
           className="client_banner_hex"
           style={{ pointerEvents: "none" }}
         />
-        <h4 className="client_head">Our Clients</h4>
+        <h4 className="client_head" >Our Clients</h4>
 
         <div className="marquee-client">
           <Marquee autoFill={true} speed={50} pauseOnHover={true}>

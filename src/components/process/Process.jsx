@@ -47,7 +47,7 @@ const Process = () => {
     <section className="pt-2">
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <h4 className="section_head mt-20">our process</h4>
+          <h4 className="section_head mt-20"data-aos="fade-up" data-aos-delay="80">our process</h4>
           <div className="col-lg-12">
             <div className="hex-container" ref={containerRef}>
               <div className="hex-wrapper position-relative">

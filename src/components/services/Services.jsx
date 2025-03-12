@@ -42,8 +42,8 @@ const Services = () => {
       <section className="services d-none d-sm-none d-md-block">
         <div className="container-fluid">
           <div className="text-center">
-            <h4 className="subhead">We offer</h4>
-            <h2 className="work_head py-3">
+            <h4 className="subhead" data-aos="fade-up" data-aos-delay="80">We offer</h4>
+            <h2 className="work_head py-3" data-aos="fade-up" data-aos-delay="90">
               Strategic, Smart, and Seamlessly Integrated <br /> Marketing That
               Works!
             </h2>
@@ -59,6 +59,7 @@ const Services = () => {
                   tiltMaxAngleX={25}
                   tiltMaxAngleY={25}
                   perspective={1000}
+                  data-aos="fade-up" data-aos-delay="80"
                 >
                   <div className="card-body h-100">
                     <div className="d-flex flex-column justify-content-center">
