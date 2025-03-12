@@ -88,7 +88,7 @@ const Services = () => {
           <div className="text-center">
             <h4 className="subhead">We offer</h4>
             <h2 className="work_head py-3">
-              Strategic, Smart, and Seamlessly Integrated <br /> Marketing That
+              <span>Strategic, Smart, and Seamlessly</span> Integrated <br /> Marketing That
               Works!
             </h2>
           </div>

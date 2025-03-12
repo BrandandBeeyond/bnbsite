@@ -21,6 +21,9 @@
   letter-spacing: 0%;
   color: var(--white-color);
 }
+.work_head span{
+  color: #f9b000 !important;
+}
 .horizontal-scroll-1 {
   display: flex;
   width: 300%;
@@ -49,6 +52,7 @@
   height: 101px;
   border-radius: 20px;
 }
+
 .bg-lifespaces-logo {
   background: url("../../images/lifespaces/lifespaces_logo_bg.webp");
   background-size: cover;
