@@ -156,7 +156,7 @@ canvas {
 .bnb_video {
   height: 642px;
   width: 100%;
-  background-color: var(--light-color);
+  object-fit: cover;
 }
 .mainbtn {
   width: 213px;
@@ -170,7 +170,9 @@ canvas {
   border-radius: 0 !important;
   position: relative;
 }
-
+.mainbtn:hover{
+  
+}
 /* hexagon css */
 .dotted {
   top: -200px;

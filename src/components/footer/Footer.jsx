@@ -117,9 +117,9 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="position-relative footer_banner mt-3">
+    <footer className="position-relative footer_banner overflow-hidden mt-3">
       <canvas ref={canvasRef} className="client_banner_hex" style={{pointerEvents:'none'}} />
-      <div className="container-fluid footercontainer overflow-hidden">
+      <div className="container-fluid footercontainer">
         <div className="row align-items-center">
           <div className="col-lg-4 col-4">
             <img
@@ -129,7 +129,7 @@ const Footer = () => {
               alt=""
             />
           </div>
-          <div className="col-lg-4 col-4 d-flex justify-content-center flex-column">
+          <div className="col-lg-4 col-3 d-flex justify-content-center flex-column">
             <h3 className="footer_head">Contact us :</h3>
             <ul className="footer_contacts mt-2 ps-0">
               <li className="nav-item text-white numbers py-2">

@@ -119,7 +119,11 @@ const HexCanvas = () => {
       <canvas ref={canvasRef} className="mainhexcanvas" />
       <div className="row main-text">
         <div className="col-lg-12 text-center">
-          <h2 className="banner_head" data-aos="zoom-out-up" data-aos-delay="120">
+          <h2
+            className="banner_head"
+            data-aos="zoom-out-up"
+            data-aos-delay="120"
+          >
             360° Marketing, Infinite Possibilities - Building Brands That{" "}
             <span>Inspire, Connect & Last</span>
           </h2>
@@ -153,17 +157,25 @@ const HexCanvas = () => {
           </div>
           <div className="col-lg-8 d-flex justify-content-center order-2 order-md-3">
             <div className="bnb_video position-relative">
+              <video width="100%" height="100%" autoPlay muted loop>
+                <source
+                  src={require("../../video/bgvideo.mp4")}
+                  type="video/mp4"
+                />
+              </video>
               <div className="hexagon-sec d-flex flex-row align-items-start align-items-sm-end  gap-2 gap-sm-3 gap-md-5">
                 {/* <div className="hexagon-big order-2"></div>
                 <div className="hexagon-small order-1"></div> */}
                 <img
                   src={require("../../images/small-hex.png")}
-                  className="img-fluid order-2" style={{height:'85px'}}
+                  className="img-fluid order-2"
+                  style={{ height: "85px" }}
                   alt=""
                 />
                 <img
                   src={require("../../images/small-hex.png")}
-                  className="img-fluid order-1"style={{height:'137px'}}
+                  className="img-fluid order-1"
+                  style={{ height: "137px" }}
                   alt=""
                 />
               </div>
