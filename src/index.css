@@ -158,7 +158,7 @@ canvas {
   width: 100%;
   object-fit: cover;
 }
-.mainbtn {
+.btn.mainbtn {
   width: 213px;
   height: 64px;
   background-color: var(--main-color);
@@ -169,9 +169,12 @@ canvas {
   letter-spacing: 0%;
   border-radius: 0 !important;
   position: relative;
+  transition: all 0.3s;
 }
-.mainbtn:hover{
-  
+.btn.mainbtn:hover{
+  background-color: var(--dark-color);
+  color: var(--white-color) !important;
+  border: 1px solid var(--white-color) !important;
 }
 /* hexagon css */
 .dotted {

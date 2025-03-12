@@ -15,6 +15,54 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.social-links {
+  display: flex;
+  margin-top: 30px;
+}
+
+.social-links button {
+  width: 39.84px;
+  height: 39.84px;
+  text-align: center;
+  text-decoration: none;
+  color: #272727;
+  border: none !important;
+  margin: 0 10px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.social-links button .fab {
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-links button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: #E7E7E7;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-links button:hover::after {
+  top: 0;
+}
+
+.social-links button:hover .fab {
+  color: #FFBB00;
+}
+
+
+
 .footlogo {
   pointer-events: none !important;
 }

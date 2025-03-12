@@ -1,10 +1,10 @@
 .card.smallcard {
-  height: 328px;
+  height: 291px;
   width: 100%;
   overflow: hidden;
 }
 .card.bigcard {
-  height: 670px;
+  height: 597px;
   width: 100%;
   overflow: hidden;
 }
@@ -21,7 +21,7 @@
   letter-spacing: 0%;
   color: var(--white-color);
 }
-.work_head span{
+.work_head span {
   color: #f9b000 !important;
 }
 .horizontal-scroll-1 {
@@ -30,7 +30,7 @@
 }
 
 .h-section {
-  flex: 0 0 100vw;
+  flex: 0 0 90vw;
   padding: 20px;
 }
 .bg-bliss-logo {
@@ -88,8 +88,8 @@
   background-color: #203421;
 }
 .color-box-swayam {
-  width: 106px;
-  height: 255px;
+  width: 88px;
+  height: 179px;
   border-radius: 20px;
 }
 .blisslogo {

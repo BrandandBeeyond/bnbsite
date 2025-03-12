@@ -116,27 +116,46 @@ const Footer = () => {
     };
   }, []);
 
+
+ 
   return (
     <footer className="position-relative footer_banner overflow-hidden mt-3">
-      <canvas ref={canvasRef} className="client_banner_hex" style={{pointerEvents:'none'}} />
+      <canvas
+        ref={canvasRef}
+        className="client_banner_hex"
+      />
       <div className="container-fluid footercontainer">
         <div className="row align-items-center">
           <div className="col-lg-4 col-4">
             <img
               src={require("../../images/logos/bnblogo.png")}
               className="img-fluid footlogo"
-           
               alt=""
             />
+            <div className="social-links">
+              <button className="" onClick={()=>window.open('https://www.facebook.com/brandandbeeyond/')}>
+                <i className="fab fa-facebook-f"></i>
+              </button>
+              <button className="" onClick={()=>window.open('https://www.instagram.com/brandandbeeyond/')}>
+                <i className="fab fa-instagram"></i>
+              </button>
+              <button className="" onClick={()=>window.open('https://in.linkedin.com/company/brandandbeeyond')}>
+                <i className="fab fa-linkedin-in"></i>
+              </button>
+              <button className="" onClick={()=>window.open('https://wa.me/+917030060904')}>
+                <i className="fab fa-whatsapp"></i>
+              </button>
+             
+            </div>
           </div>
           <div className="col-lg-4 col-3 d-flex justify-content-center flex-column">
             <h3 className="footer_head">Contact us :</h3>
             <ul className="footer_contacts mt-2 ps-0">
               <li className="nav-item text-white numbers py-2">
-                +91 45674844158
+                +91 70300 07581
               </li>
               <li className="nav-item text-white numbers py-2">
-                +91 45674844158
+                +91 70300 60904
               </li>
             </ul>
             <h3 className="footer_head">Office Address :</h3>
@@ -149,18 +168,10 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 col-4 d-flex justify-content-center">
             <ul className="footer_contacts mt-2 ps-0">
-              <li className="nav-item text-white numbers py-2">
-                 HOME
-              </li>
-              <li className="nav-item text-white numbers py-2">
-              ABOUT US
-              </li>
-              <li className="nav-item text-white numbers py-2">
-              SERVICES
-              </li>
-              <li className="nav-item text-white numbers py-2">
-              PORTFOLIO
-              </li>
+              <li className="nav-item text-white numbers py-2">HOME</li>
+              <li className="nav-item text-white numbers py-2">ABOUT US</li>
+              <li className="nav-item text-white numbers py-2">SERVICES</li>
+              <li className="nav-item text-white numbers py-2">PORTFOLIO</li>
             </ul>
           </div>
         </div>

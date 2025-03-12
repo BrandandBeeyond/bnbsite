@@ -19,7 +19,7 @@ const WorkSample = () => {
         ease: "none",
         scrollTrigger: {
           trigger: ".wrapper",
-          start: "top top+=20",
+          start: "top top+=0",
           end: "+=3000",
           scrub: 1,
           pin: true,
