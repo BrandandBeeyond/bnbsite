@@ -19,7 +19,7 @@ const About = () => {
                   Brands Beeyond expectations.
                 </p>
               </div>
-              <div className="about_para d-block d-sm-block d-md-none">
+              <div className="about_para d-block d-sm-block d-md-none" data-aos="fade-up" data-aos-delay="50">
                 <p>
                   From strategy to storytelling , digital to design—we craft 
                   Brands Beeyond expectations.

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Element } from "react-scroll";
 import Header from "./components/header/Header";
 import HexCanvas from "./components/hexcanvas/HexCanvas";
@@ -13,14 +13,25 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ProcessMob from "./components/process/ProcessMob";
 import WorkSampleMob from "./components/work/WorkSampleMob";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+
+    window.addEventListener("load", AOS.refresh);
+    return () => window.removeEventListener("load", AOS.refresh);
+  }, []);
+
   return (
     <>
-   
       <Header />
 
-     
       <Element name="hexcanvas">
         <HexCanvas />
       </Element>

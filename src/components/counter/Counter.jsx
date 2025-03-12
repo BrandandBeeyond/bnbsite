@@ -54,7 +54,7 @@ const Counter = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="counter pt-30 pt-mob-0 pb-10 mt-minus-50">
+    <section ref={sectionRef} className="counter pt-30 pt-mob-0 pb-10 mt-minus-50" data-aos="zoom-y-out">
       <div className="container-fluid">
         <div className="row justify-content-center mt-sm-5">
           <div className="col-lg-10 border-mob">

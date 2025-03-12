@@ -119,7 +119,7 @@ const HexCanvas = () => {
       <canvas ref={canvasRef} className="mainhexcanvas" />
       <div className="row main-text">
         <div className="col-lg-12 text-center">
-          <h2 className="banner_head">
+          <h2 className="banner_head" data-aos="zoom-y-out" data-aos-delay="50">
             360° Marketing, Infinite Possibilities - Building Brands That{" "}
             <span>Inspire, Connect & Last</span>
           </h2>
