@@ -134,6 +134,14 @@ canvas {
   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
   z-index: 9;
 }
+.main-links{
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main-links:hover{
+  color: var(--main-color);
+  transform: scale(1.01);
+}
 
 .about_para p {
   font-weight: 400;
@@ -242,6 +250,7 @@ canvas {
   display: inline-block;
   width: 150px;
   height: 43px;
+  line-height: 30px;
   position: relative;
   cursor: pointer;
   overflow: hidden;

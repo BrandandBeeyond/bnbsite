@@ -117,7 +117,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="position-relative footer_banner mt-3">
+    <footer className="position-relative footer_banner mt-3 overflow-x-hidden">
       <canvas ref={canvasRef} className="client_banner_hex" style={{pointerEvents:'none'}} />
       <div className="container-fluid footercontainer">
         <div className="row align-items-center">

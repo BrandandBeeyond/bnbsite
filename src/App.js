@@ -33,7 +33,7 @@ const App = () => {
         <Counter />
       </Element>
 
-      <Element name="client">
+      <Element name="client" className="overflow-x-hidden">
         <Client />
       </Element>
 

@@ -36,8 +36,10 @@ const About = () => {
         <div className="col-lg-8 d-flex justify-content-center order-2 order-md-3">
           <div className="bnb_video position-relative">
             <div className="hexagon-sec d-flex flex-row align-items-start align-items-sm-end  gap-2 gap-sm-3 gap-md-5">
-              <div className="hexagon-big order-2"></div>
-              <div className="hexagon-small order-1"></div>
+              {/* <div className=""></div> */}
+              <img src={require('../../images/big-hex.png')} className="img-fluid order-2" alt="" />
+              <img src={require('../../images/small-hex.png')} className="img-fluid order-1" alt="" />
+              {/* <div className="hexagon-small order-1"></div> */}
             </div>
           </div>
         </div>

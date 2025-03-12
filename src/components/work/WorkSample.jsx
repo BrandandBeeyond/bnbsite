@@ -49,9 +49,8 @@ const WorkSample = () => {
                         <div className="card smallcard rounded-3 border-0 bg-bliss-logo d-flex justify-content-center align-items-center">
                           <img
                             loading="lazy"
-                            src={require("../../images/logos/bliss.png")}
-                            className="img-fluid"
-                            width={120}
+                            src={require("../../images/bliss/newbliss.png")}
+                            className="img-fluid blisslogo"
                             alt=""
                           />
                         </div>
@@ -225,9 +224,9 @@ const WorkSample = () => {
                         <div className="card smallcard rounded-3 border-0">
                           <img
                             loading="lazy"
-                            src={require("../../images/swayam/swayam_thumb1.webp")}
-                            className="img-fluid object-fit-cover h-100 scaled"
-                            style={{ objectPosition: "115%" }}
+                            src={require('../../images/swayam/swayam.png')}
+                            className="img-fluid"
+                          
                             alt=""
                           />
                         </div>
