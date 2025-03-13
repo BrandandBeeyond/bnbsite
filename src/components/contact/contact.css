@@ -117,3 +117,13 @@
     text-transform: capitalize;
   }
 }
+@media (max-width: 500px) {
+  .contact_head {
+    font-size: 19px;
+  }
+  .start_contact {
+    font-family: Inter, sans-serif;
+    font-size: 12.6px;
+    padding-top: 20px;
+  }
+}
