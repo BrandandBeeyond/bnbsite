@@ -1,21 +1,22 @@
-import React from 'react'
-import HexCanvas from '../components/hexcanvas/HexCanvas'
-import About from '../components/about/About'
-import Counter from '../components/counter/Counter'
-import Client from '../components/clients/Client'
-import { Element } from 'react-scroll'
-import Services from '../components/services/Services'
-import Process from '../components/process/Process'
-import ProcessMob from '../components/process/ProcessMob'
-import WorkSample from '../components/work/WorkSample'
-import WorkSampleMob from '../components/work/WorkSampleMob'
-import Faqs from '../components/faq/Faqs'
-import Contact from '../components/contact/Contact'
+import React from "react";
+import HexCanvas from "../components/hexcanvas/HexCanvas";
+import About from "../components/about/About";
+import Counter from "../components/counter/Counter";
+import Client from "../components/clients/Client";
+import { Element } from "react-scroll";
+import Services from "../components/services/Services";
+import Process from "../components/process/Process";
+import ProcessMob from "../components/process/ProcessMob";
+import WorkSample from "../components/work/WorkSample";
+import WorkSampleMob from "../components/work/WorkSampleMob";
+import Faqs from "../components/faq/Faqs";
+import Contact from "../components/contact/Contact";
 
 const Home = () => {
   return (
     <>
-        <Element name="hexcanvas">
+      <h1 className="visual-hidden">Best web development company in Nashik</h1>
+      <Element name="hexcanvas">
         <HexCanvas />
       </Element>
 
@@ -24,7 +25,6 @@ const Home = () => {
       </Element>
 
       <Element name="counter">
-      <h1 className="visual-hidden">Best web development company in Nashik</h1>
         <Counter />
       </Element>
 
@@ -58,7 +58,7 @@ const Home = () => {
         <Contact />
       </Element>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
