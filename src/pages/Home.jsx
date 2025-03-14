@@ -24,6 +24,7 @@ const Home = () => {
       </Element>
 
       <Element name="counter">
+      <h1 className="visual-hidden">Best web development company in Nashik</h1>
         <Counter />
       </Element>
 
