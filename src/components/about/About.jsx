@@ -4,6 +4,7 @@ import dotImage from "../../images/logos/dots.png";
 const About = () => {
   return (
     <section className="d-none d-sm-none d-md-block">
+       <h1 className="visual-hidden">Best web development company in Nashik</h1>
       <div className="row align-items-center">
         <div className="col-lg-4 d-flex justify-content-center align-items-center position-relative order-md-1 order-3">
           <img
