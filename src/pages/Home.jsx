@@ -16,8 +16,8 @@ import { Helmet } from "react-helmet-async";
 const Home = () => {
   return (
     <>
-      <Helmet>
-      <link rel="canonical" href="https://brandandbeeyond.com/" />
+      <Helmet prioritizeSeoTags>
+        <link rel="canonical" href="https://brandandbeeyond.com/" />
       </Helmet>
       <h1 className="visual-hidden">Best web development company in Nashik</h1>
 
