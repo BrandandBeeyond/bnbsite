@@ -17,7 +17,9 @@ const Home = () => {
   return (
     <>
       <Helmet prioritizeSeoTags>
-        <link rel="canonical" href="https://brandandbeeyond.com/" />
+        <title>Best Web Development Company in Nashik - Brandandbeeyond</title>
+        {/* <link rel="canonical" href="https://brandandbeeyond.com/" /> */}
+        
       </Helmet>
       <h1 className="visual-hidden">Best web development company in Nashik</h1>
 
