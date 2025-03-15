@@ -11,11 +11,16 @@ import WorkSample from "../components/work/WorkSample";
 import WorkSampleMob from "../components/work/WorkSampleMob";
 import Faqs from "../components/faq/Faqs";
 import Contact from "../components/contact/Contact";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+      <link rel="canonical" href="https://brandandbeeyond.com/" />
+      </Helmet>
       <h1 className="visual-hidden">Best web development company in Nashik</h1>
+
       <Element name="hexcanvas">
         <HexCanvas />
       </Element>
