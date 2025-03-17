@@ -18,8 +18,49 @@ const Home = () => {
     <>
       <Helmet prioritizeSeoTags>
         <title>Best Web Development Company in Nashik - Brandandbeeyond</title>
-        {/* <link rel="canonical" href="https://brandandbeeyond.com/" /> */}
+        <meta
+          name="description"
+          content="Brandandbeeyond is an elite web development company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
+        />
+        <link rel="canonical" href="https://brandandbeeyond.com/" />
+
+        <meta
+          property="og:title"
+          content="Best Web Development Company in Nashik - Brandandbeeyond"
+        />
+        <meta
+          property="og:description"
+          content="Brandandbeeyond is an elite web development company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
+        />
+        <meta
+          property="og:image"
+          content="https://brandandbeeyond.com/static/media/bnblogo.ff5df8975ae1637aa426.png"
+        />
+        <meta property="og:url" content="https://brandandbeeyond.com/" />
+        <meta property="og:type" content="website" />
+
         
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Best Web Development Company in Nashik - Brandandbeeyond"
+        />
+        <meta
+          name="twitter:description"
+          content="Brandandbeeyond is an elite web development company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
+        />
+        <meta
+          name="twitter:image"
+          content="https://brandandbeeyond.com/static/media/bnblogo.ff5df8975ae1637aa426.png"
+        />
+
+        {/* Additional Meta Tags */}
+        <meta
+          name="keywords"
+          content="web development, Nashik, digital marketing, branding, SEO, bespoke solutions"
+        />
+        <meta name="author" content="Brandandbeeyond" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
       <h1 className="visual-hidden">Best web development company in Nashik</h1>
 
