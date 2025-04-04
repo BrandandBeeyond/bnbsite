@@ -8,10 +8,11 @@ import Home from "./pages/Home";
 import { useLocation } from "react-router-dom";
 
 const App = () => {
+  const TRACKING_ID = "G-60G9YGJRFT";
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.initialize("G-60G9YGJRFT");
+    ReactGA.initialize(TRACKING_ID);
   }, []);
 
   useEffect(() => {
