@@ -4,10 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import ReactGA from "react-ga";
+
 import { HelmetProvider } from "react-helmet-async";
 
-ReactGA.initialize("G-60G9YGJRFT");
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HelmetProvider>
