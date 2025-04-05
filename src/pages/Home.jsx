@@ -40,7 +40,7 @@ const Home = () => {
           property="og:image"
           content="https://brandandbeeyond.com/static/media/bnblogo.ff5df8975ae1637aa426.png"
         />
-        <meta property="og:url" content="https://brandandbeeyond.com/" />
+        <meta property="og:url" content="https://brandandbeeyond.com/"/>
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
