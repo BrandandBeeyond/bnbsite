@@ -20,11 +20,11 @@ const Home = () => {
         <title>Best Web Development Company in Nashik - Brandandbeeyond</title>
         <meta
           name="keywords"
-          content="website development company Nashik, website development services in Nashik, Best web development services in Nashik , Best branding agency in Nashik , web designing services in Nashik , Social media marketing company , Logo designing services in Nashik ,Graphic designing, Graphic designing services in nashik"
+          content="Website development company in Nashik, web designing company in Nashik,web designing services near nashik, Best web development services in Nashik ,  Social media marketing company , Logo designing services in Nashik ,Graphic designing, Graphic designing services in nashik"
         />
         <meta
           name="description"
-          content="Brandandbeeyond is an elite web development company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
+          content="Brandandbeeyond is an elite web designing company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
         />
         <link rel="canonical" href="https://brandandbeeyond.com/" />
 
@@ -58,14 +58,11 @@ const Home = () => {
         />
 
         {/* Additional Meta Tags */}
-        <meta
-          name="keywords"
-          content="web development, Nashik, digital marketing, branding, SEO, bespoke solutions"
-        />
+       
         <meta name="author" content="Brandandbeeyond" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-      <h1 className="visual-hidden">Best web development company in Nashik</h1>
+      <h1 className="visual-hidden">Best Website Design company in Nashik</h1>
 
       <Element name="hexcanvas">
         <HexCanvas />
