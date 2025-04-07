@@ -17,15 +17,15 @@ const Home = () => {
   return (
     <>
       <Helmet prioritizeSeoTags>
-        <title>Best Web Development Company in Nashik - Brandandbeeyond</title>
+      <title>Best Website Design & Development in Nashik | Brandandbeeyond</title>
         <meta
           name="keywords"
           content="Website development company in Nashik, web designing company in Nashik,web designing services near nashik, Best web development services in Nashik ,  Social media marketing company , Logo designing services in Nashik ,Graphic designing, Graphic designing services in nashik"
         />
         <meta
-          name="description"
-          content="Brandandbeeyond is an elite web designing company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
-        />
+      name="description"
+      content="Brand and beeyond is an elite web design and development company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
+    />
         <link rel="canonical" href="https://brandandbeeyond.com/" />
 
         <meta
@@ -61,6 +61,38 @@ const Home = () => {
        
         <meta name="author" content="Brandandbeeyond" />
         <meta name="robots" content="index, follow" />
+
+        <script type="application/ld+json">
+{`
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Brand and Beeyond",
+  "url": "https://brandandbeeyond.com",
+  "logo": "https://brandandbeeyond.com/static/media/bnblogo.ff5df8975ae1637aa426.png",
+  "sameAs": [
+    "https://www.facebook.com/brandandbeeyond",
+    "https://www.instagram.com/brandandbeeyond/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-7030060904",
+    "contactType": "Customer Support",
+    "areaServed": "IN",
+    "availableLanguage": "English"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Office No 12 Second Floor, Business Bay, Shree, Hari Kute Marg, near Hotel Sandeep, Mumbai Naka, Matoshree Nagar",
+    "addressLocality": "Nashik",
+    "addressRegion": "MH",
+    "postalCode": "422001",
+    "addressCountry": "IN"
+  },
+  "description": "Brand and Beeyond is a top-rated web design and development company in Nashik, offering digital marketing, logo design, and SEO services."
+}
+`}
+</script>
       </Helmet>
       <h1 className="visual-hidden">Best Website Design company in Nashik</h1>
 
