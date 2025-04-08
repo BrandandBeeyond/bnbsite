@@ -94,10 +94,10 @@ const Home = () => {
 `}
 </script>
       </Helmet>
-      <h1 className="visual-hidden">Best Website Design company in Nashik</h1>
+     
 
       <Element name="hexcanvas">
-        <HexCanvas />
+        <HexCanvas title={`Best  <span class='highlight'>website design & development</span> company in Nashik`}/>
       </Element>
 
       <Element name="about">

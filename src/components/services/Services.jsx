@@ -42,10 +42,9 @@ const Services = () => {
       <section className="services d-none d-sm-none d-md-block">
         <div className="container-fluid">
           <div className="text-center">
-            <h4 className="subhead" data-aos="fade-up" data-aos-delay="80">We offer</h4>
+            <h4 className="subhead" data-aos="fade-up" data-aos-delay="80">services</h4>
             <h2 className="work_head py-3" data-aos="fade-up" data-aos-delay="90">
-              Strategic, Smart, and Seamlessly Integrated <br /> Marketing That
-              Works!
+            More than just web development
             </h2>
           </div>
           <div className="row gy-5 pt-20">

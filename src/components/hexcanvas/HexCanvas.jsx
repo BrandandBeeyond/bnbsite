@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const HexCanvas = () => {
+const HexCanvas = ({title}) => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const needsRedrawRef = useRef(false);
@@ -119,14 +119,14 @@ const HexCanvas = () => {
       <canvas ref={canvasRef} className="mainhexcanvas" />
       <div className="row main-text">
         <div className="col-lg-12 text-center">
-          <h2
+          <h1
             className="banner_head"
             data-aos="zoom-out-up"
             data-aos-delay="120"
+            dangerouslySetInnerHTML={{ __html: title }}
           >
-            360° Marketing, Infinite Possibilities - Building Brands That{" "}
-            <span>Inspire, Connect & Last</span>
-          </h2>
+           
+          </h1>
         </div>
       </div>
       <section className="d-block d-sm-block d-md-none">
