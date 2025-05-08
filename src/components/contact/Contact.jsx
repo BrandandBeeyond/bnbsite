@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./contact.css";
+import emailjs from 'emailjs-com';
+import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "../../config";
 
 const Contact = () => {
   const services = [
@@ -14,15 +16,73 @@ const Contact = () => {
 
   const [selectedServices, setSelectedServices] = useState([]);
 
-  const handleSelectedService=(service)=>{
-     if(selectedServices.includes(service)){
-       setSelectedServices(selectedServices.filter((item)=> item !== service))
-     }
-     else{
-       setSelectedServices([...selectedServices,service])
-     }
-  }
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+  const [showPopup, setShowPopup] = useState(false);
 
+  const handleSelectedService = (service) => {
+    if (selectedServices.includes(service)) {
+      setSelectedServices(selectedServices.filter((item) => item !== service));
+    } else {
+      setSelectedServices([...selectedServices, service]);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      alert("Please fill all the fields.");
+      return;
+    }
+
+    const formMessage = `
+      Name: ${formData.name}
+      Phone: ${formData.phone}
+      Email: ${formData.email}
+      Services Interested In: ${selectedServices.join(", ")}
+      message: ${formData.message}
+    `;
+
+    const templateParams = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      services: selectedServices.join(", "),
+      message: formData.message,
+    };
+
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      templateParams,
+      USER_ID
+    ).then((response)=>{
+      console.log("Email successfully sent:", response);
+      setShowPopup(true);
+    },
+    (err) => {
+      console.error("Email sending failed:", err);
+    }) 
+  };
+  
 
   return (
     <section className="pt-25">
@@ -37,11 +97,19 @@ const Contact = () => {
                 I am looking for a project in{" "}
               </h4>
 
-              <form className="row gy-4 my-4">
+              <form className="row gy-4 my-4" onSubmit={handleSubmit}>
                 <div className="col-lg-12">
                   <div className="servicestabs d-flex flex-wrap gap-3 mb-5">
-                    {services.map((service,index)=>(
-                      <div className={`service-tab ${selectedServices.includes(service) ? 'active':''}`} key={index} onClick={()=>handleSelectedService(service)}>{service}</div>
+                    {services.map((service, index) => (
+                      <div
+                        className={`service-tab ${
+                          selectedServices.includes(service) ? "active" : ""
+                        }`}
+                        key={index}
+                        onClick={() => handleSelectedService(service)}
+                      >
+                        {service}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -49,33 +117,40 @@ const Contact = () => {
                 <div className="col-lg-6 col-12">
                   <input
                     type="text"
+                    name="name"
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
                     placeholder="Name"
+                    onChange={handleChange}
                     required
                   />
                 </div>
                 <div className="col-lg-6 col-12">
                   <input
-                    type="num"
+                    type="tel"
+                    name="phone"
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
                     placeholder="Phone number"
+                    onChange={handleChange}
                     required
                   />
                 </div>
                 <div className="col-lg-12 col-12">
                   <input
                     type="email"
+                    name="email"
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
                     placeholder="Email"
+                    onChange={handleChange}
                     required
                   />
                 </div>
                 <div className="col-lg-12 col-12">
                   <textarea
-                    name=""
+                    name="message"
                     rows={5}
                     className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
                     id=""
+                    onChange={handleChange}
                     placeholder="describe your project"
                   ></textarea>
                 </div>
@@ -87,6 +162,15 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <h3>Thanks for contacting us!</h3>
+            <p>We will get back to you shortly.</p>
+            <button onClick={() => setShowPopup(false)} className="popup-close-btn">Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
