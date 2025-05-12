@@ -11,8 +11,8 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 
 const App = () => {
-  // const TRACKING_ID = "G-60G9YGJRFT";
-  const TRACKING_ID = "G-8TTH8GV3LY";
+  const TRACKING_ID = "G-60G9YGJRFT";
+  // const TRACKING_ID = "G-8TTH8GV3LY";
   const location = useLocation();
 
 
