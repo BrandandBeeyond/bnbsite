@@ -112,11 +112,11 @@ const About = () => {
         <div className="container-fluid text-center">
           <div className="titlesec position-relative">
             <div className="blury-circle"></div>
-            <h2 className="meetourteam">Meet our fabulous team </h2>
+            <h2 className="meetourteam" ref={headingRef}>Meet our fabulous team </h2>
             <div className="row justify-content-center">
               <div className="col-lg-7">
                 <div className="about-para py-3 py-sm-5">
-                  <p>
+                  <p ref={headingRef}>
                     "Meet our Creative Team A family of creators, thinkers, and
                     storytellers shaping brands that matter{" "}
                   </p>
@@ -393,7 +393,7 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-lg-4">
             <div className="position-relative text-center realvoicetext">
-              <h2 className="meetourteam text-white">
+              <h2 className="meetourteam text-white" ref={headingRef}>
                 Real voices <br />
                 Real branding journeys
               </h2>
