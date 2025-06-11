@@ -145,19 +145,20 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 1000px;
   pointer-events: none;
 }
 .container-fluid {
   max-width: 1400px !important;
 }
 .banner_head {
-  color: var(--white-color);
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 56.35px;
-  letter-spacing: 0%;
-  pointer-events: none;
-  font-family: "Staatliches", sans-serif;
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 78.35px;
+    letter-spacing: 0%;
+    pointer-events: none;
+    font-family: "Staatliches", sans-serif;
 }
 .banner_head span {
   color: var(--main-color);

@@ -9,7 +9,10 @@
       name="description"
       content="Brand and beeyond is an elite web design and development company in Nashik that crafts innovative and bespoke website solutions that propel your brand to the forefront."
     />
-    <meta name="google-site-verification" content="B4Q5BDkLAm7oPFNmFsdy6Alk4hevL2s-yo8CwIOSWew" />
+    <meta
+      name="google-site-verification"
+      content="B4Q5BDkLAm7oPFNmFsdy6Alk4hevL2s-yo8CwIOSWew"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -26,14 +29,18 @@
       crossorigin="anonymous"
     ></script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11170730270">
-    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11170730270"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'AW-11170730270');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-11170730270");
     </script>
     <title>Best Website Design Company in Nashik | Brandandbeeyond</title>
   </head>
@@ -47,37 +54,42 @@
     <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
 
     <noscript>
-      <p>Brand and Beeyond is the best website design and development company in Nashik, specializing in innovative website designing, SEO, and digital marketing. 
-      Our expert developers craft high-performance websites tailored for businesses. If you’re looking for top-notch web development services in Nashik, 
-      contact us today!</p>
+      <p>
+        Brand and Beeyond is the best website design and development company in
+        Nashik, specializing in innovative website designing, SEO, and digital
+        marketing. Our expert developers craft high-performance websites
+        tailored for businesses. If you’re looking for top-notch web development
+        services in Nashik, contact us today!
+      </p>
     </noscript>
     <div id="root">
-        <!-- <h1 class="">Best web Development Company in Nashik</h1> -->
+      <!-- <h1 class="">Best web Development Company in Nashik</h1> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const preloader = document.getElementById("preloader");
-    const video = document.getElementById("preloader-video");
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("preloader");
+        const video = document.getElementById("preloader-video");
 
-    const isHome = window.location.pathname === "/";
-    const hasSeenPreloader = localStorage.getItem("hasSeenPreloader") === "true";
+        const isHome = window.location.pathname === "/";
+        const hasSeenPreloader =
+          localStorage.getItem("hasSeenPreloader") === "true";
 
-    if (isHome && !hasSeenPreloader) {
-      video.onended = function () {
-        preloader.style.opacity = "0";
-        preloader.style.transition = "opacity 1s ease-out";
-        setTimeout(() => {
+        if (isHome && !hasSeenPreloader) {
+          video.onended = function () {
+            preloader.style.opacity = "0";
+            preloader.style.transition = "opacity 1s ease-out";
+            setTimeout(() => {
+              preloader.style.display = "none";
+            }, 1000);
+            localStorage.setItem("hasSeenPreloader", "true"); // mark as seen
+          };
+        } else {
+          // instantly hide preloader
           preloader.style.display = "none";
-        }, 1000);
-        localStorage.setItem("hasSeenPreloader", "true"); // mark as seen
-      };
-    } else {
-      // instantly hide preloader
-      preloader.style.display = "none";
-    }
-  });
-</script>
+        }
+      });
+    </script>
 
     <style>
       #preloader {
@@ -102,7 +114,6 @@
       }
     </style>
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   </body>
 </html>
