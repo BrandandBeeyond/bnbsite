@@ -121,7 +121,7 @@ const HexCanvas = ({title}) => {
     <div
   className="main_banner position-relative t-up overflow-x-hidden"
   style={{
-    height: window.innerWidth <= 768 ? '800px' : '100vh',
+    height: window.innerWidth <= 768 ? '946px' : '100vh',
     overflow: 'hidden',
   }}
 >

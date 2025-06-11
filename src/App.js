@@ -19,6 +19,7 @@ import PrintMediadesigns from "./pages/Services/PrintMediadesigns";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import gsap from "gsap";
 import Sidebar from "./components/header/Sidebar";
+import Blogs from "./pages/Blogs";
 
 const App = () => {
   const TRACKING_ID = "G-8TTH8GV3LY";
@@ -90,6 +91,7 @@ const App = () => {
               <Route path="/logodesign" element={<LogoDesign />} />
               <Route path="/websitedesign" element={<WebsiteDesign />} />
               <Route path="/socialmedia" element={<SocialMedia />} />
+              <Route path="/blogs" element={<Blogs />} />
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
               <Route
                 path="/printmediadesigns"
