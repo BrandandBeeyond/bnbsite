@@ -11,7 +11,7 @@ const Blogs = () => {
           <div className="row gy-4">
             <div className="row text-center mt-3">
               <h2 className="foliohead" style={{ color: "#fff" }}>
-                   Blogs
+                   Comming soon
               </h2>
             </div>
           </div>
