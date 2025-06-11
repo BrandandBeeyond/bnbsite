@@ -152,7 +152,7 @@ const About = () => {
                     </div>
                     <div className="hexagon-team">
                       <img
-                        src={require("../images/team/pallavi.jpg")}
+                        src={require("../images/team/pallavimam.jpg")}
                         className="img-fluid"
                         alt=""
                       />
@@ -274,7 +274,7 @@ const About = () => {
                     <div className="d-flex flex-row  gap-2">
                       <div className="hexagon-team">
                         <img
-                          src={require("../images/team/pallavi.jpg")}
+                          src={require("../images/team/pallavimam.jpg")}
                           className="img-fluid"
                           alt=""
                         />
