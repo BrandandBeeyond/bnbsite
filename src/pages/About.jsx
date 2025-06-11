@@ -93,18 +93,7 @@ const About = () => {
         </section>
       </div>
 
-      <section className="about-company my-5 py-5">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="about-para text-start text-white">
-                <p>"Fill the Form. Let’s Make Your Brand Legendary "</p>
-              </div>
-            </div>
-            <div className="col-lg-4"></div>
-          </div>
-        </div>
-      </section>
+   
 
       <section className="team mt-5 pt-5 text-white">
         <div className="container-fluid text-center">
