@@ -13,7 +13,7 @@ import Avani from "../../images/logos/avani.png";
 import Sparkle from "../../images/logos/sparkle.png";
 import "./client.css";
 
-const Client = () => {
+const Client = ({headingRef}) => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const needsRedrawRef = useRef(false);
@@ -184,7 +184,7 @@ const Client = () => {
       </div>
       <div className="position-relative client_bannner py-15 d-block d-sm-block d-md-none">
         <div className="pb-20">
-          <h4 className="client_head">Our Clients</h4>
+          <h4 className="client_head" ref={headingRef}>Our Clients</h4>
         </div>
 
         <div className="">

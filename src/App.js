@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Header from "./components/header/Header";
 import ReactGA from "react-ga4";
 import Footer from "./components/footer/Footer";
@@ -20,18 +20,21 @@ import ScrollSmoother from "gsap/ScrollSmoother";
 import gsap from "gsap";
 import Sidebar from "./components/header/Sidebar";
 import Blogs from "./pages/Blogs";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const App = () => {
   const TRACKING_ID = "G-8TTH8GV3LY";
   const location = useLocation();
   const smoothRef = useRef(null);
+  const wrapperRef = useRef(null);
+  const contentRef = useRef(null);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
   const closeSidebar = () => setSidebarOpen(false);
-
-  gsap.registerPlugin(ScrollSmoother);
 
   useEffect(() => {
     ReactGA.initialize(TRACKING_ID);
@@ -62,11 +65,16 @@ const App = () => {
     return () => window.removeEventListener("load", handleLoad);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const wrapper = wrapperRef.current;
+    const content = contentRef.current;
+
+    if (!wrapper || !content) return;
+
     if (!smoothRef.current) {
       smoothRef.current = ScrollSmoother.create({
-        wrapper: "#smooth-wrapper",
-        content: "#smooth-content",
+        wrapper,
+        content,
         smooth: 0.8,
         effects: true,
       });
@@ -74,11 +82,12 @@ const App = () => {
       smoothRef.current.scrollTo(0, true);
     }
   }, [location.pathname]);
+
   return (
     <>
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+      <div id="smooth-wrapper" ref={wrapperRef}>
+        <div id="smooth-content" ref={contentRef}>
           <main className="overflow-x-hidden">
             <Header toggleSidebar={toggleSidebar} />
             <Routes>
@@ -93,17 +102,12 @@ const App = () => {
               <Route path="/socialmedia" element={<SocialMedia />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
-              <Route
-                path="/printmediadesigns"
-                element={<PrintMediadesigns />}
-              />
+              <Route path="/printmediadesigns" element={<PrintMediadesigns />} />
             </Routes>
             <Footer />
           </main>
         </div>
       </div>
-
-      {/* ✅ Footer Section */}
     </>
   );
 };

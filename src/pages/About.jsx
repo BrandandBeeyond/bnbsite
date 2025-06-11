@@ -4,8 +4,21 @@ import mainBee from "../images/bigbee.svg";
 import Client from "../components/clients/Client";
 import Contact from "../components/contact/Contact";
 import ReactOwlCarousel from "react-owl-carousel";
+import useSplitText from "../hooks/useSplitText";
 
 const About = () => {
+  const headingRef = useSplitText({
+    type: "chars",
+    animateFrom: { y: 80, opacity: 0 },
+    animateTo: {
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      stagger: 0.04,
+      ease: "power3.out"
+    },
+    deps: []
+  });
   const options = {
     responsive: {
       0: {
@@ -44,7 +57,7 @@ const About = () => {
           </div>
           <div className="col-lg-6">
             <div className="mis-para">
-              <p>
+              <p ref={headingRef} className="split-heading">
                 To make Entrepreneurship a Happy Journey with power of
                 Spirituality and Branding
               </p>
@@ -54,7 +67,7 @@ const About = () => {
         <div className="row align-items-center mt-0 mt-sm-5">
           <div className="col-lg-6">
             <div className="vis-para">
-              <p>
+              <p ref={headingRef} className="split-heading">
                 To make Brand and Beeyond as Number 1 Strategic Unmarketing
                 Agency in India by 2027
               </p>

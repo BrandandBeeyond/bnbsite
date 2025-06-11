@@ -1,7 +1,7 @@
 import React from "react";
 import ReactParallaxTilt from "react-parallax-tilt";
 
-const Services = () => {
+const Services = ({headingRef}) => {
   const servicedata = [
     {
       serviceThumb: require("../../images/services/webdev.png"),
@@ -42,8 +42,8 @@ const Services = () => {
       <section className="services d-none d-sm-none d-md-block">
         <div className="container-fluid">
           <div className="text-center">
-            <h4 className="subhead reveal-text">services</h4>
-            <h2 className="work_head py-3 reveal-text">
+            <h4 className="subhead reveal-text" ref={headingRef}>services</h4>
+            <h2 className="work_head py-3 reveal-text" ref={headingRef}>
             More than just web development
             </h2>
           </div>

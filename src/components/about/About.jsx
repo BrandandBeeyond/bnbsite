@@ -1,7 +1,7 @@
 import React from "react";
 import dotImage from "../../images/logos/dots.png";
 
-const About = () => {
+const About = ({headingRef}) => {
   return (
     <section className="d-none d-sm-none d-md-block">
       
@@ -18,7 +18,7 @@ const About = () => {
                 className="about_para d-none d-sm-none d-md-block"
                 
               >
-                <p>
+                <p ref={headingRef}>
                   From strategy to storytelling ,<br /> digital to design—we
                   craft <br />
                   Brands Beeyond expectations.
@@ -30,7 +30,7 @@ const About = () => {
                   Brands Beeyond expectations.
                 </p>
               </div>
-              <div className="mt-3 mt-sm-4 mt-md-5">
+              <div className="mt-3 mt-sm-4 mt-md-5"data-aos="fade-up" data-aos-offset="100" data-aos-duration="4000">
                 <button
                   className="btn mainbtn"
                   

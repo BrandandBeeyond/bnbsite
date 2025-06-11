@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const canvasRef = useRef(null);
@@ -168,10 +169,26 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 col-4 d-flex justify-content-center">
             <ul className="footer_contacts mt-2 ps-0">
-              <li className="nav-item text-white numbers py-2">HOME</li>
-              <li className="nav-item text-white numbers py-2">ABOUT US</li>
-              <li className="nav-item text-white numbers py-2">SERVICES</li>
-              <li className="nav-item text-white numbers py-2">PORTFOLIO</li>
+              <li className="nav-item text-white numbers py-2">
+                <Link className="nav-link" to={'/'}>
+                HOME
+                </Link>
+               </li>
+              <li className="nav-item text-white numbers py-2">
+                <Link className="nav-link" to={'/about'}>
+                ABOUT US
+                </Link>
+               </li>
+              <li className="nav-item text-white numbers py-2">
+                <Link className="nav-link" to={'/services'}>
+                SERVICES
+                </Link>
+               </li>
+              <li className="nav-item text-white numbers py-2">
+                <Link className="nav-link" to={'/portfolio'}>
+                PORTFOLIO
+                </Link>
+               </li>
             </ul>
           </div>
         </div>

@@ -315,6 +315,10 @@ canvas {
 .bg-darkgreen {
   background-color: #366546;
 }
+.split-heading {
+  overflow: hidden;
+  display: inline-block;
+}
 
 .main-links {
   font-weight: 600;

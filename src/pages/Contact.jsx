@@ -91,7 +91,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="message"
-                className="form-control form-input bg-transparent rounded-0 border-0 mb-2"
+                className="form-control form-input bg-transparent rounded-0 border-0 mb-2 d-block d-sm-none"
                 placeholder="message"
                 required
               />

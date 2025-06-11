@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HexCanvas from "../components/hexcanvas/HexCanvas";
 import About from "../components/about/About";
 import Counter from "../components/counter/Counter";
@@ -12,8 +12,24 @@ import WorkSampleMob from "../components/work/WorkSampleMob";
 import Faqs from "../components/faq/Faqs";
 import Contact from "../components/contact/Contact";
 import { Helmet } from "react-helmet-async";
+import useSplitText from "../hooks/useSplitText";
 
 const Home = () => {
+
+  const headingRef = useSplitText({
+      type: "chars",
+      animateFrom: { y: 60, opacity: 0 },
+      animateTo: {
+        y: 0,
+        opacity: 1,
+        duration: 0.9,
+        stagger: 0.04,
+        ease: "power3.out"
+      },
+      deps: []
+    });
+
+
   return (
     <>
       <Helmet prioritizeSeoTags>
@@ -99,7 +115,7 @@ const Home = () => {
       <HexCanvas title={`Best  <span class='highlight'>website design & development</span> company in Nashik`}/>
 
       <Element name="about">
-        <About />
+        <About headingRef={headingRef}/>
       </Element>
 
       <Element name="counter">
@@ -107,11 +123,11 @@ const Home = () => {
       </Element>
 
       <Element name="client">
-        <Client />
+        <Client headingRef={headingRef}/>
       </Element>
 
       <Element name="services">
-        <Services />
+        <Services headingRef={headingRef}/>
       </Element>
 
       <Element name="process" className="d-none d-sm-none d-md-block">
