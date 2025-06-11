@@ -1349,6 +1349,12 @@ canvas {
   .testi{
     margin-top: -257px;
   }
+  
+.bg-contactform {
+    height: 497px;
+    transform: translateY(-300px);
+    width: 100%;
+}
 }
 
 @media (max-width: 450px) {

@@ -36,7 +36,7 @@ const Contact = () => {
               <h4 className="start_contact_dark my-1 my-sm-5">
                 I am looking for a project in{" "}
               </h4>
-              <div className="servicestabs d-flex flex-wrap  gap-2 gap-sm-3 mt-3 mb-1 mb-sm-5">
+              <div className="servicestabs d-flex flex-wrap justify-content-center text-center  gap-2 gap-sm-3 mt-3 mb-1 mb-sm-5">
                 {services.map((service, index) => (
                   <div
                     className={`service-tab ${
