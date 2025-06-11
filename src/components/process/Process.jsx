@@ -2,10 +2,24 @@ import React, { useEffect, useRef } from "react";
 import "./process.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import useSplitText from "../../hooks/useSplitText";
 
 const Process = () => {
   const containerRef = useRef(null);
   const hexagonsRef = useRef([]);
+ const headingRef = useSplitText({
+    type: "chars",
+    animateFrom: { y: 60, opacity: 0 },
+    animateTo: {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "power3.out",
+    },
+    triggerHook: 0.8, // trigger when 80% into viewport
+    once: true,
+    deps: [], // leave empty unless you need to re-run
+  });
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +60,7 @@ const Process = () => {
     <section className="pt-2">
       <div className="container-fluid">
         <div className="row justify-content-center">
-          <h4 className="section_head mt-20"data-aos="fade-up" data-aos-delay="80">our process</h4>
+          <h4 className="section_head mt-20" ref={headingRef}>our process</h4>
           <div className="col-lg-12">
             <div className="hex-container" ref={containerRef}>
               <div className="hex-wrapper position-relative">

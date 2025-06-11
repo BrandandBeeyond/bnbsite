@@ -12,12 +12,29 @@ import TheBrandYogi from "../../images/logos/brandyogi.png";
 import Avani from "../../images/logos/avani.png";
 import Sparkle from "../../images/logos/sparkle.png";
 import "./client.css";
+import useSplitText from "../../hooks/useSplitText";
 
-const Client = ({headingRef}) => {
+const Client = () => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const needsRedrawRef = useRef(false);
   let hexagons = [];
+  
+
+   const headingRef = useSplitText({
+    type: "chars",
+    animateFrom: { y: 60, opacity: 0 },
+    animateTo: {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "power3.out",
+    },
+    triggerHook: 0.8, // trigger when 80% into viewport
+    once: true,
+    deps: [], // leave empty unless you need to re-run
+  });
+
 
   useEffect(() => {
     const canvasElement = canvasRef.current;
@@ -166,7 +183,7 @@ const Client = ({headingRef}) => {
           className="client_banner_hex"
           style={{ pointerEvents: "none" }}
         />
-        <h4 className="client_head" >Our Clients</h4>
+        <h4 className="client_head" ref={headingRef}>Our Clients</h4>
 
         <div className="marquee-client">
           <Marquee autoFill={true} speed={50} pauseOnHover={true}>

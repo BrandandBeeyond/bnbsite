@@ -2,10 +2,23 @@ import React, { useEffect, useRef } from "react";
 import "./worksample.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import useSplitText from "../../hooks/useSplitText";
 
 const WorkSample = () => {
   const containerRef = useRef(null);
-
+ const headingRef = useSplitText({
+    type: "chars",
+    animateFrom: { y: 60, opacity: 0 },
+    animateTo: {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "power3.out",
+    },
+    triggerHook: 0.8, // trigger when 80% into viewport
+    once: true,
+    deps: [], // leave empty unless you need to re-run
+  });
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +52,7 @@ const WorkSample = () => {
       <section className="p-much-top">
         <div className="container-fluid">
           <div className="wrapper" >
-            <h2 className="work_head py-3 ps-5">Our work</h2>
+            <h2 className="work_head py-3 ps-5" ref={headingRef}>Our work</h2>
             <div className="horizontal-scroll-1" ref={containerRef}>
               <div className="h-section first">
                 <div className="row">

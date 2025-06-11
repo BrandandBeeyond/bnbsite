@@ -1,7 +1,22 @@
 import React from "react";
 import dotImage from "../../images/logos/dots.png";
+import useSplitText from "../../hooks/useSplitText";
 
-const About = ({headingRef}) => {
+const About = () => {
+   const headingRef = useSplitText({
+    type: "chars",
+    animateFrom: { y: 60, opacity: 0 },
+    animateTo: {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
+      ease: "power3.out",
+    },
+    triggerHook: 0.8, // trigger when 80% into viewport
+    once: true,
+    deps: [], // leave empty unless you need to re-run
+  });
+
   return (
     <section className="d-none d-sm-none d-md-block">
       
