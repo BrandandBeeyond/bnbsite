@@ -21,7 +21,7 @@ import gsap from "gsap";
 import Sidebar from "./components/header/Sidebar";
 
 const App = () => {
-  const TRACKING_ID = "G-60G9YGJRFT";
+  const TRACKING_ID = "G-8TTH8GV3LY";
   const location = useLocation();
   const smoothRef = useRef(null);
 
