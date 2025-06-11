@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./contact.css";
 import emailjs from 'emailjs-com';
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "../../config";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+  const location = useLocation();
+
   const services = [
     "Social Media",
     "Website Development",
@@ -85,7 +88,7 @@ const Contact = () => {
   
 
   return (
-    <section className="pt-25">
+    <section className={location.pathname ==='/services' ? 'pt-25-advance' : 'pt-25'}>
       <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-lg-5">
@@ -99,7 +102,7 @@ const Contact = () => {
 
               <form className="row gy-4 my-4" onSubmit={handleSubmit}>
                 <div className="col-lg-12">
-                  <div className="servicestabs d-flex flex-wrap gap-3 mb-5">
+                  <div className="servicestabs d-flex flex-wrap justify-content-center justify-content-sm-start gap-3 mb-5">
                     {services.map((service, index) => (
                       <div
                         className={`service-tab ${

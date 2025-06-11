@@ -1,10 +1,13 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 const HexCanvas = ({title}) => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const needsRedrawRef = useRef(false);
   let hexagons = [];
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const canvasElement = canvasRef.current;
@@ -115,8 +118,14 @@ const HexCanvas = ({title}) => {
   }, []);
 
   return (
-    <div className="main_banner position-relative t-up overflow-x-hidden">
-      <canvas ref={canvasRef} className="mainhexcanvas" />
+    <div
+  className="main_banner position-relative t-up overflow-x-hidden"
+  style={{
+    height: window.innerWidth <= 768 ? '800px' : '100vh',
+    overflow: 'hidden',
+  }}
+>
+      <canvas ref={canvasRef} className="" />
       <div className="row main-text">
         <div className="col-lg-12 text-center">
           <h1
@@ -129,7 +138,9 @@ const HexCanvas = ({title}) => {
           </h1>
         </div>
       </div>
-      <section className="d-block d-sm-block d-md-none">
+
+     {isHomePage && (
+ <section className="d-block d-sm-block d-md-none">
         <div className="row align-items-center t-up-mob">
           <div className="col-lg-4 d-flex justify-content-center align-items-center position-relative order-md-1 order-3">
             <div className="row justify-content-center mt-4 mt-sm-3 mt-md-0">
@@ -183,6 +194,8 @@ const HexCanvas = ({title}) => {
           </div>
         </div>
       </section>
+     )}
+     
     </div>
   );
 };

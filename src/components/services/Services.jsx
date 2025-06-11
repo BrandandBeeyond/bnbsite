@@ -42,8 +42,8 @@ const Services = () => {
       <section className="services d-none d-sm-none d-md-block">
         <div className="container-fluid">
           <div className="text-center">
-            <h4 className="subhead" data-aos="fade-up" data-aos-delay="80">services</h4>
-            <h2 className="work_head py-3" data-aos="fade-up" data-aos-delay="90">
+            <h4 className="subhead reveal-text">services</h4>
+            <h2 className="work_head py-3 reveal-text">
             More than just web development
             </h2>
           </div>
@@ -112,7 +112,7 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="service_head my-3">
+                  <div className="service_head my-0 my-sm-3 mt-3 mb-1 mt-sm-0 mb-sm-0">
                     <h5 className="">{item.serviceTitle}</h5>
                   </div>
                   <div className="service_para">

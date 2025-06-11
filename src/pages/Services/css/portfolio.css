@@ -1,0 +1,205 @@
+.brand-hording {
+  height: 800px;
+}
+.Lbrandlogo {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.Rbrandlogo {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.blissfestive {
+  height: 414px;
+  width: 414px;
+  position: relative;
+  top: 16px;
+}
+.blissmiddle {
+  height: 900px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: -50px;
+}
+.blissfestive3 {
+  position: absolute;
+  top: 259px;
+  left: 12px;
+  right: 12px;
+  height: 410.5px;
+}
+.aquabliss {
+  position: absolute;
+  top: 30.5%;
+  z-index: 11;
+  width: 90%;
+  left: 5.1999%;
+}
+.aquabliss2 {
+  position: absolute;
+  top: 30.5%;
+  z-index: 11;
+  width: 76.5%;
+  left: 12%;
+}
+.anayamain {
+  width: 390px;
+}
+.amoralogo {
+  width: 100px;
+}
+.amoramain {
+  width: 270px;
+}
+.bhandarilogo {
+  width: 160px;
+}
+.bhandarimain {
+  width: 200px;
+}
+
+.brandyogilogo {
+  width: 180px;
+}
+.brandyogimain {
+  width: 330px;
+}
+.stratalogo {
+  width: 450px;
+}
+.graycoldlogo {
+  width: 450px;
+}
+.smartlogo {
+  width: 380px;
+}
+.sparklogo {
+  width: 450px;
+}
+.smartNlogo {
+  width: 450px;
+}
+.gmb1 {
+  height: 453px;
+  width: 100%;
+}
+.fbreview {
+  height: 700px;
+  width: 100%;
+}
+.printmediadesigns img {
+  height: 700px;
+}
+.creativecard img {
+  transform: rotate(-18.94deg);
+}
+.creativecard.creative2 {
+  margin-top: -460px;
+}
+@media (max-width: 768px) {
+  .brand-hording {
+    height: 240px;
+  }
+  .Lbrandlogo,
+  .Rbrandlogo {
+    height: 129px;
+  }
+  .anayamain {
+    width: 150px;
+  }
+  .amoralogo {
+    width: 35px;
+  }
+  .creativecard.creative2 {
+    margin-top: -150px;
+  }
+  .amoramain {
+    width: 99px;
+  }
+  .bhandarilogo {
+    width: 59px;
+  }
+  .gmbfolio {
+    margin-top: -300px;
+    position: relative;
+  }
+  .bhandarimain {
+    width: 79px;
+  }
+  .brandyogilogo {
+    width: 59px;
+  }
+  .brandyogimain {
+    width: 139px;
+  }
+  .stratalogo {
+    width: 178px;
+  }
+  .graycoldlogo {
+    width: 150px;
+  }
+  .smartlogo,
+  .sparklogo {
+    width: 121px;
+  }
+  .smartNlogo {
+    width: 158px;
+  }
+  .logodesign {
+    margin-top: -474px;
+    position: relative;
+  }
+  .blissmiddle {
+    height: 305px;
+    object-fit: contain;
+  }
+  .blissfestive3 {
+    top: 55px;
+    left: 4px;
+    right: 12px;
+    height: 134.5px;
+  }
+  .blissfestive {
+    height: 133px;
+    width: 133px;
+    top: -29px;
+  }
+  .gmb1 {
+    height: 156px;
+    object-fit: contain;
+    width: 100%;
+  }
+  .fbreview {
+    height: 272px;
+    width: 100%;
+    object-fit: contain;
+  }
+ 
+  .printmedia img {
+    height: 260px;
+    object-fit: cover;
+  }
+  .printmediapage{
+    margin-top: -400px;
+    position: relative;
+  }
+}
+
+@media (max-width: 400px) {
+  .blissfestive3 {
+    top: 57px;
+    left: 3px;
+    right: 12px;
+    width: 117px;
+    height: 122.5px;
+  }
+  .blissfestive {
+    height: 120px;
+    width: 120px;
+    top: -35px;
+  }
+}

@@ -1,0 +1,101 @@
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ⬅️ changed from flex-end to center */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.sidebar-nav{
+     padding: 2rem 1.5rem;
+}
+
+.sidebar-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar-content {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background: url('../../images/hexnav.png') no-repeat center center;
+  background-size: contain;
+  border-radius: 40px; /* ⬅️ smoother all-around roundness */
+  transform: scale(1);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-content::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, rgba(39, 39, 39, 0) 0%, #272727 100%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.sidebar-overlay.open .sidebar-content {
+  transform: scale(1);
+  opacity: 1;
+}
+.close-btn{
+    position: absolute;
+    right: 30px;
+}
+.close-btn i{
+     font-size: 30px;
+     color: white;
+}
+.nav-link.navlinks{
+     font-family: "Staatliches", sans-serif;
+font-weight: 400;
+font-size: 36px;
+line-height: 100%;
+letter-spacing: 0%;
+padding: 15px 0;
+color: #fff;
+}
+
+.sidebar-nav .navlinks {
+  opacity: 0;
+  transform: translateY(40px);
+  transform: translateY(40px);
+  transition: opacity 0.4s ease, transform 0.6s ease;
+}
+
+/* When sidebar is open, animate them in */
+.sidebar-overlay.open .sidebar-nav .navlinks {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sidebar-overlay.open .sidebar-nav .navlinks:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.sidebar-overlay.open .sidebar-nav .navlinks:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.sidebar-overlay.open .sidebar-nav .navlinks:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.sidebar-overlay.open .sidebar-nav .navlinks:nth-child(4) {
+  transition-delay: 0.7s;
+}
+.sidebar-overlay.open .sidebar-nav .navlinks:nth-child(5) {
+  transition-delay: 0.8s;
+}
+.sidebar-overlay.open .sidebar-nav .navlinks:nth-child(6) {
+  transition-delay: 0.9s;
+}

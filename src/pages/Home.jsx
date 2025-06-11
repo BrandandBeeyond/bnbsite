@@ -96,9 +96,7 @@ const Home = () => {
       </Helmet>
      
 
-      <Element name="hexcanvas">
-        <HexCanvas title={`Best  <span class='highlight'>website design & development</span> company in Nashik`}/>
-      </Element>
+      <HexCanvas title={`Best  <span class='highlight'>website design & development</span> company in Nashik`}/>
 
       <Element name="about">
         <About />

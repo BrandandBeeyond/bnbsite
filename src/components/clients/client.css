@@ -84,7 +84,7 @@ Marquee {
   pointer-events: none !important;
 }
 .brand-logo-wrapper {
-  padding: 0 40px; /* Adjust logo spacing if needed */
+  padding: 0 15px; /* Adjust logo spacing if needed */
 }
 
 @media (max-width: 750px) {
@@ -100,10 +100,15 @@ Marquee {
     color: var(--white-color);
     text-transform: capitalize;
   }
-  
-  
-  .clientmob{
+
+  .clientmob {
     height: 60px !important;
     width: auto;
+  }
+  .py-15 {
+    padding: 40px 0;
+  }
+  .brand-logo-wrapper img{
+     width: 100px;
   }
 }

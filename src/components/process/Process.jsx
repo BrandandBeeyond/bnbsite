@@ -41,7 +41,6 @@ const Process = () => {
   }, []);
   
   
-  
 
   return (
     <section className="pt-2">

@@ -16,8 +16,7 @@ const About = () => {
             <div className="col-lg-12 text-center text-sm-start text-md-start">
               <div
                 className="about_para d-none d-sm-none d-md-block"
-                data-aos="fade-up"
-                data-aos-delay="80"
+                
               >
                 <p>
                   From strategy to storytelling ,<br /> digital to design—we
@@ -34,8 +33,7 @@ const About = () => {
               <div className="mt-3 mt-sm-4 mt-md-5">
                 <button
                   className="btn mainbtn"
-                  data-aos="fade-up"
-                  data-aos-delay="80"
+                  
                 >
                   Start your project <i className="bi bi-chevron-right"></i>
                 </button>
@@ -56,15 +54,11 @@ const About = () => {
               <img
                 src={require("../../images/big-hex.png")}
                 className="img-fluid order-2"
-                data-aos="flip-left"
-                data-aos-delay="50"
                 alt=""
               />
               <img
                 src={require("../../images/small-hex.png")}
                 className="img-fluid order-1"
-                data-aos="flip-left"
-                data-aos-delay="50"
                 alt=""
               />
               {/* <div className="hexagon-small order-1"></div> */}
