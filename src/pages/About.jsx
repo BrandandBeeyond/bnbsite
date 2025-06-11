@@ -7,7 +7,7 @@ import ReactOwlCarousel from "react-owl-carousel";
 import useSplitText from "../hooks/useSplitText";
 
 const About = () => {
-  const headingRef = useSplitText({
+  const sameConfig = {
     type: "chars",
     animateFrom: { y: 80, opacity: 0 },
     animateTo: {
@@ -15,10 +15,16 @@ const About = () => {
       opacity: 1,
       duration: 1.2,
       stagger: 0.04,
-      ease: "power3.out"
+      ease: "power3.out",
     },
-    deps: []
-  });
+  };
+
+  const missionRef = useSplitText({...sameConfig });
+  const visionRef = useSplitText({...sameConfig });
+  const onemoreRef = useSplitText({...sameConfig });
+  const twomoreRef = useSplitText({...sameConfig });
+  const threemoreRef = useSplitText({...sameConfig });
+
   const options = {
     responsive: {
       0: {
@@ -57,7 +63,7 @@ const About = () => {
           </div>
           <div className="col-lg-6">
             <div className="mis-para">
-              <p ref={headingRef} className="split-heading">
+              <p ref={missionRef} className="split-heading">
                 To make Entrepreneurship a Happy Journey with power of
                 Spirituality and Branding
               </p>
@@ -67,7 +73,7 @@ const About = () => {
         <div className="row align-items-center mt-0 mt-sm-5">
           <div className="col-lg-6">
             <div className="vis-para">
-              <p ref={headingRef} className="split-heading">
+              <p ref={visionRef} className="split-heading">
                 To make Brand and Beeyond as Number 1 Strategic Unmarketing
                 Agency in India by 2027
               </p>
@@ -106,17 +112,17 @@ const About = () => {
         </section>
       </div>
 
-   
-
       <section className="team mt-5 pt-5 text-white">
         <div className="container-fluid text-center">
           <div className="titlesec position-relative">
             <div className="blury-circle"></div>
-            <h2 className="meetourteam" ref={headingRef}>Meet our fabulous team </h2>
+            <h2 className="meetourteam" ref={onemoreRef}>
+              Meet our fabulous team{" "}
+            </h2>
             <div className="row justify-content-center">
               <div className="col-lg-7">
                 <div className="about-para py-3 py-sm-5">
-                  <p ref={headingRef}>
+                  <p ref={twomoreRef}>
                     "Meet our Creative Team A family of creators, thinkers, and
                     storytellers shaping brands that matter{" "}
                   </p>
@@ -332,7 +338,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                   <div className="anotherround-mob-2">
+                  <div className="anotherround-mob-2">
                     <div className="d-flex flex-row  gap-2">
                       <div className="hexagon-team">
                         <img
@@ -363,7 +369,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                   <div className="anotherround-mob-3">
+                  <div className="anotherround-mob-3">
                     <div className="d-flex flex-row  gap-2">
                       <div className="hexagon-team">
                         <img
@@ -380,7 +386,6 @@ const About = () => {
                         />
                       </div>
                     </div>
-                  
                   </div>
                 </div>
               </div>
@@ -393,7 +398,7 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-lg-4">
             <div className="position-relative text-center realvoicetext">
-              <h2 className="meetourteam text-white" ref={headingRef}>
+              <h2 className="meetourteam text-white" ref={threemoreRef}>
                 Real voices <br />
                 Real branding journeys
               </h2>

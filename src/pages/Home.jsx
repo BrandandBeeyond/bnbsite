@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import HexCanvas from "../components/hexcanvas/HexCanvas";
 import About from "../components/about/About";
 import Counter from "../components/counter/Counter";
