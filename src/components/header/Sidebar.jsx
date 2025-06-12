@@ -25,11 +25,11 @@ const Sidebar = ({isOpen,onClose}) => {
             </Link>
           </div>
           <div className="mt-4 ps-5 d-flex flex-column">
-            <Link className="nav-link navlinks" to="/" onClick={onClose}>
+            <Link className="nav-link navlinks" data-text="Home"  to="/" onClick={onClose}>
               Home
             </Link>
             <Link
-              className="nav-link navlinks"
+              className="nav-link navlinks" data-text="About us"
               to="/about"
               onClick={onClose}
             >
@@ -37,6 +37,7 @@ const Sidebar = ({isOpen,onClose}) => {
             </Link>
             <Link
               className="nav-link navlinks"
+              data-text="Our Services"
               to="/services"
               onClick={onClose}
             >
@@ -44,6 +45,7 @@ const Sidebar = ({isOpen,onClose}) => {
             </Link>
             <Link
               className="nav-link navlinks"
+              data-text="Portfolio"
               to="/portfolio"
               onClick={onClose}
             >
@@ -51,6 +53,7 @@ const Sidebar = ({isOpen,onClose}) => {
             </Link>
             <Link
               className="nav-link navlinks"
+              data-text="Blogs"
               to="/blogs"
               onClick={onClose}
             >
@@ -58,6 +61,7 @@ const Sidebar = ({isOpen,onClose}) => {
             </Link>
             <Link
               className="nav-link navlinks"
+              data-text="Contact"
               to="/contact"
               onClick={onClose}
             >
