@@ -183,7 +183,7 @@ const Client = () => {
           className="client_banner_hex"
           style={{ pointerEvents: "none" }}
         />
-        <h4 className="client_head" ref={headingRef}>Our Clients</h4>
+        <h4 className="client_head" style={{color:'#f9b000'}} ref={headingRef}>Our Clients</h4>
 
         <div className="marquee-client">
           <Marquee autoFill={true} speed={50} pauseOnHover={true}>

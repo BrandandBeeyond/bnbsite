@@ -19,11 +19,11 @@ const About = () => {
     },
   };
 
-  const missionRef = useSplitText({...sameConfig });
-  const visionRef = useSplitText({...sameConfig });
-  const onemoreRef = useSplitText({...sameConfig });
-  const twomoreRef = useSplitText({...sameConfig });
-  const threemoreRef = useSplitText({...sameConfig });
+  const missionRef = useSplitText({ ...sameConfig });
+  const visionRef = useSplitText({ ...sameConfig });
+  const onemoreRef = useSplitText({ ...sameConfig });
+  const twomoreRef = useSplitText({ ...sameConfig });
+  const beeRef = useSplitText({ ...sameConfig });
 
   const options = {
     responsive: {
@@ -90,22 +90,28 @@ const About = () => {
           <div className="container d-flex flex-column align-items-center justify-content-center h-100 inter">
             <div className="tupsec text-center">
               <h2 className="beeHead text-white">The BEE</h2>
-              <span className="beeSub text-dark">Our Brand Ambasador</span>
+              <span className="beeSub text-dark" ref={beeRef}>
+                Our Brand Ambasador
+              </span>
             </div>
             <div className="row text-center position-relative beerow">
               <div className="col-lg-3 col-3">
-                <h3 className="beeSub2 py-1 py-sm-5">Purpose-Driven</h3>
-                <h3 className="beeSub2 py-1 py-sm-5 fw-bold">Collaborative</h3>
-                <h3 className="beeSub2 py-1 py-sm-5">Consistent</h3>
+                <h3 className="beeSub2 py-1 py-sm-5">Small steps Big Value</h3>
+                <h3 className="beeSub2 py-1 py-sm-5 fw-bold">
+                  Seamless workflow, strategic succession
+                </h3>
+                <h3 className="beeSub2 py-1 py-sm-5">Team savings, wealth</h3>
               </div>
               <div className="col-lg-6 col-6 text-center">
                 <img src={mainBee} className="img-fluid beee" alt="" />
-                <h3 className="beeSub2 fw-bold py-1 py-sm-5">Strategic</h3>
+                <h3 className="beeSub2 fw-bold py-1 py-sm-5">Sharp insights</h3>
               </div>
               <div className="col-lg-3 col-3">
-                <h3 className="beeSub2 py-1 py-sm-5">Focused</h3>
-                <h3 className="beeSub2 py-1 py-sm-5 fw-bold">Resilient</h3>
-                <h3 className="beeSub2 py-1 py-sm-5">Value-Creators</h3>
+                <h3 className="beeSub2 py-1 py-sm-5">Effortless scaling</h3>
+                <h3 className="beeSub2 py-1 py-sm-5 fw-bold">
+                  Renowned authority
+                </h3>
+                <h3 className="beeSub2 py-1 py-sm-5">Optimal structure</h3>
               </div>
             </div>
           </div>
@@ -135,108 +141,109 @@ const About = () => {
                 <div className="meetteam position-relative">
                   <div className="blury-circle-btm"></div>
                   <div className="d-flex flex-row gap-2">
-                    <div className="hexagon-team">
+                    <div className="hexagon-team" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000">
                       <img
                         src={require("../images/team/kapilsir.jpeg")}
                         className="img-fluid picdown"
                         alt=""
                       />
                     </div>
-                    <div className="hexagon-team">
+                    <div className="hexagon-team" data-aos="flip-left" data-aos-offset="110" data-aos-duration="1000">
                       <img
                         src={require("../images/team/sainathsir.jpg")}
                         className="img-fluid zoom picdown1"
                         alt=""
                       />
                     </div>
-                    <div className="hexagon-team">
+                    <div className="hexagon-team" data-aos="flip-left" data-aos-offset="120" data-aos-duration="1000">
                       <img
                         src={require("../images/team/rupali_mam.png")}
-                        className="img-fluid picdown"
+                        className="img-fluid zoom picdown"
                         alt=""
                       />
                     </div>
-                    <div className="hexagon-team">
+                    <div className="hexagon-team" data-aos="flip-left" data-aos-offset="130" data-aos-duration="1000">
                       <img
                         src={require("../images/team/pallavimam.jpg")}
-                        className="img-fluid"
+                        className="img-fluid zoom"
+                        style={{ objectPosition: "top" }}
                         alt=""
                       />
                     </div>
                   </div>
                   <div className="d-flex secrow flex-row gap-2">
-                    <div className="hexagon-team">
+                    <div className="hexagon-team ">
                       <img
                         src={require("../images/team/vivek.jpg")}
-                        className="img-fluid"
+                        className="img-fluid zoom"
                         alt=""
                       />
                     </div>
-                    <div className="hexagon-team">
+                    <div className="hexagon-team" data-aos="flip-left" data-aos-offset="130" data-aos-duration="1000">
                       <img
                         src={require("../images/team/pavitra.jpg")}
-                        className="img-fluid"
+                        className="img-fluid zoom"
                         alt=""
                       />
                     </div>
-                    <div className="hexagon-team">
+                    <div className="hexagon-team" data-aos="flip-left" data-aos-offset="140" data-aos-duration="1000">
                       <img
                         src={require("../images/team/prajwal.jpg")}
-                        className="img-fluid"
+                        className="img-fluid zoom"
                         alt=""
                       />
                     </div>
                   </div>
                   <div className="anotherround">
                     <div className="d-flex flex-row  gap-2">
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left" data-aos-offset="150" data-aos-duration="1000">
                         <img
                           src={require("../images/team/abhijeet.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left"data-aos-offset="160" data-aos-duration="1000">
                         <img
                           src={require("../images/team/Dhiraj.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left" data-aos-offset="165" data-aos-duration="1000">
                         <img
                           src={require("../images/team/sarath.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left">
                         <img
                           src={require("../images/team/pratik.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
                     </div>
                     <div className="d-flex secrow flex-row gap-2">
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left" data-aos-offset="170" data-aos-duration="1000">
                         <img
                           src={require("../images/team/gaurav.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left" data-aos-offset="175" data-aos-duration="1000">
                         <img
                           src={require("../images/team/yash.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
-                      <div className="hexagon-team">
+                      <div className="hexagon-team" data-aos="flip-left"data-aos-offset="180" data-aos-duration="1000">
                         <img
                           src={require("../images/team/swaraj.jpg")}
-                          className="img-fluid"
+                          className="img-fluid zoom"
                           alt=""
                         />
                       </div>
@@ -398,9 +405,9 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-lg-4">
             <div className="position-relative text-center realvoicetext">
-              <h2 className="meetourteam text-white" ref={threemoreRef}>
-                Real voices <br />
-                Real branding journeys
+              <h2 className="meetourteam" style={{color:'#f9b000'}}>
+                Real Voices <br />
+                Real Branding Journeys
               </h2>
             </div>
           </div>
@@ -427,10 +434,31 @@ const About = () => {
                 </div>
               </div>
               <div className="card reviewcard rounded-5 border-0">
-                <div className="card-body"></div>
+                <div className="card-body d-flex align-items-center justify-content-center">
+                  <div className="client-review inter text-white">
+                    <p>
+                      “It’s rare to find a team that blends creativity, clarity, and care. Brand and Beeyond became an extension of our brand family. Every campaign they crafted felt rooted in purpose”
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="card reviewcard rounded-5 border-0">
-                <div className="card-body"></div>
+                <div className="card-body d-flex align-items-center justify-content-center">
+                  <div className="client-review inter text-white">
+                    <p>
+                      “Brand and Beeyond reimagined our entire brand story with visuals and messaging that truly stand out. Their creativity helped us connect with the right audience and it reflects in our sales and social growth”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="card reviewcard rounded-5 border-0">
+                <div className="card-body d-flex align-items-center justify-content-center">
+                  <div className="client-review inter text-white">
+                    <p>
+                     “I approached them for a logo. What I got was a complete brand system that reflects my purpose and personality. Their process is deep, their ideas are fresh, and the results are real.”
+                    </p>
+                  </div>
+                </div>
               </div>
             </ReactOwlCarousel>
           </div>

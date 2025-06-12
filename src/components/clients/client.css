@@ -65,13 +65,12 @@
 .client_head {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 48px;
   line-height: 100%;
   position: absolute;
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--white-color);
   text-transform: capitalize;
 }
 Marquee {
