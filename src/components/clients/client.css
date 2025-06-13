@@ -100,10 +100,10 @@ Marquee {
     text-transform: capitalize;
   }
 
-  .clientmob {
-    height: 60px !important;
+ .clientmob {
+    height: 27px!important;
     width: auto;
-  }
+}
   .py-15 {
     padding: 40px 0;
   }
