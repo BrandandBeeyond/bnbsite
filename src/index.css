@@ -1513,9 +1513,9 @@ canvas {
     pointer-events: none;
     z-index: 0;
   }
-  .mt-minus-50 {
-    margin-top: -262px;
+ .mt-minus-50 {
+    margin-top: -168px;
     position: relative;
     z-index: 12;
-  }
+}
 }
