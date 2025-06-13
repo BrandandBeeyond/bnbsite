@@ -123,3 +123,27 @@ padding: 15px 0;
 .navlinks:hover {
   color: transparent;
 }
+
+
+
+
+@media(max-width: 768px) {
+  .nav-link.navlinks {
+
+    font-size: 25px;
+    font-weight: 400;
+    transition: color .3s ease;
+}
+  
+  .sidebar-nav {
+    padding: 1rem; /* ⬅️ reduced padding for mobile */
+  }
+  
+  .nav-link.navlinks {
+    font-size: 24px; /* ⬅️ smaller font size for mobile */
+  }
+  
+  .close-btn i {
+    font-size: 24px; /* ⬅️ smaller close button icon */
+  }
+}
