@@ -1283,13 +1283,14 @@ canvas {
   .p-much-top {
     padding-top: 10px;
   }
-  .main-text {
+ .main-text {
     position: absolute;
     top: 34%;
     left: 50%;
     transform: translate(-47%, -20%);
     pointer-events: none;
-  }
+    width: 400px;
+}
   .career-desc {
     font-size: 18px;
     line-height: 27px;
