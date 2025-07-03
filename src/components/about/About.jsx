@@ -47,8 +47,7 @@ const About = () => {
               </div>
               <div className="mt-3 mt-sm-4 mt-md-5"data-aos="fade-up" data-aos-offset="100" data-aos-duration="4000">
                 <button
-                  className="btn mainbtn"
-                  
+                  className="btn mainbtn" 
                 >
                   Start your project <i className="bi bi-chevron-right"></i>
                 </button>
