@@ -467,6 +467,22 @@ canvas {
   line-height: 100%;
   letter-spacing: 0%;
 }
+.blog-para p{
+   font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #fff;
+}
+.bloglist li{
+   font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #fff;
+}
 .about-us-img {
   height: 350px;
   width: 100%;
@@ -967,6 +983,11 @@ canvas {
 }
 .foliohead {
   font-size: 90px;
+  font-weight: 400;
+  font-family: "Staatliches", sans-serif;
+}
+.foliohead-sm {
+  font-size: 50px;
   font-weight: 400;
   font-family: "Staatliches", sans-serif;
 }

@@ -21,6 +21,7 @@ import gsap from "gsap";
 import Sidebar from "./components/header/Sidebar";
 import Blogs from "./pages/Blogs";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import StrategicBrandingBlog from "./pages/Blogs/why_your_business_needs_strategic_branding";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -103,6 +104,7 @@ const App = () => {
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
               <Route path="/printmediadesigns" element={<PrintMediadesigns />} />
+              <Route path="/why_your_business_needs_strategic_branding" element={<StrategicBrandingBlog />} />
             </Routes>
             <Footer />
           </main>
