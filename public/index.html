@@ -86,34 +86,31 @@
       <!-- <h1 class="">Best web Development Company in Nashik</h1> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
- <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.getElementById("preloader");
     const video = document.getElementById("preloader-video");
 
     const isHome = window.location.pathname === "/";
-    const storedTimestamp = localStorage.getItem("preloaderLastSeen");
-    const now = Date.now();
 
-    // 12 hours in milliseconds
-    const twelveHours = 12 * 60 * 60 * 1000;
+    const navEntry = performance.getEntriesByType("navigation")[0];
+    const isReload = navEntry && navEntry.type === "reload";
 
-    const shouldShowPreloader = !storedTimestamp || now - parseInt(storedTimestamp, 10) > twelveHours;
-
-    if (isHome && shouldShowPreloader) {
+    if (isHome && !isReload) {
+      // Play video and hide preloader after video ends
       video.onended = function () {
         preloader.style.opacity = "0";
         preloader.style.transition = "opacity 1s ease-out";
         setTimeout(() => {
           preloader.style.display = "none";
         }, 1000);
-        localStorage.setItem("preloaderLastSeen", Date.now().toString());
       };
     } else {
       preloader.style.display = "none";
     }
   });
 </script>
+
 
 
     <style>
