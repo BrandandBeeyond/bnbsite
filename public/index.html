@@ -31,15 +31,19 @@
 
     <!-- Google tag (gtag.js) -->
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11170730270">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11170730270"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'AW-11170730270');
-</script>
+      gtag("config", "AW-11170730270");
+    </script>
     <title>Best Website Design Company in Nashik | Brandandbeeyond</title>
     <script>
       (function (w, d, s, l, i) {
@@ -84,32 +88,30 @@
       <!-- <h1 class="">Best web Development Company in Nashik</h1> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const preloader = document.getElementById("preloader");
-    const video = document.getElementById("preloader-video");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("preloader");
+        const video = document.getElementById("preloader-video");
 
-    const isHome = window.location.pathname === "/";
+        const isHome = window.location.pathname === "/";
 
-    const navEntry = performance.getEntriesByType("navigation")[0];
-    const isReload = navEntry && navEntry.type === "reload";
+        const navEntry = performance.getEntriesByType("navigation")[0];
+        const isReload = navEntry && navEntry.type === "reload";
 
-    if (isHome && !isReload) {
-      // Play video and hide preloader after video ends
-      video.onended = function () {
-        preloader.style.opacity = "0";
-        preloader.style.transition = "opacity 1s ease-out";
-        setTimeout(() => {
+        if (isHome && !isReload) {
+          // Play video and hide preloader after video ends
+          video.onended = function () {
+            preloader.style.opacity = "0";
+            preloader.style.transition = "opacity 1s ease-out";
+            setTimeout(() => {
+              preloader.style.display = "none";
+            }, 1000);
+          };
+        } else {
           preloader.style.display = "none";
-        }, 1000);
-      };
-    } else {
-      preloader.style.display = "none";
-    }
-  });
-</script>
-
-
+        }
+      });
+    </script>
 
     <style>
       #preloader {
