@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./contact.css";
 import emailjs from 'emailjs-com';
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "../../config";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const services = [
     "Social Media",
@@ -19,14 +20,15 @@ const Contact = () => {
 
   const [selectedServices, setSelectedServices] = useState([]);
 
+
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
   });
-  const [showPopup, setShowPopup] = useState(false);
-
+ 
   const handleSelectedService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
@@ -79,7 +81,8 @@ const Contact = () => {
       USER_ID
     ).then((response)=>{
       console.log("Email successfully sent:", response);
-      setShowPopup(true);
+      navigate('/thank-you');
+
     },
     (err) => {
       console.error("Email sending failed:", err);
@@ -165,15 +168,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {showPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <h3>Thanks for contacting us!</h3>
-            <p>We will get back to you shortly.</p>
-            <button onClick={() => setShowPopup(false)} className="popup-close-btn">Close</button>
-          </div>
-        </div>
-      )}
+     
     </section>
   );
 };

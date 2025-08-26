@@ -96,6 +96,13 @@ canvas {
   width: 100%; /* Make canvas responsive */
   overflow-x: hidden !important;
 }
+.ty-head{
+  font-size: 70px;
+  line-height: 110px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 .main_banner::before {
   content: "";
   position: absolute;

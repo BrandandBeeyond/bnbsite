@@ -22,6 +22,7 @@ import Sidebar from "./components/header/Sidebar";
 import Blogs from "./pages/Blogs";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import StrategicBrandingBlog from "./pages/Blogs/why_your_business_needs_strategic_branding";
+import ThankYou from "./pages/ThankYou";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -49,7 +50,7 @@ const App = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: "auto",
     });
   }, [location.pathname]);
 
@@ -84,13 +85,16 @@ const App = () => {
     }
   }, [location.pathname]);
 
+
+   const hideHeaderFooter = location.pathname === "/thank-you";
+
   return (
     <>
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       <div id="smooth-wrapper" ref={wrapperRef}>
         <div id="smooth-content" ref={contentRef}>
           <main className="overflow-x-hidden">
-            <Header toggleSidebar={toggleSidebar} />
+            {!hideHeaderFooter && <Header toggleSidebar={toggleSidebar} />}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -105,8 +109,9 @@ const App = () => {
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
               <Route path="/printmediadesigns" element={<PrintMediadesigns />} />
               <Route path="/why_your_business_needs_strategic_branding" element={<StrategicBrandingBlog />} />
+              <Route path="/thank-you" element={<ThankYou/>}/>
             </Routes>
-            <Footer />
+            {!hideHeaderFooter && <Footer />}
           </main>
         </div>
       </div>
