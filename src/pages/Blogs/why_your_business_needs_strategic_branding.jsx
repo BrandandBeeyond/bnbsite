@@ -35,7 +35,7 @@ const StrategicBrandingBlog = () => {
         <div className="row my-4 pt-4">
           <div className="col-lg-7">
             <img
-              src={require("../../images/strategic_branding.png")}
+              src="images/strategic_branding.png"
               className="img-fluid"
               alt=""
             />

@@ -23,6 +23,7 @@ import Blogs from "./pages/Blogs";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import StrategicBrandingBlog from "./pages/Blogs/why_your_business_needs_strategic_branding";
 import ThankYou from "./pages/ThankYou";
+import WebsiteMarketing from "./pages/Blogs/why-your-business-needs-strategic-website";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -109,6 +110,7 @@ const App = () => {
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
               <Route path="/printmediadesigns" element={<PrintMediadesigns />} />
               <Route path="/why_your_business_needs_strategic_branding" element={<StrategicBrandingBlog />} />
+              <Route path="/why-your-business-needs-strategic-website" element={<WebsiteMarketing />} />
               <Route path="/thank-you" element={<ThankYou/>}/>
             </Routes>
             {!hideHeaderFooter && <Footer />}
