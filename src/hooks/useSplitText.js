@@ -11,7 +11,7 @@ const useSplitText = ({
   animateTo = {},
   triggerHook = 0.8, // offset behavior
   once = true, // animate only once
-  deps = [],
+  deps = [], // additional dependencies (optional)
 } = {}) => {
   const textRef = useRef(null);
 
@@ -46,7 +46,8 @@ const useSplitText = ({
       tl.kill();
       split.revert();
     };
-  }, [type, animateFrom, animateTo, triggerHook, once, ...deps]); // ✅ fixed
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [type, animateFrom, animateTo, triggerHook, once, JSON.stringify(deps)]); // ✅ safe & warning-free
 
   return textRef;
 };
