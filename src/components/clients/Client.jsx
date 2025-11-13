@@ -18,10 +18,9 @@ const Client = () => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const needsRedrawRef = useRef(false);
-  let hexagons = [];
-  
+  const hexagonsRef = useRef([]); // ✅ Persistent hexagons array
 
-   const headingRef = useSplitText({
+  const headingRef = useSplitText({
     type: "chars",
     animateFrom: { y: 60, opacity: 0 },
     animateTo: {
@@ -30,35 +29,34 @@ const Client = () => {
       duration: 0.9,
       ease: "power3.out",
     },
-    triggerHook: 0.8, // trigger when 80% into viewport
+    triggerHook: 0.8,
     once: true,
-    deps: [], // leave empty unless you need to re-run
+    deps: [],
   });
-
 
   useEffect(() => {
     const canvasElement = canvasRef.current;
     const canvas = canvasElement.getContext("2d");
     let [canvW, canvH] = [window.innerWidth, window.innerHeight];
-    let size = 20;
-    let xinc = size * Math.sin(Math.PI / 3) * 2;
-    let yinc = size * 1.5;
+    const size = 20;
+    const xinc = size * Math.sin(Math.PI / 3) * 2;
+    const yinc = size * 1.5;
 
     // Function to set canvas dimensions
     const setCanvasSize = () => {
       canvW = window.innerWidth;
-      canvH = 525; // Fixed height
+      canvH = 525;
       canvasElement.width = canvW;
       canvasElement.height = canvH;
       createHexGrid();
     };
 
-    // Function to create the hexagonal grid
+    // Create hexagonal grid
     const createHexGrid = () => {
-      hexagons = [];
+      hexagonsRef.current = [];
       for (let y = 0; y < canvH / yinc; y++) {
         for (let x = y % 2 === 0 ? 0 : xinc / 2; x < canvW; x += xinc) {
-          hexagons.push({
+          hexagonsRef.current.push({
             x,
             y: y * yinc,
             hoverState: 0,
@@ -70,12 +68,12 @@ const Client = () => {
       needsRedrawRef.current = true;
     };
 
-    // Function to draw a hexagon
+    // Draw hexagon
     const drawHexagon = (x, y, hoverState, opacity, lineWidth) => {
       canvas.beginPath();
       for (let side = 0; side > -7; side--) {
-        let x2 = x + size * Math.sin((side * 2 * Math.PI) / 6);
-        let y2 = y + size * Math.cos((side * 2 * Math.PI) / 6);
+        const x2 = x + size * Math.sin((side * 2 * Math.PI) / 6);
+        const y2 = y + size * Math.cos((side * 2 * Math.PI) / 6);
         canvas.lineTo(x2, y2);
       }
       canvas.fillStyle = hoverState === 1 ? "rgba(24,24,24,0.8)" : "#181818";
@@ -92,28 +90,29 @@ const Client = () => {
       canvas.globalAlpha = 1;
     };
 
-    // Redraw the hexagons
+    // Redraw all hexagons
     const redraw = () => {
       if (!needsRedrawRef.current) return;
       canvas.clearRect(0, 0, canvW, canvH);
-      hexagons.forEach(({ x, y, hoverState, opacity, lineWidth }) =>
+      hexagonsRef.current.forEach(({ x, y, hoverState, opacity, lineWidth }) =>
         drawHexagon(x, y, hoverState, opacity, lineWidth)
       );
       needsRedrawRef.current = false;
     };
 
-    // Optimize mouse move event
+    // Mouse move handler
     let lastMouseMove = 0;
     const handleMouseMove = (event) => {
       const now = performance.now();
-      if (now - lastMouseMove < 50) return; // Limit updates to every 50ms
+      if (now - lastMouseMove < 50) return;
       lastMouseMove = now;
 
-      let mouseX = event.clientX,
-        mouseY = event.clientY;
-      hexagons.forEach((hex) => {
-        let distance = Math.sqrt((mouseX - hex.x) ** 2 + (mouseY - hex.y) ** 2);
-        let newHoverState =
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      hexagonsRef.current.forEach((hex) => {
+        const distance = Math.sqrt((mouseX - hex.x) ** 2 + (mouseY - hex.y) ** 2);
+        const newHoverState =
           distance < size * 1.5 ? 2 : distance < size * 6 ? 1 : 0;
         if (hex.hoverState !== newHoverState) {
           hex.hoverState = newHoverState;
@@ -122,17 +121,15 @@ const Client = () => {
       });
     };
 
-    // Animation loop (optimized)
+    // Animation loop
     const animate = () => {
       redraw();
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    // Resize event
+    // Events
     window.addEventListener("resize", setCanvasSize);
-    canvasElement.addEventListener("mousemove", handleMouseMove, {
-      passive: true,
-    });
+    canvasElement.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     setCanvasSize();
     animate();
@@ -145,6 +142,7 @@ const Client = () => {
     };
   }, []);
 
+  // Client logos
   const allClients = [
     { logo: BlissLogo, size: "clientbig" },
     { logo: TouchwoodLogo, size: "clientxsmall" },
@@ -175,15 +173,23 @@ const Client = () => {
     { logo: Avani, size: "clientmob" },
     { logo: Sparkle, size: "clientxsmall" },
   ];
+
   return (
     <>
+      {/* Desktop View */}
       <div className="position-relative client_bannner d-none d-sm-none d-md-block py-15">
         <canvas
           ref={canvasRef}
           className="client_banner_hex"
           style={{ pointerEvents: "none" }}
         />
-        <h4 className="client_head" style={{color:'#f9b000'}} ref={headingRef}>Our Clients</h4>
+        <h4
+          className="client_head"
+          style={{ color: "#f9b000" }}
+          ref={headingRef}
+        >
+          Our Clients
+        </h4>
 
         <div className="marquee-client">
           <Marquee autoFill={true} speed={50} pauseOnHover={true}>
@@ -199,12 +205,14 @@ const Client = () => {
           </Marquee>
         </div>
       </div>
+
+      {/* Mobile View */}
       <div className="position-relative client_bannner py-15 d-block d-sm-block d-md-none">
         <div className="pb-20">
           <h4 className="client_head">Our Clients</h4>
         </div>
 
-        <div className="">
+        <div>
           <Marquee autoFill={true} speed={50} pauseOnHover={true}>
             {upperClient.map((item, i) => (
               <div className="brand-logo-wrapper" key={i}>
@@ -216,6 +224,7 @@ const Client = () => {
               </div>
             ))}
           </Marquee>
+
           <Marquee
             autoFill={true}
             speed={50}

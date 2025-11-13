@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./contact.css";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "../../config";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -20,15 +20,13 @@ const Contact = () => {
 
   const [selectedServices, setSelectedServices] = useState([]);
 
-
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
   });
- 
+
   const handleSelectedService = (service) => {
     if (selectedServices.includes(service)) {
       setSelectedServices(selectedServices.filter((item) => item !== service));
@@ -58,14 +56,6 @@ const Contact = () => {
       return;
     }
 
-    const formMessage = `
-      Name: ${formData.name}
-      Phone: ${formData.phone}
-      Email: ${formData.email}
-      Services Interested In: ${selectedServices.join(", ")}
-      message: ${formData.message}
-    `;
-
     const templateParams = {
       name: formData.name,
       phone: formData.phone,
@@ -74,24 +64,21 @@ const Contact = () => {
       message: formData.message,
     };
 
-    emailjs.send(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      templateParams,
-      USER_ID
-    ).then((response)=>{
-      console.log("Email successfully sent:", response);
-      navigate('/thank-you');
-
-    },
-    (err) => {
-      console.error("Email sending failed:", err);
-    }) 
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
+      .then((response) => {
+        console.log("Email successfully sent:", response);
+        navigate("/thank-you");
+      })
+      .catch((err) => {
+        console.error("Email sending failed:", err);
+      });
   };
-  
 
   return (
-    <section className={location.pathname ==='/services' ? 'pt-25-advance' : 'pt-25'}>
+    <section
+      className={location.pathname === "/services" ? "pt-25-advance" : "pt-25"}
+    >
       <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-lg-5">
@@ -168,7 +155,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-     
     </section>
   );
 };
