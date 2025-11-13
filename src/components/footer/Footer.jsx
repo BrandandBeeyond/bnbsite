@@ -6,7 +6,7 @@ const Footer = () => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef(null);
   const needsRedrawRef = useRef(false);
-  let hexagons = [];
+  const hexagonsRef = useRef([]); // ✅ Use useRef to persist hexagons
 
   useEffect(() => {
     const canvasElement = canvasRef.current;
@@ -16,18 +16,16 @@ const Footer = () => {
     let xinc = size * Math.sin(Math.PI / 3) * 2;
     let yinc = size * 1.5;
 
-    // Function to set canvas dimensions
     const setCanvasSize = () => {
       canvW = window.innerWidth;
-      canvH = 525; // Fixed height
+      canvH = 525;
       canvasElement.width = canvW;
       canvasElement.height = canvH;
       createHexGrid();
     };
 
-    // Function to create the hexagonal grid
     const createHexGrid = () => {
-      hexagons = [];
+      const hexagons = [];
       for (let y = 0; y < canvH / yinc; y++) {
         for (let x = y % 2 === 0 ? 0 : xinc / 2; x < canvW; x += xinc) {
           hexagons.push({
@@ -39,10 +37,10 @@ const Footer = () => {
           });
         }
       }
+      hexagonsRef.current = hexagons; // ✅ Store in ref
       needsRedrawRef.current = true;
     };
 
-    // Function to draw a hexagon
     const drawHexagon = (x, y, hoverState, opacity, lineWidth) => {
       canvas.beginPath();
       for (let side = 0; side > -7; side--) {
@@ -64,26 +62,24 @@ const Footer = () => {
       canvas.globalAlpha = 1;
     };
 
-    // Redraw the hexagons
     const redraw = () => {
       if (!needsRedrawRef.current) return;
       canvas.clearRect(0, 0, canvW, canvH);
-      hexagons.forEach(({ x, y, hoverState, opacity, lineWidth }) =>
+      hexagonsRef.current.forEach(({ x, y, hoverState, opacity, lineWidth }) =>
         drawHexagon(x, y, hoverState, opacity, lineWidth)
       );
       needsRedrawRef.current = false;
     };
 
-    // Optimize mouse move event
     let lastMouseMove = 0;
     const handleMouseMove = (event) => {
       const now = performance.now();
-      if (now - lastMouseMove < 50) return; // Limit updates to every 50ms
+      if (now - lastMouseMove < 50) return;
       lastMouseMove = now;
 
-      let mouseX = event.clientX,
-        mouseY = event.clientY;
-      hexagons.forEach((hex) => {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      hexagonsRef.current.forEach((hex) => {
         let distance = Math.sqrt((mouseX - hex.x) ** 2 + (mouseY - hex.y) ** 2);
         let newHoverState =
           distance < size * 1.5 ? 2 : distance < size * 6 ? 1 : 0;
@@ -94,13 +90,11 @@ const Footer = () => {
       });
     };
 
-    // Animation loop (optimized)
     const animate = () => {
       redraw();
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    // Resize event
     window.addEventListener("resize", setCanvasSize);
     canvasElement.addEventListener("mousemove", handleMouseMove, {
       passive: true,
@@ -109,7 +103,6 @@ const Footer = () => {
     setCanvasSize();
     animate();
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(animationFrameRef.current);
       window.removeEventListener("resize", setCanvasSize);
@@ -117,14 +110,9 @@ const Footer = () => {
     };
   }, []);
 
-
- 
   return (
     <footer className="position-relative footer_banner overflow-hidden mt-3">
-      <canvas
-        ref={canvasRef}
-        className="client_banner_hex"
-      />
+      <canvas ref={canvasRef} className="client_banner_hex" />
       <div className="container-fluid footercontainer">
         <div className="row align-items-center">
           <div className="col-lg-4 col-4">
@@ -134,19 +122,36 @@ const Footer = () => {
               alt=""
             />
             <div className="social-links">
-              <button className="" onClick={()=>window.open('https://www.facebook.com/brandandbeeyond/')}>
+              <button
+                className=""
+                onClick={() =>
+                  window.open("https://www.facebook.com/brandandbeeyond/")
+                }
+              >
                 <i className="fab fa-facebook-f"></i>
               </button>
-              <button className="" onClick={()=>window.open('https://www.instagram.com/brandandbeeyond/')}>
+              <button
+                className=""
+                onClick={() =>
+                  window.open("https://www.instagram.com/brandandbeeyond/")
+                }
+              >
                 <i className="fab fa-instagram"></i>
               </button>
-              <button className="" onClick={()=>window.open('https://in.linkedin.com/company/brandandbeeyond')}>
+              <button
+                className=""
+                onClick={() =>
+                  window.open("https://in.linkedin.com/company/brandandbeeyond")
+                }
+              >
                 <i className="fab fa-linkedin-in"></i>
               </button>
-              <button className="" onClick={()=>window.open('https://wa.me/+917030060904')}>
+              <button
+                className=""
+                onClick={() => window.open("https://wa.me/+917030060904")}
+              >
                 <i className="fab fa-whatsapp"></i>
               </button>
-             
             </div>
           </div>
           <div className="col-lg-4 col-3 d-flex justify-content-center flex-column">
@@ -170,25 +175,25 @@ const Footer = () => {
           <div className="col-lg-4 col-4 d-flex justify-content-center">
             <ul className="footer_contacts mt-2 ps-0">
               <li className="nav-item text-white numbers py-2">
-                <Link className="nav-link" to={'/'}>
-                HOME
+                <Link className="nav-link" to={"/"}>
+                  HOME
                 </Link>
-               </li>
+              </li>
               <li className="nav-item text-white numbers py-2">
-                <Link className="nav-link" to={'/about'}>
-                ABOUT US
+                <Link className="nav-link" to={"/about"}>
+                  ABOUT US
                 </Link>
-               </li>
+              </li>
               <li className="nav-item text-white numbers py-2">
-                <Link className="nav-link" to={'/services'}>
-                SERVICES
+                <Link className="nav-link" to={"/services"}>
+                  SERVICES
                 </Link>
-               </li>
+              </li>
               <li className="nav-item text-white numbers py-2">
-                <Link className="nav-link" to={'/portfolio'}>
-                PORTFOLIO
+                <Link className="nav-link" to={"/portfolio"}>
+                  PORTFOLIO
                 </Link>
-               </li>
+              </li>
             </ul>
           </div>
         </div>

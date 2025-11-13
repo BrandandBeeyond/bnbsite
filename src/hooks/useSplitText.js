@@ -10,8 +10,8 @@ const useSplitText = ({
   animateFrom = {},
   animateTo = {},
   triggerHook = 0.8, // offset behavior
-  once = true,       // animate only once
-  deps = []
+  once = true, // animate only once
+  deps = [],
 } = {}) => {
   const textRef = useRef(null);
 
@@ -24,9 +24,11 @@ const useSplitText = ({
       scrollTrigger: {
         trigger: textRef.current,
         start: `top ${triggerHook * 100}%`,
-        toggleActions: once ? "play none none none" : "play reverse play reverse",
+        toggleActions: once
+          ? "play none none none"
+          : "play reverse play reverse",
         once: once,
-      }
+      },
     });
 
     tl.fromTo(
@@ -36,7 +38,7 @@ const useSplitText = ({
         ...animateTo,
         stagger: 0.04,
         duration: 1,
-        ease: "power3.out"
+        ease: "power3.out",
       }
     );
 
@@ -44,7 +46,7 @@ const useSplitText = ({
       tl.kill();
       split.revert();
     };
-  }, deps);
+  }, [type, animateFrom, animateTo, triggerHook, once, ...deps]); // ✅ fixed
 
   return textRef;
 };
