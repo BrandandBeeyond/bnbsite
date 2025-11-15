@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "How to Choose the Right Website Development Agency in Nashik & Mumbai",
+      thumbnail: "/images/fairytale.png",
+      slug: "best-website-development-agencies-mumbai",
+      blogpara:
+        " Choosing the right website development company is more than a technical decision it’s an emotional investment in the future of your brand. Backed by two years of immersive experience and a portfolio that spans across real estate, hospitality, MSMEs, clinics, startups, and more, we help businesses brand smart, grow fast, and lead with meaning.",
+      altseo: "strategic branding in nashik",
+    },
+    {
       name: "Why Your Business Needs Strategic Branding in 2025",
       thumbnail: "/images/strategic_branding.png",
       slug: "why_your_business_needs_strategic_branding",
