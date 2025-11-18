@@ -1,8 +1,10 @@
 import React from "react";
 import dotImage from "../../images/logos/dots.png";
 import useSplitText from "../../hooks/useSplitText";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   const headingRef = useSplitText({
     type: "chars",
     animateFrom: { y: 60, opacity: 0 },
@@ -48,7 +50,7 @@ const About = () => {
                   data-aos-offset="100"
                   data-aos-duration="4000"
                 >
-                  <button className="btn mainbtn">
+                  <button className="btn mainbtn" onClick={()=>navigate("/contact")}>
                     Start your project <i className="bi bi-chevron-right"></i>
                   </button>
                 </div>

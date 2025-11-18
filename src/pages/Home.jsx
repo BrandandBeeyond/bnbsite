@@ -108,9 +108,15 @@ const Home = () => {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-10">
-                <h1 className=" fs-1 mt-60" style={{ color: "#f9b000" }} title="Best Marketing in nashik">
+                <h1
+                  className=" fs-1 mt-60"
+                  style={{ color: "#f9b000" }}
+                  title="Best Marketing in nashik"
+                >
                   Brand & Beeyond – Your{" "}
-                  <span className="me-3 text-white">Trusted 360 Marketing & Branding</span>
+                  <span className="me-3 text-white">
+                    Trusted 360 Marketing & Branding
+                  </span>
                   Partner in Nashik
                 </h1>
 
