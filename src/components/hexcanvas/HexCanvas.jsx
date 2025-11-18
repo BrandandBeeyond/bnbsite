@@ -123,7 +123,7 @@ const HexCanvas = ({ title }) => {
       <canvas ref={canvasRef} />
       <div className="row main-text">
         <div className="col-lg-12 text-center">
-          <h1
+          <h2
             className="banner_head"
             data-aos="zoom-out-up"
             data-aos-delay="120"
