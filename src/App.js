@@ -26,6 +26,7 @@ import ThankYou from "./pages/ThankYou";
 import WebsiteMarketing from "./pages/Blogs/why-your-business-needs-strategic-website";
 import LogoMarketing from "./pages/Blogs/best-logo-design-trends";
 import WebsiteDevNashikMumbaiBlog from "./pages/Blogs/how-to-choose-right-website-agency-in-nashik";
+import CustomVSreadymadeTemp from "./pages/Blogs/custom-website-development";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -88,8 +89,7 @@ const App = () => {
     }
   }, [location.pathname]);
 
-
-   const hideHeaderFooter = location.pathname === "/thank-you";
+  const hideHeaderFooter = location.pathname === "/thank-you";
 
   return (
     <>
@@ -110,12 +110,31 @@ const App = () => {
               <Route path="/socialmedia" element={<SocialMedia />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
-              <Route path="/printmediadesigns" element={<PrintMediadesigns />} />
-              <Route path="/why_your_business_needs_strategic_branding" element={<StrategicBrandingBlog />} />
-              <Route path="/why-your-business-needs-strategic-website" element={<WebsiteMarketing />} />
-              <Route path="/best-logo-design-trends" element={<LogoMarketing />} />
-              <Route path="/best-website-development-agencies-mumbai" element={<WebsiteDevNashikMumbaiBlog />} />
-              <Route path="/thank-you" element={<ThankYou/>}/>
+              <Route
+                path="/printmediadesigns"
+                element={<PrintMediadesigns />}
+              />
+              <Route
+                path="/why_your_business_needs_strategic_branding"
+                element={<StrategicBrandingBlog />}
+              />
+              <Route
+                path="/why-your-business-needs-strategic-website"
+                element={<WebsiteMarketing />}
+              />
+              <Route
+                path="/best-logo-design-trends"
+                element={<LogoMarketing />}
+              />
+              <Route
+                path="/best-website-development-agencies-mumbai"
+                element={<WebsiteDevNashikMumbaiBlog />}
+              />
+              <Route
+                path="/custom-website-design-company-in-nashik"
+                element={<CustomVSreadymadeTemp />}
+              />
+              <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}
           </main>

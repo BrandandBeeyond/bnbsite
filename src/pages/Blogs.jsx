@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "Custom Website vs Ready-Made Templates: What’s Best for Your Business?",
+      thumbnail: "/images/stratacarebg.png",
+      slug: "custom-website-design-company-in-nashik",
+      blogpara:
+        " Choosing the right website development company is more than a technical decision it’s an emotional investment in the future of your brand. Backed by two years of immersive experience and a portfolio that spans across real estate, hospitality, MSMEs, clinics, startups, and more, we help businesses brand smart, grow fast, and lead with meaning.",
+      altseo: "strategic branding in nashik",
+    },
+    {
       name: "How to Choose the Right Website Development Agency in Nashik & Mumbai",
       thumbnail: "/images/fairytale.png",
       slug: "best-website-development-agencies-mumbai",
