@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <>
-      <section className="d-none d-sm-none d-md-block">
+      <section className="d-block d-sm-block d-md-block">
         <div className="row align-items-center">
           <div className="col-lg-4 d-flex justify-content-center align-items-center position-relative order-md-1 order-3">
             <img

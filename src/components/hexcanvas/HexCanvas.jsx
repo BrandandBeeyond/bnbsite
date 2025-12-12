@@ -133,7 +133,7 @@ const HexCanvas = ({ title }) => {
       </div>
 
       {isHomePage && (
-        <section className="d-block d-sm-block d-md-none">
+        <section className="d-none d-sm-block d-md-none">
           <div className="row align-items-center t-up-mob">
             <div className="col-lg-4 d-flex justify-content-center align-items-center position-relative order-md-1 order-3">
               <div className="row justify-content-center mt-4 mt-sm-3 mt-md-0">
