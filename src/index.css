@@ -1036,6 +1036,9 @@ canvas {
     pointer-events: none;
     font-family: "Staatliches", sans-serif;
   }
+  .para.fs-4{
+    font-size: 12px !important;
+  }
   .bnb_video {
     width: 390px;
     height: 256.79px;
@@ -1547,7 +1550,7 @@ canvas {
     z-index: 0;
   }
  .mt-minus-50 {
-    margin-top: -168px;
+    margin-top: 0px;
     position: relative;
     z-index: 12;
 }
