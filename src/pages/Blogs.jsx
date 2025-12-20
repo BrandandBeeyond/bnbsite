@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "How a Well-Developed Website Improves Your SEO and Google Ranking",
+      thumbnail: "/images/seo.jpg",
+      slug: "best-seo-marketing-agency-in-nashik",
+      blogpara:
+        " At Brand and Beeyond, we have seen firsthand how businesses start  ranking better simply by fixing their website structure, speed, and design.",
+      altseo: "seo marketing agency in nashik",
+    },
+    {
       name: "Custom Website vs Ready-Made Templates: What’s Best for Your Business?",
       thumbnail: "/images/stratacarebg.png",
       slug: "custom-website-design-company-in-nashik",

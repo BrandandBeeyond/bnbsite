@@ -27,6 +27,7 @@ import WebsiteMarketing from "./pages/Blogs/why-your-business-needs-strategic-we
 import LogoMarketing from "./pages/Blogs/best-logo-design-trends";
 import WebsiteDevNashikMumbaiBlog from "./pages/Blogs/how-to-choose-right-website-agency-in-nashik";
 import CustomVSreadymadeTemp from "./pages/Blogs/custom-website-development";
+import WebsiteSEOImpactBlog from "./pages/Blogs/best-seo-marketing-agency-in-nashik";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -133,6 +134,10 @@ const App = () => {
               <Route
                 path="/custom-website-design-company-in-nashik"
                 element={<CustomVSreadymadeTemp />}
+              />
+              <Route
+                path="/best-seo-marketing-agency-in-nashik"
+                element={<WebsiteSEOImpactBlog />}
               />
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
