@@ -28,6 +28,7 @@ import LogoMarketing from "./pages/Blogs/best-logo-design-trends";
 import WebsiteDevNashikMumbaiBlog from "./pages/Blogs/how-to-choose-right-website-agency-in-nashik";
 import CustomVSreadymadeTemp from "./pages/Blogs/custom-website-development";
 import WebsiteSEOImpactBlog from "./pages/Blogs/best-seo-marketing-agency-in-nashik";
+import Marketing360AgencyNashik from "./pages/Blogs/best-360-degree-marketing-agency-nashik";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -138,6 +139,10 @@ const App = () => {
               <Route
                 path="/best-seo-marketing-agency-in-nashik"
                 element={<WebsiteSEOImpactBlog />}
+              />
+              <Route
+                path="/best-360-degree-marketing-agency-nashik"
+                element={<Marketing360AgencyNashik />}
               />
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>

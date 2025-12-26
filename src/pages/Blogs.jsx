@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "From Visibility to Conversions: 360-Degree Digital Marketing | Brand and Beeyond",
+      thumbnail: "/images/360marketing.png",
+      slug: "best-360-degree-marketing-agency-nashik",
+      blogpara:
+        " In today’s competitive digital landscape, visibility alone is not enough. Many businesses appear online but still struggle to generate quality leads.",
+      altseo: "360 degree marketing agency in nashik",
+    },
+    {
       name: "How a Well-Developed Website Improves Your SEO and Google Ranking",
       thumbnail: "/images/seo.jpg",
       slug: "best-seo-marketing-agency-in-nashik",
