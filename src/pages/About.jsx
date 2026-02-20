@@ -181,7 +181,7 @@ const About = () => {
                     </div>
                     <div className="hexagon-team" data-aos="flip-left" data-aos-offset="130" data-aos-duration="1000">
                       <img
-                        src={require("../images/team/srushti.jpg")}
+                        src=""
                         className="img-fluid zoom"
                         alt=""
                       />
