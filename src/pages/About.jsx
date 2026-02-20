@@ -164,7 +164,7 @@ const About = () => {
                     </div>
                     <div className="hexagon-team" data-aos="flip-left" data-aos-offset="130" data-aos-duration="1000">
                       <img
-                        src={require("../images/team/pallavimam.jpg")}
+                        src={require("../images/team/pavitra.jpg")}
                         className="img-fluid zoom"
                         style={{ objectPosition: "top" }}
                         alt=""
@@ -181,7 +181,7 @@ const About = () => {
                     </div>
                     <div className="hexagon-team" data-aos="flip-left" data-aos-offset="130" data-aos-duration="1000">
                       <img
-                        src={require("../images/team/pavitra.jpg")}
+                        src={require("../images/team/srushti.jpg")}
                         className="img-fluid zoom"
                         alt=""
                       />
