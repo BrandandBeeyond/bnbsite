@@ -125,7 +125,7 @@ const Home = () => {
                   style={{ textAlign: "justify" }}
                 >
                   <p>
-                    Welcome to Brand & Beeyond — a leading 360 marketing and
+                    Welcome to Brand & Beeyond  a leading 360 marketing and
                     branding company in Nashik committed to helping businesses
                     grow with creative strategies and powerful digital
                     solutions. From brand identity to impactful online presence,

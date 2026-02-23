@@ -58,7 +58,9 @@ const App = () => {
       left: 0,
       behavior: "auto",
     });
-  }, [location.pathname]);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [location.key]);
 
   useEffect(() => {
     AOS.init({
@@ -87,9 +89,9 @@ const App = () => {
         effects: true,
       });
     } else {
-      smoothRef.current.scrollTo(0, true);
+      smoothRef.current.scrollTo(0, false);
     }
-  }, [location.pathname]);
+  }, [location.key]);
 
   const hideHeaderFooter = location.pathname === "/thank-you";
 
