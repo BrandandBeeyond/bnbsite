@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@rollup/plugin-inject": "^5.0.5",
     "@studio-freight/lenis": "^1.0.42",
