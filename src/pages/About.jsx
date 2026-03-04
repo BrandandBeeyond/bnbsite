@@ -214,7 +214,7 @@ const About = () => {
                       data-aos-duration="1000"
                     >
                       <img
-                        src={require("../images/team/prajwal.jpg")}
+                        src={require("../images/team/soniya.jpeg")}
                         className="img-fluid zoom"
                         alt=""
                       />
@@ -229,7 +229,7 @@ const About = () => {
                         data-aos-duration="1000"
                       >
                         <img
-                          src={require("../images/team/abhijeet.jpg")}
+                          src={require("../images/team/krupa.jpg")}
                           className="img-fluid zoom"
                           alt=""
                         />
