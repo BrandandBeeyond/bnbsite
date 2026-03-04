@@ -422,11 +422,11 @@ const About = () => {
                       <div className="position-relative">
                         <div className="hexagon-dead-l"></div>
                         <div className="hexagon-team">
-                          <img
+                          {/* <img
                             src={require("../images/team/yash.jpeg")}
                             className="img-fluid"
                             alt=""
-                          />
+                          /> */}
                         </div>
                         <div className="hexagon-dead-r"></div>
                       </div>
@@ -436,7 +436,7 @@ const About = () => {
                     <div className="d-flex flex-row  gap-2">
                       <div className="hexagon-team">
                         <img
-                          src={require("../images/team/sarath.jpg")}
+                          src={require("../images/team/krupa.jpg")}
                           className="img-fluid"
                           alt=""
                         />
