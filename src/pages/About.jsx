@@ -286,7 +286,7 @@ const About = () => {
                         data-aos-duration="1000"
                       >
                         <img
-                          src={require("../images/team/yash.jpg")}
+                          src={require("../images/team/yash.jpeg")}
                           className="img-fluid zoom"
                           alt=""
                         />
@@ -422,11 +422,11 @@ const About = () => {
                       <div className="position-relative">
                         <div className="hexagon-dead-l"></div>
                         <div className="hexagon-team">
-                          {/* <img
+                          <img
                             src={require("../images/team/yash.jpeg")}
                             className="img-fluid"
                             alt=""
-                          /> */}
+                          />
                         </div>
                         <div className="hexagon-dead-r"></div>
                       </div>
