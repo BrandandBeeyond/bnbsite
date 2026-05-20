@@ -39,7 +39,7 @@ const BestDigitalMarketingAgencyNashik = () => {
         <div className="row my-4 pt-4">
           <div className="col-lg-7">
             <img
-              src="/images/digital-marketing-nashik.jpg"
+              src="/images/dm.avif"
               className="img-fluid"
               alt="Best Digital Marketing Agency in Nashik"
             />

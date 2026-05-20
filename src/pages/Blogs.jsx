@@ -6,7 +6,7 @@ const Blogs = () => {
   const blogs = [
     {
       name: "Why Brand and Beeyond is Among the Best Digital Marketing Agencies in Nashik",
-      thumbnail: "/images/360marketing.png",
+      thumbnail: "/images/dm.avif",
       slug: "best-digital-marketing-agency-in-nashik",
       blogpara:
         "Brand and Beeyond is more than another digital marketing agency in Nashik. We build meaningful digital experiences with SEO, websites, branding, and social media strategies that help businesses grow.",
