@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "Why Brand and Beeyond is Among the Best Digital Marketing Agencies in Nashik",
+      thumbnail: "/images/360marketing.png",
+      slug: "best-digital-marketing-agency-in-nashik",
+      blogpara:
+        "Brand and Beeyond is more than another digital marketing agency in Nashik. We build meaningful digital experiences with SEO, websites, branding, and social media strategies that help businesses grow.",
+      altseo: "best digital marketing agency in nashik",
+    },
+    {
       name: "From Visibility to Conversions: 360-Degree Digital Marketing | Brand and Beeyond",
       thumbnail: "/images/360marketing.png",
       slug: "best-360-degree-marketing-agency-nashik",

@@ -29,6 +29,7 @@ import WebsiteDevNashikMumbaiBlog from "./pages/Blogs/how-to-choose-right-websit
 import CustomVSreadymadeTemp from "./pages/Blogs/custom-website-development";
 import WebsiteSEOImpactBlog from "./pages/Blogs/best-seo-marketing-agency-in-nashik";
 import Marketing360AgencyNashik from "./pages/Blogs/best-360-degree-marketing-agency-nashik";
+import BestDigitalMarketingAgencyNashik from "./pages/Blogs/best-digital-marketing-agency-in-nashik";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -145,6 +146,10 @@ const App = () => {
               <Route
                 path="/best-360-degree-marketing-agency-nashik"
                 element={<Marketing360AgencyNashik />}
+              />
+              <Route
+                path="/best-digital-marketing-agency-in-nashik"
+                element={<BestDigitalMarketingAgencyNashik />}
               />
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
