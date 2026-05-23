@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "How the Right Digital Marketing Strategy Helps Businesses Grow Faster",
+      thumbnail: "/images/dm.avif",
+      slug: "right-digital-marketing-strategy-business-growth",
+      blogpara:
+        "The right digital marketing strategy helps businesses improve visibility, build customer trust, generate quality leads, and create sustainable long-term growth.",
+      altseo: "digital marketing strategy for business growth",
+    },
+    {
       name: "Why Brand and Beeyond is Among the Best Digital Marketing Agencies in Nashik",
       thumbnail: "/images/dm.avif",
       slug: "best-digital-marketing-agency-in-nashik",
@@ -76,8 +84,8 @@ const Blogs = () => {
 
       <section className="printmediapage">
         <div className="container">
-          {blogs.map((blg, i) => (
-            <div className="row mt-5">
+          {blogs.map((blg) => (
+            <div className="row mt-5" key={blg.slug}>
               <div className="col-lg-6">
                 <img
                   src={blg.thumbnail}
