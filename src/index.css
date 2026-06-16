@@ -103,7 +103,7 @@ canvas {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.main_banner::before {
+/* .main_banner::before {
   content: "";
   position: absolute;
   background: linear-gradient(180deg, rgba(39, 39, 39, 0) 0%, #272727 100%);
@@ -113,7 +113,7 @@ canvas {
   left: 0;
   transform: rotate(-180deg);
   pointer-events: none;
-}
+} */
 .interff {
   font-family: "Inter", sans-serif;
 }
@@ -154,6 +154,7 @@ canvas {
   transform: translate(-50%, -50%);
   width: 1000px;
   pointer-events: none;
+  z-index: 2;
 }
 .container-fluid {
   max-width: 1400px !important;
@@ -166,6 +167,25 @@ canvas {
     letter-spacing: 0%;
     pointer-events: none;
     font-family: "Staatliches", sans-serif;
+}
+
+.hero-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  pointer-events: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.main_banner canvas {
+  position: relative;
+  z-index: 0;
+}
+
+.main_banner::before,
+.main_banner::after {
+  z-index: 1;
 }
 .banner_head span {
   color: var(--main-color);
@@ -1557,4 +1577,95 @@ canvas {
     position: relative;
     z-index: 12;
 }
+}
+
+
+
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 44px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #f9b000;
+  box-shadow: 0 0 0 2px #f9b000;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: auto;
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #f9b000;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #f9b000;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #f9b000;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
 }

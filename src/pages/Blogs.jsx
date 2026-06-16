@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "Website Development Company in Nashik | Professional Website Development Services",
+      thumbnail: "/images/webdev2.webp",
+      slug: "best-website-design-and-development-services-in-nashik",
+      blogpara:
+        "Looking for a website development company in Nashik? Discover how a professional website can generate leads",
+      altseo: "digital marketing strategy for business growth",
+    },
+    {
       name: "How the Right Digital Marketing Strategy Helps Businesses Grow Faster",
       thumbnail: "/images/dm.avif",
       slug: "right-digital-marketing-strategy-business-growth",
@@ -19,6 +27,14 @@ const Blogs = () => {
       blogpara:
         "Brand and Beeyond is more than another digital marketing agency in Nashik. We build meaningful digital experiences with SEO, websites, branding, and social media strategies that help businesses grow.",
       altseo: "best digital marketing agency in nashik",
+    },
+    {
+      name: "Best Website Design and Development Services in Nashik",
+      thumbnail: "/images/website-design.jpg",
+      slug: "best-website-design-and-development-services-in-nashik",
+      blogpara:
+        "Brand and Beeyond delivers website design and development services in Nashik that are responsive, SEO-friendly, and built to support real business growth.",
+      altseo: "best website design and development services in nashik",
     },
     {
       name: "From Visibility to Conversions: 360-Degree Digital Marketing | Brand and Beeyond",
