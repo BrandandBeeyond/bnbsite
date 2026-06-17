@@ -32,6 +32,7 @@ import Marketing360AgencyNashik from "./pages/Blogs/best-360-degree-marketing-ag
 import BestDigitalMarketingAgencyNashik from "./pages/Blogs/best-digital-marketing-agency-in-nashik";
 import RightDigitalMarketingStrategyBusinessGrowth from "./pages/Blogs/right-digital-marketing-strategy-business-growth";
 import BestWebsiteDesignAndDevelopmentServicesNashik from "./pages/Blogs/best-website-design-and-development-services-in-nashik";
+import SocialMediaMarketingNashik from "./pages/Blogs/social-media-marketing-agency-in-nashik";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -160,6 +161,10 @@ const App = () => {
               <Route
                 path="/right-digital-marketing-strategy-business-growth"
                 element={<RightDigitalMarketingStrategyBusinessGrowth />}
+              />
+              <Route
+                path="/social-media-marketing-agency-in-nashik"
+                element={<SocialMediaMarketingNashik />}
               />
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>

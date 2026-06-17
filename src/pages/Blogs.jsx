@@ -6,6 +6,14 @@ const Blogs = () => {
   const blogs = [
     {
       name: "Website Development Company in Nashik | Professional Website Development Services",
+      thumbnail: "/images/social-media.jpg",
+      slug: "social-media-marketing-agency-in-nashik",
+      blogpara:
+        "Looking for a website development company in Nashik? Discover how a professional website can generate leads",
+      altseo: "digital marketing strategy for business growth",
+    },
+    {
+      name: "Website Development Company in Nashik | Professional Website Development Services",
       thumbnail: "/images/webdev2.webp",
       slug: "best-website-design-and-development-services-in-nashik",
       blogpara:
