@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Header from "./components/header/Header";
 import ReactGA from "react-ga4";
 import Footer from "./components/footer/Footer";
+import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Home from "./pages/Home";
@@ -33,6 +34,7 @@ import BestDigitalMarketingAgencyNashik from "./pages/Blogs/best-digital-marketi
 import RightDigitalMarketingStrategyBusinessGrowth from "./pages/Blogs/right-digital-marketing-strategy-business-growth";
 import BestWebsiteDesignAndDevelopmentServicesNashik from "./pages/Blogs/best-website-design-and-development-services-in-nashik";
 import SocialMediaMarketingNashik from "./pages/Blogs/social-media-marketing-agency-in-nashik";
+import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -165,6 +167,10 @@ const App = () => {
               <Route
                 path="/social-media-marketing-agency-in-nashik"
                 element={<SocialMediaMarketingNashik />}
+              />
+              <Route
+                path="/best-software-development-company-in-nashik"
+                element={<SoftwareDevelopment />}
               />
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
