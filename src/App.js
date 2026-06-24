@@ -169,7 +169,7 @@ const App = () => {
                 element={<SocialMediaMarketingNashik />}
               />
               <Route
-                path="/best-software-development-company-in-nashik"
+                path="/best-software-development-services-in-nashik"
                 element={<SoftwareDevelopment />}
               />
               <Route path="/thank-you" element={<ThankYou />} />

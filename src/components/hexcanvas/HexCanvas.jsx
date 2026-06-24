@@ -10,7 +10,7 @@ const HexCanvas = ({ title }) => {
   const isHomePage = location.pathname === "/";
 
   const handleGetStartedClicktoSoftwarepage = () => {
-    window.location.href = "/best-software-development-company-in-nashik";
+    window.location.href = "/best-software-development-services-in-nashik";
   }
 
   useEffect(() => {
@@ -136,7 +136,7 @@ const HexCanvas = ({ title }) => {
 
           {isHomePage && (
             <div className="hero-cta-wrap">
-              <button type="button" className="animated-button"  onClick={handleGetStartedClicktoSoftwarepage}>
+              <button type="button" className="animated-button" onClick={handleGetStartedClicktoSoftwarepage}>
                 <svg
                   viewBox="0 0 24 24"
                   className="arr-2"
