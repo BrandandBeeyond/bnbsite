@@ -1,19 +1,82 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { createPortal } from "react-dom";
 import ReactParallaxTilt from "react-parallax-tilt";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const challenges = [
-  { icon: "M", title: "Manual Processes" },
-  { icon: "D", title: "Scattered Data" },
-  { icon: "W", title: "Inefficient Workflows" },
-  { icon: "C", title: "Poor Customer Management" },
-  { icon: "R", title: "Lack of Real-time Insights" },
-  { icon: "S", title: "Scaling Your Business" },
+  {
+    letter: "M",
+    title: "Manual Processes",
+    icon: "/images/icons/challenges/manual-processes.svg",
+  },
+  {
+    letter: "D",
+    title: "Scattered Data",
+    icon: "/images/icons/challenges/scattered-data.svg",
+  },
+  {
+    letter: "W",
+    title: "Inefficient Workflows",
+    icon: "/images/icons/challenges/inefficient-workflows.svg",
+  },
+  {
+    letter: "C",
+    title: "Poor Customer Management",
+    icon: "/images/icons/challenges/customer-management.svg",
+  },
+  {
+    letter: "R",
+    title: "Lack of Real-time Insights",
+    icon: "/images/icons/challenges/real-time-insights.svg",
+  },
+  {
+    letter: "S",
+    title: "Scaling Your Business",
+    icon: "/images/icons/challenges/scaling-business.svg",
+  },
+];
+
+const helpSteps = [
+  {
+    number: "01",
+    icon: "/images/icons/help/search.svg",
+    title: "UNDERSTAND",
+    text: "We analyze your business and identify key challenges holding you back.",
+  },
+  {
+    number: "02",
+    icon: "/images/icons/help/target.svg",
+    title: "STRATEGIZE",
+    text: "We create a tailored strategy aligned with your goals and vision.",
+  },
+  {
+    number: "03",
+    icon: "/images/icons/help/code.svg",
+    title: "BUILD",
+    text: "We develop scalable, secure and high-performance solutions.",
+  },
+  {
+    number: "04",
+    icon: "/images/icons/help/gear.svg",
+    title: "AUTOMATE",
+    text: "We streamline processes to save time and reduce manual work.",
+  },
+  {
+    number: "05",
+    icon: "/images/icons/help/chart.svg",
+    title: "OPTIMIZE",
+    text: "We optimize performance and improve efficiency across your business.",
+  },
+  {
+    number: "06",
+    icon: "/images/icons/help/rocket.svg",
+    title: "SCALE",
+    text: "We help you scale seamlessly and stay ahead of the competition.",
+  },
 ];
 
 const softwareServices = [
@@ -103,6 +166,18 @@ const techStack = [
 export default function SoftwareDevelopment() {
   const processSectionRef = useRef(null);
   const processCardRefs = useRef([]);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [isMobileHero, setIsMobileHero] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth <= 560 : false,
+  );
+  const [quoteForm, setQuoteForm] = useState({
+    fullName: "",
+    email: "",
+    mobile: "",
+    businessName: "",
+    service: "",
+    message: "",
+  });
   const [activeProcessIndex, setActiveProcessIndex] = useState(0);
 
   useEffect(() => {
@@ -177,6 +252,91 @@ export default function SoftwareDevelopment() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isQuoteModalOpen) {
+      return undefined;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setIsQuoteModalOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isQuoteModalOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileHero(window.innerWidth <= 560);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleQuoteChange = (event) => {
+    const { name, value } = event.target;
+    setQuoteForm((current) => ({
+      ...current,
+      [name]: value,
+    }));
+  };
+
+  const handleQuoteSubmit = (event) => {
+    event.preventDefault();
+
+    const requiredFields = [
+      quoteForm.fullName,
+      quoteForm.email,
+      quoteForm.mobile,
+      quoteForm.businessName,
+      quoteForm.service,
+      quoteForm.message,
+    ];
+
+    if (requiredFields.some((field) => !field.trim())) {
+      alert("Please fill all the fields.");
+      return;
+    }
+
+    const whatsappNumber = "917030081814";
+    const whatsappMessage = [
+      "New software development quote request",
+      `Full Name: ${quoteForm.fullName}`,
+      `Email: ${quoteForm.email}`,
+      `Mobile: ${quoteForm.mobile}`,
+      `Business Name: ${quoteForm.businessName}`,
+      `Service Looking For: ${quoteForm.service}`,
+      `Message: ${quoteForm.message}`,
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage,
+    )}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    setIsQuoteModalOpen(false);
+    setQuoteForm({
+      fullName: "",
+      email: "",
+      mobile: "",
+      businessName: "",
+      service: "",
+      message: "",
+    });
+  };
+
   return (
     <>
       <Helmet prioritizeSeoTags>
@@ -223,7 +383,11 @@ export default function SoftwareDevelopment() {
               <div
                 className="software-hero__panel-bg"
                 style={{
-                  backgroundImage: 'url("/images/software-development-herobg.png")',
+                  backgroundImage: `url("${
+                    isMobileHero
+                      ? "/images/software-dev-herobgmob.png"
+                      : "/images/software-development-herobg.png"
+                  }")`,
                 }}
                 aria-hidden="true"
               />
@@ -247,25 +411,25 @@ export default function SoftwareDevelopment() {
                 </p>
 
                 <div className="software-hero__actions">
-                  <Link
+                  <button
+                    type="button"
                     className="software-hero__btn software-hero__btn--primary"
-                    to="/contact"
+                    onClick={() => setIsQuoteModalOpen(true)}
                   >
-                    GET A FREE CONSULTATION
+                    GET A QUOTE
                     <span className="software-hero__btn-icon" aria-hidden="true">
                       &rarr;
                     </span>
-                  </Link>
-                  <Link
-                    className="software-hero__btn software-hero__btn--secondary"
-                    to="/portfolio"
-                  >
-                    VIEW OUR WORK
-                    <span className="software-hero__btn-icon" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </Link>
+                  </button>
                 </div>
+              </div>
+
+              <div className="software-hero__mobile-visual" aria-hidden="true">
+                <img
+                  src="/images/software-dev-herobgmob.png"
+                  alt=""
+                  className="software-hero__mobile-image"
+                />
               </div>
             </div>
           </div>
@@ -273,29 +437,235 @@ export default function SoftwareDevelopment() {
 
         <section className="software-challenges">
           <div className="container-fluid">
-            <div className="software-challenges__grid">
+            <div className="software-challenges__layout">
               <div className="software-challenges__intro">
                 <p className="software-challenges__eyebrow">CHALLENGES WE SOLVE</p>
                 <h2 className="software-challenges__title">
-                  Is Your Business
+                  Is Your
                   <br />
-                  Facing These Challenges?
+                  Business
+                  <br />
+                  Facing These
+                  <br />
+                  <span>Challenges?</span>
                 </h2>
+                <div className="software-challenges__dots" aria-hidden="true" />
               </div>
 
-              <div className="software-challenges__items">
+              <div className="software-challenges__cards">
                 {challenges.map((item) => (
-                  <div className="software-challenges__item" key={item.title}>
-                    <span className="software-challenges__icon">
-                      {item.icon}
-                    </span>
-                    <p>{item.title}</p>
-                  </div>
+                  <article className="software-challenges__card" key={item.title}>
+                    <span className="software-challenges__badge">{item.letter}</span>
+                    <span className="software-challenges__rule" aria-hidden="true" />
+                    <h3 className="software-challenges__card-title">{item.title}</h3>
+                    <div className="software-challenges__card-art" aria-hidden="true">
+                      <img
+                        src={item.icon}
+                        alt=""
+                        className="software-challenges__card-icon"
+                      />
+                    </div>
+                  </article>
                 ))}
               </div>
             </div>
           </div>
         </section>
+
+        <section className="software-help">
+          <div className="container-fluid">
+            <div className="software-help__layout">
+              <div className="software-help__visual">
+                <div className="software-help__image-shell">
+                  <img
+                    src="/images/bnbsolutionbg.png"
+                    alt="Software development strategy visual"
+                    className="software-help__image"
+                  />
+                  <div className="software-help__visual-overlay" aria-hidden="true" />
+                  <div className="software-help__visual-caption">
+                    <span>We turn your challenges into</span>
+                    <strong>REAL BUSINESS <em>GROWTH</em></strong>
+                  </div>
+                </div>
+              </div>
+
+              <div className="software-help__content">
+                <p className="software-help__eyebrow">HOW WE HELP</p>
+                <h2 className="software-help__title">
+                  A PROVEN PROCESS TO DRIVE
+                  <br />
+                  MEASURABLE <span>RESULTS</span>
+                </h2>
+                <p className="software-help__copy">
+                  We follow a structured approach to understand your business,
+                  build the right solution, and help you scale with confidence.
+                </p>
+
+                <div className="software-help__steps">
+                  {helpSteps.map((step) => (
+                    <article className="software-help__step" key={step.number}>
+                      <div className="software-help__number">{step.number}</div>
+                      <div className="software-help__step-icon" aria-hidden="true">
+                        <img
+                          src={step.icon}
+                          alt=""
+                          className="software-help__step-icon-img"
+                        />
+                      </div>
+                      <div className="software-help__step-body">
+                        <h3>{step.title}</h3>
+                        <p>{step.text}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+                <div className="software-help__cta">
+                  <div className="software-help__cta-icon" aria-hidden="true">
+                    <img
+                      src="/images/icons/help/star.svg"
+                      alt=""
+                      className="software-help__cta-icon-img"
+                    />
+                  </div>
+                  <p>
+                    We don&apos;t just build solutions, we build{" "}
+                    <span>long-term growth partnerships.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {isQuoteModalOpen && typeof document !== "undefined"
+          ? createPortal(
+              <div
+                className="software-quote-modal"
+                role="presentation"
+                onMouseDown={() => setIsQuoteModalOpen(false)}
+              >
+                <div
+                  className="software-quote-modal__dialog"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="software-quote-modal-title"
+                  onMouseDown={(event) => event.stopPropagation()}
+                >
+                  <button
+                    type="button"
+                    className="software-quote-modal__close"
+                    onClick={() => setIsQuoteModalOpen(false)}
+                    aria-label="Close quote form"
+                  >
+                    ×
+                  </button>
+
+                  <div className="software-quote-modal__header">
+                    <p className="software-quote-modal__eyebrow">GET A QUOTE</p>
+                    <h3 id="software-quote-modal-title">Tell us about your project</h3>
+                    <p>
+                      Fill in the details below and we&apos;ll open WhatsApp with your
+                      message ready to send.
+                    </p>
+                  </div>
+
+                  <form
+                    className="software-quote-modal__form"
+                    onSubmit={handleQuoteSubmit}
+                  >
+                    <div className="software-quote-modal__grid">
+                      <div className="software-quote-modal__field">
+                        <label htmlFor="fullName">Full Name</label>
+                        <input
+                          id="fullName"
+                          name="fullName"
+                          type="text"
+                          value={quoteForm.fullName}
+                          onChange={handleQuoteChange}
+                          placeholder="Enter your full name"
+                        />
+                      </div>
+
+                      <div className="software-quote-modal__field">
+                        <label htmlFor="email">Email</label>
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={quoteForm.email}
+                          onChange={handleQuoteChange}
+                          placeholder="Enter your email"
+                        />
+                      </div>
+
+                      <div className="software-quote-modal__field">
+                        <label htmlFor="mobile">Mobile</label>
+                        <input
+                          id="mobile"
+                          name="mobile"
+                          type="tel"
+                          value={quoteForm.mobile}
+                          onChange={handleQuoteChange}
+                          placeholder="Enter your mobile number"
+                        />
+                      </div>
+
+                      <div className="software-quote-modal__field">
+                        <label htmlFor="businessName">Business Name</label>
+                        <input
+                          id="businessName"
+                          name="businessName"
+                          type="text"
+                          value={quoteForm.businessName}
+                          onChange={handleQuoteChange}
+                          placeholder="Enter your business name"
+                        />
+                      </div>
+
+                      <div className="software-quote-modal__field software-quote-modal__field--full">
+                        <label htmlFor="service">Service You Looking For</label>
+                        <select
+                          id="service"
+                          name="service"
+                          value={quoteForm.service}
+                          onChange={handleQuoteChange}
+                        >
+                          <option value="">Select a service</option>
+                          {softwareServices.map((item) => (
+                            <option key={item.title} value={item.title}>
+                              {item.title}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div className="software-quote-modal__field software-quote-modal__field--full">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={5}
+                          value={quoteForm.message}
+                          onChange={handleQuoteChange}
+                          placeholder="Tell us about your goals, timeline, and requirements"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="software-quote-modal__actions">
+                      <button type="button" onClick={() => setIsQuoteModalOpen(false)}>
+                        Cancel
+                      </button>
+                      <button type="submit">Send on WhatsApp</button>
+                    </div>
+                  </form>
+                </div>
+              </div>,
+              document.body,
+            )
+          : null}
 
         <section className="services software-page-services d-none d-md-block">
           <div className="container-fluid">
