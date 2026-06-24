@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const HexCanvas = ({ title }) => {
   const canvasRef = useRef(null);
@@ -7,11 +7,12 @@ const HexCanvas = ({ title }) => {
   const needsRedrawRef = useRef(false);
   const hexagonsRef = useRef([]); // ✅ Persist across renders
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
   const handleGetStartedClicktoSoftwarepage = () => {
-    window.location.href = "/best-software-development-services-in-nashik";
-  }
+    navigate("/best-software-development-services-in-nashik");
+  };
 
   useEffect(() => {
     const canvasElement = canvasRef.current;
