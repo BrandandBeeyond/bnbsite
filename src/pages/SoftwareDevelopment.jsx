@@ -354,7 +354,7 @@ export default function SoftwareDevelopment() {
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://brandandbeeyond.com/best-software-development-company-in-nashik"
+          href="https://brandandbeeyond.com/best-software-development-services-in-nashik"
         />
         <meta
           property="og:title"
@@ -370,7 +370,7 @@ export default function SoftwareDevelopment() {
         />
         <meta
           property="og:url"
-          content="https://brandandbeeyond.com/best-software-development-company-in-nashik"
+          content="https://brandandbeeyond.com/best-software-development-services-in-nashik"
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
