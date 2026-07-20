@@ -35,6 +35,7 @@ import RightDigitalMarketingStrategyBusinessGrowth from "./pages/Blogs/right-dig
 import BestWebsiteDesignAndDevelopmentServicesNashik from "./pages/Blogs/best-website-design-and-development-services-in-nashik";
 import SocialMediaMarketingNashik from "./pages/Blogs/social-media-marketing-agency-in-nashik";
 import WhyBrandAndBeeyondTopDigitalMarketingAgencyNashik from "./pages/Blogs/why-brand-and-beeyond-is-top-digital-marketing-agency-in-nashik";
+import WhyCustomCrmSoftwareEssentialForYourBusiness2026 from "./pages/Blogs/why-custom-crm-software-is-essential-for-your-business-in-2026";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -168,6 +169,14 @@ const App = () => {
               <Route
                 path="/social-media-marketing-agency-in-nashik"
                 element={<SocialMediaMarketingNashik />}
+              />
+              <Route
+                path="/why-brand-and-beeyond-is-top-digital-marketing-agency-in-nashik"
+                element={<WhyBrandAndBeeyondTopDigitalMarketingAgencyNashik />}
+              />
+              <Route
+                path="/why-custom-crm-software-is-essential-for-your-business-in-2026"
+                element={<WhyCustomCrmSoftwareEssentialForYourBusiness2026 />}
               />
               <Route
                 path="/best-software-development-services-in-nashik"

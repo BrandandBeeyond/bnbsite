@@ -13,6 +13,14 @@ const Blogs = () => {
       altseo: "top digital marketing agency in nashik",
     },
     {
+      name: "Why Custom CRM Software is Essential for Your Business in 2026",
+      thumbnail: "/images/webdev2.webp",
+      slug: "why-custom-crm-software-is-essential-for-your-business-in-2026",
+      blogpara:
+        "Discover why custom CRM software is becoming essential for businesses in 2026 and how it improves sales, automation, customer management, and growth.",
+      altseo: "custom crm software for business in 2026",
+    },
+    {
       name: "Website Development Company in Nashik | Professional Website Development Services",
       thumbnail: "/images/social-media.jpg",
       slug: "social-media-marketing-agency-in-nashik",
