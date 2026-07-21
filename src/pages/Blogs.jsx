@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "How Social Media Marketing Can Increase Your Sales",
+      thumbnail: "/images/social-media.jpg",
+      slug: "how-social-media-can-increase-your-sales",
+      blogpara:
+        "Learn how social media marketing helps businesses build brand awareness, generate quality leads, drive website traffic, and increase sales.",
+      altseo: "how social media marketing can increase your sales",
+    },
+    {
       name: "Why Brand and Beeyond is the Top Digital Marketing Agency in Nashik",
       thumbnail: "/images/dm.avif",
       slug: "why-brand-and-beeyond-is-top-digital-marketing-agency-in-nashik",
@@ -25,7 +33,7 @@ const Blogs = () => {
       thumbnail: "/images/social-media.jpg",
       slug: "social-media-marketing-agency-in-nashik",
       blogpara:
-        "Looking for a website development company in Nashik? Discover how a professional website can generate leads",
+        "Discover how social media marketing helps businesses build brand awareness, generate quality leads, and increase sales.",
       altseo: "digital marketing strategy for business growth",
     },
     {
