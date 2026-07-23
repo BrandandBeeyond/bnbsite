@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "Why Digital Growth is Essential for Your Business",
+      thumbnail: "/images/dm.avif",
+      slug: "why-digital-growth-is-essential-for-your-business",
+      blogpara:
+        "Learn why digital growth is essential for every business and how Brand & Beeyond helps brands grow through websites, SEO, social media, branding, and digital strategy.",
+      altseo: "why digital growth is essential for your business",
+    },
+    {
       name: "How Social Media Marketing Can Increase Your Sales",
       thumbnail: "/images/social-media.jpg",
       slug: "how-social-media-can-increase-your-sales",

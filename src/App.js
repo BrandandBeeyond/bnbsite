@@ -37,6 +37,7 @@ import SocialMediaMarketingNashik from "./pages/Blogs/social-media-marketing-age
 import WhyBrandAndBeeyondTopDigitalMarketingAgencyNashik from "./pages/Blogs/why-brand-and-beeyond-is-top-digital-marketing-agency-in-nashik";
 import WhyCustomCrmSoftwareEssentialForYourBusiness2026 from "./pages/Blogs/why-custom-crm-software-is-essential-for-your-business-in-2026";
 import HowSocialMediaCanIncreaseYourSales from "./pages/Blogs/how-social-media-can-increase-your-sales";
+import WhyDigitalGrowthIsEssentialForYourBusiness from "./pages/Blogs/why-digital-growth-is-essential-for-your-business";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -174,6 +175,10 @@ const App = () => {
               <Route
                 path="/how-social-media-can-increase-your-sales"
                 element={<HowSocialMediaCanIncreaseYourSales />}
+              />
+              <Route
+                path="/why-digital-growth-is-essential-for-your-business"
+                element={<WhyDigitalGrowthIsEssentialForYourBusiness />}
               />
               <Route
                 path="/why-brand-and-beeyond-is-top-digital-marketing-agency-in-nashik"
