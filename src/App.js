@@ -36,6 +36,9 @@ import BestWebsiteDesignAndDevelopmentServicesNashik from "./pages/Blogs/best-we
 import SocialMediaMarketingNashik from "./pages/Blogs/social-media-marketing-agency-in-nashik";
 import WhyBrandAndBeeyondTopDigitalMarketingAgencyNashik from "./pages/Blogs/why-brand-and-beeyond-is-top-digital-marketing-agency-in-nashik";
 import WhyCustomCrmSoftwareEssentialForYourBusiness2026 from "./pages/Blogs/why-custom-crm-software-is-essential-for-your-business-in-2026";
+import BestWebsiteDesignCompanyInNashik from "./pages/Blogs/best-website-design-company-in-nashik";
+import WhyCustomCrmSoftwareIsMandatoryForYourBusinessIn2026 from "./pages/Blogs/why-custom-crm-software-is-mandatory-for-your-business-in-2026";
+import BestSocialMediaMarketingAgencyInNashik from "./pages/Blogs/best-social-media-marketing-agency-in-nashik";
 import HowSocialMediaCanIncreaseYourSales from "./pages/Blogs/how-social-media-can-increase-your-sales";
 import WhyDigitalGrowthIsEssentialForYourBusiness from "./pages/Blogs/why-digital-growth-is-essential-for-your-business";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
@@ -123,6 +126,18 @@ const App = () => {
               <Route path="/websitedesign" element={<WebsiteDesign />} />
               <Route path="/socialmedia" element={<SocialMedia />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route
+                path="/best-website-design-company-in-nashik"
+                element={<BestWebsiteDesignCompanyInNashik />}
+              />
+              <Route
+                path="/why-custom-crm-software-is-mandatory-for-your-business-in-2026"
+                element={<WhyCustomCrmSoftwareIsMandatoryForYourBusinessIn2026 />}
+              />
+              <Route
+                path="/best-social-media-marketing-agency-in-nashik"
+                element={<BestSocialMediaMarketingAgencyInNashik />}
+              />
               <Route path="/googlemybusiness" element={<Googlemybusiness />} />
               <Route
                 path="/printmediadesigns"

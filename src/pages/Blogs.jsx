@@ -5,6 +5,30 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+      name: "Best Website Design Company in Nashik: Why Businesses Need a High-Converting Website in 2026",
+      thumbnail: "/images/website-design.jpg",
+      slug: "best-website-design-company-in-nashik",
+      blogpara:
+        "Discover why the best website design company in Nashik can help your business grow in 2026 with a high-converting, SEO-friendly, mobile-first website.",
+      altseo: "best website design company in nashik",
+    },
+    {
+      name: "Why Custom CRM Software Is Mandatory for Your Business in 2026 & How Brand & Beeyond Helps",
+      thumbnail: "/images/software-development-herobg.png",
+      slug: "why-custom-crm-software-is-mandatory-for-your-business-in-2026",
+      blogpara:
+        "Learn why custom CRM software development is mandatory in 2026 and how Brand & Beeyond builds CRM software for business growth, automation, and better customer management.",
+      altseo: "custom crm software development",
+    },
+    {
+      name: "Best Social Media Marketing Agency in Nashik: How the Right Strategy Can Grow Your Business in 2026",
+      thumbnail: "/images/socialmedia1.jpg",
+      slug: "best-social-media-marketing-agency-in-nashik",
+      blogpara:
+        "Discover how the best social media marketing agency in Nashik can grow your business in 2026 with strategy, content, social media management, and paid advertising.",
+      altseo: "best social media marketing agency in nashik",
+    },
+    {
       name: "Why Digital Growth is Essential for Your Business",
       thumbnail: "/images/dm.avif",
       slug: "why-digital-growth-is-essential-for-your-business",
@@ -37,7 +61,7 @@ const Blogs = () => {
       altseo: "custom crm software for business in 2026",
     },
     {
-      name: "Website Development Company in Nashik | Professional Website Development Services",
+      name: "Social Media Marketing Agency in Nashik | Digital Marketing Services",
       thumbnail: "/images/social-media.jpg",
       slug: "social-media-marketing-agency-in-nashik",
       blogpara:
