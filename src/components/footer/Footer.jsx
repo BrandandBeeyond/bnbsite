@@ -158,7 +158,7 @@ const Footer = () => {
             <h3 className="footer_head">Contact us :</h3>
             <ul className="footer_contacts mt-2 ps-0">
               <li className="nav-item text-white numbers py-2">
-                +91 70300 07581
+                +9170300 81814
               </li>
               <li className="nav-item text-white numbers py-2">
                 +91 70300 60904
