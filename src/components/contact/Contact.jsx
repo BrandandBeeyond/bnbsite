@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./contact.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const GOOGLE_SCRIPT_URL = " "; //app script url 
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbzx108GcYbwlnHCmfEWdWrktvEXLPppP7022ZajggqvJMSGn9NGt-VmSClj0ylZsG-6Vg/exec";
 
 const Contact = () => {
   const location = useLocation();
