@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./contact.css";
-import emailjs from "emailjs-com";
-import { SERVICE_ID, TEMPLATE_ID, USER_ID } from "../../config";
 import { useLocation, useNavigate } from "react-router-dom";
+
+const GOOGLE_SCRIPT_URL = " "; //app script url 
 
 const Contact = () => {
   const location = useLocation();
@@ -62,16 +62,23 @@ const Contact = () => {
       email: formData.email,
       services: selectedServices.join(", "),
       message: formData.message,
+      page: window.location.href,
     };
 
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
-      .then((response) => {
-        console.log("Email successfully sent:", response);
+    // Sends the enquiry to Google Apps Script (it emails you + adds a row in Google Sheet).
+    // "no-cors" + text/plain avoids browser CORS errors with Apps Script web apps.
+    fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(templateParams),
+    })
+      .then(() => {
+        console.log("Enquiry submitted successfully");
         navigate("/thank-you");
       })
       .catch((err) => {
-        console.error("Email sending failed:", err);
+        console.error("Enquiry submission failed:", err);
       });
   };
 
