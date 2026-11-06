@@ -5,6 +5,22 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const blogs = [
     {
+  name: "Posting Every Day, Getting No Leads? Here's What Your Marketing Strategy Is Missing",
+  thumbnail: "/images/blogs/posting-daily-no-leads-hero.jpg",
+  slug: "posting-every-day-getting-no-leads",
+  blogpara:
+    "Posting daily on social media but not getting enquiries? Discover what your marketing strategy is missing and how a digital marketing agency in Nashik turns posts into real leads.",
+  altseo: "digital marketing agency in nashik",
+},
+{
+  name: "AI Is Changing Marketing, But Can It Replace Human Creativity?",
+  thumbnail: "/images/blogs/ai-marketing-hero.jpg",
+  slug: "ai-changing-marketing-can-it-replace-human-creativity",
+  blogpara:
+    "AI is transforming digital marketing, but can it replace human creativity? Learn where AI helps, where it falls short, and how the best brands use both.",
+  altseo: "AI in digital marketing nashik",
+},
+    {
       name: "Best Website Design Company in Nashik: Why Businesses Need a High-Converting Website in 2026",
       thumbnail: "/images/website-design.jpg",
       slug: "best-website-design-company-in-nashik",
