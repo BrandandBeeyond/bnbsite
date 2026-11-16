@@ -207,5 +207,4 @@ const BrandSeriesBlog = ({ post }) => {
     </>
   );
 };
-
 export default BrandSeriesBlog;
