@@ -44,6 +44,8 @@ import WhyDigitalGrowthIsEssentialForYourBusiness from "./pages/Blogs/why-digita
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import PostingEveryDayNoLeads from "./pages/Blogs/posting-everyday-getting-no-leads";
 import AIChangingMarketingHumanCreativity from "./pages/Blogs/ai-changing-marketing-human-creativity";
+import BrandSeriesBlog from "./pages/Blogs/BrandSeriesBlog";
+import { brandSeriesPosts } from "./pages/Blogs/brandSeriesPosts";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -221,6 +223,9 @@ const App = () => {
                 path="/ai-changing-marketing-can-it-replace-human-creativity"
                 element={<AIChangingMarketingHumanCreativity />}
               />
+              {brandSeriesPosts.map((post) => (
+                <Route key={post.slug} path={`/${post.slug}`} element={<BrandSeriesBlog post={post} />} />
+              ))}
               <Route path="/thank-you" element={<ThankYou />} />
             </Routes>
             {!hideHeaderFooter && <Footer />}

@@ -1,9 +1,17 @@
 import React from "react";
 import HexCanvas from "../components/hexcanvas/HexCanvas";
 import { Link } from "react-router-dom";
+import { brandSeriesPosts } from "./Blogs/brandSeriesPosts";
 
 const Blogs = () => {
   const blogs = [
+    ...brandSeriesPosts.map((p) => ({
+      name: p.title,
+      thumbnail: p.hero,
+      slug: p.slug,
+      blogpara: p.listPara,
+      altseo: p.heroAlt,
+    })),
     {
   name: "Posting Every Day, Getting No Leads? Here's What Your Marketing Strategy Is Missing",
   thumbnail: "/images/blogs/posting-daily-no-leads-hero.jpg",
