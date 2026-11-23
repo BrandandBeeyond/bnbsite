@@ -2,6 +2,316 @@ const img = (f) => `/images/blogs/${f}`;
 
 export const brandSeriesPosts = [
   {
+    slug: "google-business-profile-local-seo-nashik",
+    title: "Why Your Competitor Shows Up on Google Maps and You Don't",
+    metaTitle: "Google Business Profile & Local SEO in Nashik: How to Rank on Google Maps | Brand and Beeyond",
+    description:
+      "Why does your competitor appear on Google Maps while you don't? Learn how Google Business Profile, reviews and local SEO work, and how a digital marketing agency in Nashik can help you get found nearby.",
+    keywords:
+      "local SEO Nashik, Google Business Profile optimization, Google Maps ranking, google my business Nashik, SEO company in Nashik, digital marketing agency in Nashik, how to rank on Google Maps, local search marketing, near me searches, Brand and Beeyond",
+    date: "2026-11-23",
+    hero: img("local-seo-google-maps-hero.jpg"),
+    heroAlt: "Google Maps search for a digital marketing agency near me showing a business ranked first in Nashik",
+    listPara:
+      "Customers searching 'near me' choose from the top few results on the map. Learn how Google Business Profile and local SEO decide who gets seen, and how to get on that list.",
+    intro: [
+      "Picture a customer standing in Nashik, phone in hand, typing 'best dentist near me' or 'digital marketing agency near me'. In seconds, Google shows a map and three businesses. Most people call or visit one of those three. Everyone else might as well not exist.",
+      "If your competitor is on that map and you are not, the gap is rarely about quality. It is almost always about how well their Google Business Profile is set up and maintained. The good news: this is one of the most affordable, fastest-moving parts of digital marketing for a local business.",
+      "At Brand and Beeyond, a digital marketing agency in Nashik, we see the same pattern again and again: a great local business with an empty or neglected profile, losing customers it never knew it had.",
+    ],
+    blocks: [
+      { type: "quote", q: "If a customer can't find you in the first three results on the map, you are not on the shortlist." },
+      {
+        type: "text",
+        h: "What Is a Google Business Profile?",
+        p: [
+          "Your Google Business Profile (earlier known as Google My Business) is the free listing that appears on Google Search and Google Maps when someone looks for your business or for what you offer. It shows your name, address, phone number, hours, photos, services, reviews and posts.",
+          "Think of it as your shopfront on Google. For many local customers, it is the first and only thing they see before deciding to call you.",
+        ],
+      },
+      {
+        type: "image",
+        img: img("google-local-ranking-factors.png"),
+        alt: "Diagram of the three Google local ranking factors: relevance, distance and prominence",
+        caption: "Google says local results are based mainly on relevance, distance and prominence.",
+      },
+      {
+        type: "cards",
+        h: "How Google Chooses Who Appears on the Map",
+        items: [
+          ["Relevance", "How well your profile matches the search. The right categories, services and description tell Google what you do."],
+          ["Distance", "How close your business is to the person searching. You can't move your shop, but you can make sure your address and service area are accurate."],
+          ["Prominence", "How well known your business is. Reviews, ratings, mentions across the web and a strong website all add to it."],
+        ],
+      },
+      {
+        type: "split",
+        img: img("google-business-profile-before-after.png"),
+        alt: "Before and after comparison of an incomplete and an optimised Google Business Profile",
+        h: "Complete Profiles Win Trust and Clicks",
+        p: [
+          "An incomplete profile looks abandoned. No photos, a generic category and unanswered reviews make a customer hesitate, even if your service is excellent.",
+          "An optimised profile answers questions before they are asked: what you do, where you are, when you are open and what other customers think. That reassurance is what turns a search into a phone call.",
+        ],
+      },
+      {
+        type: "steps",
+        h: "How to Improve Your Google Maps Ranking, Step by Step",
+        items: [
+          ["Claim and verify your profile", "Search for your business and claim the listing. Verification proves you are the owner and unlocks full control."],
+          ["Choose the right categories", "Pick the one primary category that best describes your business, then add relevant secondary ones."],
+          ["Keep your details identical everywhere", "Your name, address and phone number should match on your website, social pages and online directories."],
+          ["Add real photos and services", "Upload photos of your shop, team and work. List each service with a short, clear description."],
+          ["Ask for reviews, and reply to all of them", "Happy customers rarely review unprompted. Share your review link and answer every review, good or bad, politely."],
+          ["Post regularly", "Share offers, updates and events through Google Posts so your profile looks active."],
+          ["Support it with a fast, local website", "A mobile-friendly website with your city, services and contact details backs up what your profile says."],
+        ],
+      },
+      {
+        type: "compare",
+        h: "Google Business Profile vs Social Media Pages",
+        cols: ["", "Google Business Profile", "Social media page"],
+        rows: [
+          ["Customer intent", "Ready to buy or visit now", "Browsing and discovering"],
+          ["Seen when", "Someone searches for what you offer", "Someone scrolls or follows you"],
+          ["Best for", "Calls, directions, walk-ins, enquiries", "Brand personality and community"],
+          ["Cost to be listed", "Free", "Free"],
+        ],
+      },
+      {
+        type: "checklist",
+        h: "Your Local SEO Quick Check",
+        items: [
+          "My Google Business Profile is claimed and verified",
+          "My primary category is specific, not generic",
+          "Name, address and phone are identical across the web",
+          "I have recent photos and my services listed",
+          "I ask every happy customer for a review",
+          "I reply to all reviews within a few days",
+          "My website mentions Nashik and the areas I serve",
+        ],
+      },
+      {
+        type: "text",
+        h: "Common Mistakes Local Businesses Make",
+        p: [
+          "Stuffing keywords into the business name is one of them. Google's guidelines say your name should match your real-world name, and breaking the rules can get a profile suspended.",
+          "Another is ignoring negative reviews. A calm, helpful reply shows future customers how you handle problems, which often matters more than the complaint itself.",
+          "And finally, setting everything up once and forgetting it. Local search rewards businesses that stay active and accurate.",
+        ],
+      },
+    ],
+    faqs: [
+      ["How long does it take to rank on Google Maps?", "Improvements to a profile can show within weeks, but ranking depends on competition, reviews and how complete your presence is. It is an ongoing effort, not a one-time setup."],
+      ["Is Google Business Profile free?", "Yes. Creating and managing a Google Business Profile is free. You only pay if you hire an agency or run Google Ads."],
+      ["Do reviews really affect local ranking?", "Yes. Google lists review count and ratings as part of prominence, and reviews also strongly influence whether a customer chooses you."],
+      ["Can Brand and Beeyond manage my Google Business Profile?", "Yes. As a local SEO and digital marketing agency in Nashik, we set up, optimise and maintain profiles along with your website and social media."],
+    ],
+    ctaHead: "Get Found by Customers Who Are Searching Right Now",
+    ctaText:
+      "Brand and Beeyond is a digital marketing agency in Nashik that helps local businesses show up on Google Maps, get more calls and turn searches into customers.",
+    ctaBtn: "Get a Free Profile Review",
+  },
+  {
+    slug: "brand-colour-psychology-how-colours-influence-customers",
+    title: "The Colour Psychology of Branding: What Your Brand Colours Say Before You Do",
+    metaTitle: "Colour Psychology in Branding: How Brand Colours Influence Customers | Brand and Beeyond",
+    description:
+      "Learn how colour psychology shapes first impressions, trust and buying decisions, and how to choose brand colours that suit your business. Branding advice from a creative agency in Nashik.",
+    keywords:
+      "colour psychology in branding, brand colour palette, how to choose brand colours, logo colour meaning, branding agency in Nashik, brand identity design, colour psychology marketing, 60-30-10 rule, creative agency in Nashik, Brand and Beeyond",
+    date: "2026-11-23",
+    hero: img("brand-colour-psychology-hero.jpg"),
+    heroAlt: "Colour wheel showing red, orange, yellow, green, blue and black with the emotions each brand colour suggests",
+    listPara:
+      "Before a customer reads a word, your colours have already spoken. Learn what red, blue, yellow and more say about a brand, and how to choose a palette that fits.",
+    intro: [
+      "Think of a fast-food chain, a bank, or a luxury watch brand. Chances are a colour came to mind before a name did. That is not an accident. Colour is one of the quickest ways a brand communicates what it is like.",
+      "Research on colour and branding, such as the widely cited 2012 study by Labrecque and Milne, suggests colours shape the personality people attach to a brand. Red tends to feel exciting, blue feels competent and reliable. Customers may not be able to explain why, but they feel it.",
+      "At Brand and Beeyond, a branding agency in Nashik, choosing colours is never about 'what looks nice'. It is about what your customers should feel in the first second.",
+    ],
+    blocks: [
+      { type: "quote", q: "Colour is the first sentence of your brand story, and people read it before any words." },
+      {
+        type: "image",
+        img: img("brand-colour-emotions.png"),
+        alt: "Six brand colours with the feelings they suggest and the industries that commonly use them",
+        caption: "Common associations for six brand colours, and where you often see them used.",
+      },
+      {
+        type: "text",
+        h: "Why Colour Matters So Much in Branding",
+        p: [
+          "Colour is processed almost instantly. On a crowded shelf, a busy social feed or a Google results page, it is what makes your brand recognisable at a glance.",
+          "Used consistently across your logo, website, packaging and posts, a colour becomes a memory shortcut. Over time, people can recognise you without seeing your name at all.",
+        ],
+      },
+      {
+        type: "cards",
+        h: "What Popular Brand Colours Usually Signal",
+        items: [
+          ["Red", "Energy, urgency and appetite. Great for food, sales and anything that needs quick action."],
+          ["Blue", "Trust, calm and competence. A safe choice for finance, healthcare and technology."],
+          ["Green", "Growth, health and nature. Common in wellness, farming and sustainability."],
+          ["Yellow and gold", "Optimism, warmth and value. Stands out and feels friendly, but needs careful contrast."],
+          ["Black", "Premium, serious and timeless. Often used for luxury and high-end design."],
+          ["Orange", "Friendly, active and approachable. Works well for brands that want to feel fresh and affordable."],
+        ],
+      },
+      {
+        type: "text",
+        h: "Context and Culture Change the Meaning",
+        p: [
+          "Colour meanings are not universal. Red can mean danger in one setting and celebration or a wedding in another. White is linked to purity in some places and mourning in others. In India, colours such as saffron, red and gold carry cultural and festive meaning that a global guide might miss.",
+          "The shade matters too. A deep navy feels formal, a bright sky blue feels friendly. Always judge colours against your audience, your industry and your competitors.",
+        ],
+      },
+      {
+        type: "split",
+        reverse: true,
+        img: img("colour-60-30-10-rule.png"),
+        alt: "The 60-30-10 colour rule shown with a sample website using a dominant, secondary and accent colour",
+        h: "Use the 60-30-10 Rule for a Balanced Palette",
+        p: [
+          "A simple designer's rule keeps a palette from feeling chaotic: roughly 60% a dominant neutral, 30% a secondary colour and 10% a bold accent.",
+          "The accent should go on the things you most want people to act on, such as buttons and key offers. When everything is highlighted, nothing is.",
+        ],
+      },
+      {
+        type: "steps",
+        h: "How to Choose Brand Colours for Your Business",
+        items: [
+          ["Define how you want customers to feel", "Pick three words, such as trusted, modern, warm. Choose colours that support those words."],
+          ["Study your competitors", "If every rival uses blue, a well-chosen different colour can make you easier to remember. But stay credible for your industry."],
+          ["Think about your audience", "Age, culture and expectations all influence how colours are received."],
+          ["Test accessibility", "Make sure text has enough contrast against its background so everyone can read it, including on a phone in sunlight."],
+          ["Check it everywhere", "See how it looks on your logo, website, signboard, packaging and social posts before you commit."],
+        ],
+      },
+      {
+        type: "checklist",
+        h: "Brand Colour Checklist",
+        items: [
+          "Our colours match the feeling we want customers to have",
+          "We use one main colour and one accent, not ten",
+          "Text is easy to read on every background",
+          "Our colours are identical on web, print and social media",
+          "They help us stand out from local competitors",
+        ],
+      },
+    ],
+    faqs: [
+      ["How many colours should a brand use?", "Most strong brands use one or two main colours plus a neutral and an accent. Fewer colours used consistently are easier to remember."],
+      ["Does colour really affect sales?", "Colour influences first impressions and perceived personality, which can affect trust and action. It works best alongside clear messaging, good design and a quality product."],
+      ["Should I change my brand colours?", "Only if they no longer fit your audience or positioning. A refresh is often better than a complete change, so you keep existing recognition."],
+      ["Can Brand and Beeyond create a colour palette and brand identity for my business?", "Yes. As a branding agency in Nashik, we build full brand identities including logo, palette, typography and usage guidelines."],
+    ],
+    ctaHead: "Give Your Brand Colours a Purpose",
+  },
+  {
+    slug: "short-video-reels-marketing-strategy-for-brands",
+    title: "Reels That Sell: How Short Videos Help Local Brands Get Noticed Faster",
+    metaTitle: "Instagram Reels Marketing Strategy for Local Businesses | Brand and Beeyond, Nashik",
+    description:
+      "Learn how short-form video and Instagram Reels help local businesses get discovered. Hook, structure and content ideas from a social media marketing agency in Nashik.",
+    keywords:
+      "Instagram Reels marketing, short form video marketing, reels for business, video marketing agency in Nashik, social media marketing agency in Nashik, content marketing strategy, reel ideas for small business, social media growth, Brand and Beeyond",
+    date: "2026-11-23",
+    hero: img("short-video-reels-hero.jpg"),
+    heroAlt: "Three smartphones playing vertical short videos with a hook in the first three seconds",
+    listPara:
+      "Short videos are one of the quickest ways for a small brand to reach new people. Learn how to hook viewers in three seconds and what to post to get real enquiries.",
+    intro: [
+      "A static post asks people to stop and look. A short video earns attention by moving, speaking and showing. That is why Reels, YouTube Shorts and similar formats have become one of the fastest ways for small brands to be discovered by people who do not follow them yet.",
+      "But posting a reel is not a strategy. Thousands of businesses upload videos that nobody finishes. The difference is rarely the budget or the camera. It is whether the first few seconds give people a reason to stay.",
+      "At Brand and Beeyond, a social media marketing agency in Nashik, we plan short videos like mini-stories: a strong hook, a clear payoff and one next step.",
+    ],
+    blocks: [
+      { type: "quote", q: "On a short video, you don't have to win the whole audience. You only have to win the first three seconds." },
+      {
+        type: "text",
+        h: "Why Short Videos Work for Small Businesses",
+        p: [
+          "Short-form video platforms show content to people based on how they react, not only on who already follows you. A new brand with a good video can reach a fresh audience without a big ad budget.",
+          "Video also builds trust faster than text. Seeing your team, your product and your process makes a business feel real, which matters a lot for local services where customers want to know who they are dealing with.",
+        ],
+      },
+      {
+        type: "image",
+        img: img("reel-retention-curve.png"),
+        alt: "Illustrative chart comparing audience retention for a reel with a strong hook and one with a weak hook",
+        caption: "Illustrative example: most of the audience is won or lost right at the start.",
+      },
+      {
+        type: "split",
+        img: img("reel-structure-timeline.png"),
+        alt: "Timeline showing the structure of a 30 second reel: hook, value, proof and call to action",
+        h: "A Simple Structure for Every Reel",
+        p: [
+          "Great reels follow a pattern. Open with a hook, deliver one piece of value, back it up with proof, then end with one clear action.",
+          "Resist the urge to cram in everything you know. One idea per video is easier to watch, easier to remember and easier to share.",
+        ],
+      },
+      {
+        type: "cards",
+        h: "Reel Ideas Any Local Business Can Use",
+        items: [
+          ["Behind the scenes", "Show how your product is made or how your team works. People enjoy seeing the process."],
+          ["Myth vs fact", "Bust a common misconception in your industry. It is quick, useful and shareable."],
+          ["Before and after", "Visual transformations are naturally gripping, from a design revamp to a renovated space."],
+          ["Customer story", "A short testimonial or result, told simply, builds more trust than any claim you make yourself."],
+          ["Quick tips", "One practical tip in under 30 seconds positions you as the expert people turn to."],
+          ["Day in the life", "Let people see the human side of your brand, which is what they remember."],
+        ],
+      },
+      {
+        type: "steps",
+        h: "How to Create a Reel That Gets Watched",
+        items: [
+          ["Start with the hook", "Open with a question, a bold statement or a surprising visual. Do not begin with a logo or a long greeting."],
+          ["Keep it tight", "Cut pauses and filler. Every second should earn its place."],
+          ["Add captions", "Many people watch with the sound off, so on-screen text keeps them following along."],
+          ["Show real faces and places", "Authentic, well-lit footage usually beats over-produced content for local brands."],
+          ["End with one clear action", "Tell viewers what to do next: follow, save, call, book or visit."],
+          ["Post consistently and learn", "Check which videos held attention, then make more of what works."],
+        ],
+      },
+      {
+        type: "compare",
+        h: "Weak Reel vs Strong Reel",
+        cols: ["", "Weak reel", "Strong reel"],
+        rows: [
+          ["Opening", "Logo animation or 'Hi everyone'", "A question, claim or striking visual"],
+          ["Message", "Five ideas at once", "One clear idea"],
+          ["Text", "No captions", "Captions and key words on screen"],
+          ["Ending", "Just stops", "Clear next step"],
+        ],
+      },
+      {
+        type: "checklist",
+        h: "Before You Post a Reel",
+        items: [
+          "The first 3 seconds make someone want to keep watching",
+          "The video teaches, shows or entertains with one clear idea",
+          "Captions are on and readable on a small screen",
+          "The audio is clear and the lighting is good",
+          "There is a single call to action at the end",
+          "The video matches our brand colours, tone and style",
+        ],
+      },
+    ],
+    faqs: [
+      ["How long should a reel be?", "There is no single best length. Many successful business reels are between 15 and 30 seconds, but a video should be as long as it needs to be to deliver its idea and no longer."],
+      ["How often should a business post reels?", "Consistency matters more than volume. Pick a rhythm you can sustain, such as two to three reels a week, and stick with it."],
+      ["Do I need expensive equipment?", "No. A modern smartphone, good natural light and clear audio are enough to start. Strong ideas matter far more than gear."],
+      ["Can Brand and Beeyond plan and shoot reels for my business?", "Yes. As a social media marketing agency in Nashik, we handle content planning, scripting, shooting, editing and publishing."],
+    ],
+    ctaHead: "Turn Short Videos into Real Customers",
+    ctaText:
+      "Brand and Beeyond is a social media marketing agency in Nashik that creates scroll-stopping content and manages channels so your brand gets noticed and remembered.",
+    ctaBtn: "Plan My Reels Strategy",
+  },
+  {
     slug: "reverse-marketing-strategy-for-business-growth",
     title: "The Reverse Marketing Effect: What Happens When a Brand Tells Customers NOT to Buy?",
     metaTitle: "Best Marketing Agency in Nashik: How Reverse Marketing Builds Powerful Brands",

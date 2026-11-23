@@ -192,9 +192,10 @@ const BrandSeriesBlog = ({ post }) => {
         <div className="text-white text-center mt-5 p-5" style={{ background: "#ffffff0d", borderRadius: 12 }}>
           <h2 className="fs-2" style={{ color: Y }}>{post.ctaHead}</h2>
           <P>
-            Brand and Beeyond is a branding and digital marketing agency in Nashik that helps businesses build brands people remember, trust and choose.
+            {post.ctaText ||
+              "Brand and Beeyond is a branding and digital marketing agency in Nashik that helps businesses build brands people remember, trust and choose."}
           </P>
-          <Link to="/contact" className="btn btn-warning mt-3 px-4 py-2 fw-bold">Talk to Our Branding Team</Link>
+          <Link to="/contact" className="btn btn-warning mt-3 px-4 py-2 fw-bold">{post.ctaBtn || "Talk to Our Branding Team"}</Link>
           <div className="mt-4 blog-para">
             <p>
               Read more: <Link to="/blogs" style={{ color: Y }}>All Blogs</Link> ·{" "}
