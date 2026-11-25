@@ -46,6 +46,9 @@ import PostingEveryDayNoLeads from "./pages/Blogs/posting-everyday-getting-no-le
 import AIChangingMarketingHumanCreativity from "./pages/Blogs/ai-changing-marketing-human-creativity";
 import BrandSeriesBlog from "./pages/Blogs/BrandSeriesBlog";
 import { brandSeriesPosts } from "./pages/Blogs/brandSeriesPosts";
+import WebsiteAboutFaqPolicyPages from "./pages/Blogs/website-about-faq-policy-pages-importance";
+import WebsiteContentStrategyBeforeDesign from "./pages/Blogs/website-content-strategy-before-design";
+import WebsiteDesignedForGoogleNotHumans from "./pages/Blogs/website-designed-for-google-not-humans";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -223,6 +226,9 @@ const App = () => {
                 path="/ai-changing-marketing-can-it-replace-human-creativity"
                 element={<AIChangingMarketingHumanCreativity />}
               />
+              <Route path="/website-about-faq-policy-pages-importance" element={<WebsiteAboutFaqPolicyPages />} />
+              <Route path="/website-content-strategy-before-design" element={<WebsiteContentStrategyBeforeDesign />} />
+              <Route path="/website-designed-for-google-not-humans" element={<WebsiteDesignedForGoogleNotHumans />} />
               {brandSeriesPosts.map((post) => (
                 <Route key={post.slug} path={`/${post.slug}`} element={<BrandSeriesBlog post={post} />} />
               ))}
