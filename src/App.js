@@ -49,6 +49,8 @@ import { brandSeriesPosts } from "./pages/Blogs/brandSeriesPosts";
 import WebsiteAboutFaqPolicyPages from "./pages/Blogs/website-about-faq-policy-pages-importance";
 import WebsiteContentStrategyBeforeDesign from "./pages/Blogs/website-content-strategy-before-design";
 import WebsiteDesignedForGoogleNotHumans from "./pages/Blogs/website-designed-for-google-not-humans";
+import BestWebsiteAndWebDevelopmentCompanyNashik from "./pages/Blogs/best-website-and-web-development-company-in-nashik";
+import BestBrandingAgencyAndMarketingCompanyNashik from "./pages/Blogs/best-branding-agency-and-marketing-company-in-nashik";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -133,6 +135,8 @@ const App = () => {
               <Route path="/websitedesign" element={<WebsiteDesign />} />
               <Route path="/socialmedia" element={<SocialMedia />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/best-website-and-web-development-company-in-nashik" element={<BestWebsiteAndWebDevelopmentCompanyNashik />} />
+              <Route path="/best-branding-agency-and-marketing-company-in-nashik" element={<BestBrandingAgencyAndMarketingCompanyNashik />} />
               <Route
                 path="/best-website-design-company-in-nashik"
                 element={<BestWebsiteDesignCompanyInNashik />}

@@ -5,6 +5,22 @@ import { brandSeriesPosts } from "./Blogs/brandSeriesPosts";
 
 const Blogs = () => {
   const blogs = [
+        {
+      name: "Best Website & Web Development Company in Nashik: How to Choose the Right Partner in 2026",
+      thumbnail: "/images/blogs/nashik-web-development-hero.svg",
+      slug: "best-website-and-web-development-company-in-nashik",
+      blogpara:
+        "Looking for the best website company or web development company in Nashik? Learn the 7 checks, the process, technology options and red flags before you hire.",
+      altseo: "best web development company in nashik",
+    },
+    {
+      name: "Best Branding Agency & Marketing Company in Nashik: Why Your Brand and Marketing Must Work Together",
+      thumbnail: "/images/blogs/nashik-branding-marketing-hero.svg",
+      slug: "best-branding-agency-and-marketing-company-in-nashik",
+      blogpara:
+        "Searching for the best branding agency or marketing company in Nashik? See how branding and marketing work together and how to choose the right partner.",
+      altseo: "best branding agency in nashik",
+    },
     ...brandSeriesPosts.map((p) => ({
       name: p.title,
       thumbnail: p.hero,
@@ -12,6 +28,7 @@ const Blogs = () => {
       blogpara: p.listPara,
       altseo: p.heroAlt,
     })),
+       
     {
   name: "Posting Every Day, Getting No Leads? Here's What Your Marketing Strategy Is Missing",
   thumbnail: "/images/blogs/posting-daily-no-leads-hero.jpg",
